@@ -1,0 +1,120 @@
+|Project2
+Cout <= Project1:inst3.Cout
+x[0] => Project1:inst.x
+x[1] => Project1:inst1.x
+x[2] => Project1:inst2.x
+x[3] => Project1:inst3.x
+y[0] => Project1:inst.y
+y[1] => Project1:inst1.y
+y[2] => Project1:inst2.y
+y[3] => Project1:inst3.y
+Sum[0] <= Project1:inst.Sum
+Sum[1] <= Project1:inst1.Sum
+Sum[2] <= Project1:inst2.Sum
+Sum[3] <= Project1:inst3.Sum
+
+
+|Project2|Project1:inst3
+Cout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+x => halfadder:inst.x
+y => halfadder:inst.y
+Cin => halfadder:inst1.y
+Sum <= halfadder:inst1.sum
+
+
+|Project2|Project1:inst3|halfadder:inst1
+carry <= inst.DB_MAX_OUTPUT_PORT_TYPE
+x => inst.IN0
+x => inst3.IN0
+y => inst.IN1
+y => inst3.IN1
+sum <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Project2|Project1:inst3|halfadder:inst
+carry <= inst.DB_MAX_OUTPUT_PORT_TYPE
+x => inst.IN0
+x => inst3.IN0
+y => inst.IN1
+y => inst3.IN1
+sum <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Project2|Project1:inst2
+Cout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+x => halfadder:inst.x
+y => halfadder:inst.y
+Cin => halfadder:inst1.y
+Sum <= halfadder:inst1.sum
+
+
+|Project2|Project1:inst2|halfadder:inst1
+carry <= inst.DB_MAX_OUTPUT_PORT_TYPE
+x => inst.IN0
+x => inst3.IN0
+y => inst.IN1
+y => inst3.IN1
+sum <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Project2|Project1:inst2|halfadder:inst
+carry <= inst.DB_MAX_OUTPUT_PORT_TYPE
+x => inst.IN0
+x => inst3.IN0
+y => inst.IN1
+y => inst3.IN1
+sum <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Project2|Project1:inst1
+Cout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+x => halfadder:inst.x
+y => halfadder:inst.y
+Cin => halfadder:inst1.y
+Sum <= halfadder:inst1.sum
+
+
+|Project2|Project1:inst1|halfadder:inst1
+carry <= inst.DB_MAX_OUTPUT_PORT_TYPE
+x => inst.IN0
+x => inst3.IN0
+y => inst.IN1
+y => inst3.IN1
+sum <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Project2|Project1:inst1|halfadder:inst
+carry <= inst.DB_MAX_OUTPUT_PORT_TYPE
+x => inst.IN0
+x => inst3.IN0
+y => inst.IN1
+y => inst3.IN1
+sum <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Project2|Project1:inst
+Cout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+x => halfadder:inst.x
+y => halfadder:inst.y
+Cin => halfadder:inst1.y
+Sum <= halfadder:inst1.sum
+
+
+|Project2|Project1:inst|halfadder:inst1
+carry <= inst.DB_MAX_OUTPUT_PORT_TYPE
+x => inst.IN0
+x => inst3.IN0
+y => inst.IN1
+y => inst3.IN1
+sum <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Project2|Project1:inst|halfadder:inst
+carry <= inst.DB_MAX_OUTPUT_PORT_TYPE
+x => inst.IN0
+x => inst3.IN0
+y => inst.IN1
+y => inst3.IN1
+sum <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+

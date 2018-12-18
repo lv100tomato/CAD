@@ -1,0 +1,78 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/export/home/017/a0171595/FPGA/Project1/simulation/modelsim
+vhard_block
+Z1 !s110 1545106285
+!i10b 1
+!s100 DoW7G9Z`a6S7fXGjDz;aU2
+I9d[z328N=Kn2W5G`9<z=42
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1545105484
+Z4 8Project1_7_1200mv_100c_slow.vo
+Z5 FProject1_7_1200mv_100c_slow.vo
+L0 176
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1545106285.000000
+Z8 !s107 Project1_7_1200mv_100c_slow.vo|
+Z9 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|Project1_7_1200mv_100c_slow.vo|
+!i113 1
+Z10 o-vlog01compat -work work
+Z11 !s92 -vlog01compat -work work +incdir+.
+Z12 tCvgOpt 0
+vProject1
+R1
+!i10b 1
+!s100 Ke^EG1lz2@`1SlH:QIQAL1
+Idch0RS0g5ck7fz1Sh[Ia41
+R2
+R0
+R3
+R4
+R5
+L0 31
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+n@project1
+vProject1_vlg_tst
+!s110 1545106313
+!i10b 1
+!s100 @PQAEPE:Z1SCKHj^TOcjU1
+IfPz?1WJc<nG2L7DgOPjfi0
+R2
+R0
+w1545106265
+8/export/home/017/a0171595/FPGA/Project1/simulation/modelsim/Project1_test1.vt
+F/export/home/017/a0171595/FPGA/Project1/simulation/modelsim/Project1_test1.vt
+L0 28
+R6
+r1
+!s85 0
+31
+!s108 1545106313.000000
+!s107 /export/home/017/a0171595/FPGA/Project1/simulation/modelsim/Project1_test1.vt|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/export/home/017/a0171595/FPGA/Project1/simulation/modelsim|/export/home/017/a0171595/FPGA/Project1/simulation/modelsim/Project1_test1.vt|
+!i113 1
+R10
+!s92 -vlog01compat -work work +incdir+/export/home/017/a0171595/FPGA/Project1/simulation/modelsim
+R12
+n@project1_vlg_tst

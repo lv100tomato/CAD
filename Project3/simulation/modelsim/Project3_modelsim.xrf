@@ -1,0 +1,16 @@
+vendor_name = ModelSim
+source_file = 1, /export/home/017/a0171595/FPGA/Project3/Project3.bdf
+source_file = 1, /export/home/017/a0171595/FPGA/Project3/db/Project3.cbx.xml
+design_name = Project3
+instance = comp, \count[2]~output , count[2]~output, Project3, 1
+instance = comp, \count[1]~output , count[1]~output, Project3, 1
+instance = comp, \count[0]~output , count[0]~output, Project3, 1
+instance = comp, \clock~input , clock~input, Project3, 1
+instance = comp, \clock~inputclkctrl , clock~inputclkctrl, Project3, 1
+instance = comp, \reset~input , reset~input, Project3, 1
+instance = comp, \reset~inputclkctrl , reset~inputclkctrl, Project3, 1
+instance = comp, \inst1~0 , inst1~0, Project3, 1
+design_name = hard_block
+instance = comp, \~ALTERA_ASDO_DATA1~~ibuf , ~ALTERA_ASDO_DATA1~~ibuf, hard_block, 1
+instance = comp, \~ALTERA_FLASH_nCE_nCSO~~ibuf , ~ALTERA_FLASH_nCE_nCSO~~ibuf, hard_block, 1
+instance = comp, \~ALTERA_DATA0~~ibuf , ~ALTERA_DATA0~~ibuf, hard_block, 1

@@ -1,0 +1,17 @@
+vendor_name = ModelSim
+source_file = 1, /export/home/017/a0171595/FPGA/Project1/halfadder.bdf
+source_file = 1, /export/home/017/a0171595/FPGA/Project1/fulladder.bdf
+source_file = 1, /export/home/017/a0171595/FPGA/Project1/Project1.bdf
+source_file = 1, /export/home/017/a0171595/FPGA/Project1/db/Project1.cbx.xml
+design_name = Project1
+instance = comp, \Cout~output , Cout~output, Project1, 1
+instance = comp, \Sum~output , Sum~output, Project1, 1
+instance = comp, \Cin~input , Cin~input, Project1, 1
+instance = comp, \x~input , x~input, Project1, 1
+instance = comp, \y~input , y~input, Project1, 1
+instance = comp, \inst2~0 , inst2~0, Project1, 1
+instance = comp, \inst1|inst3~0 , inst1|inst3~0, Project1, 1
+design_name = hard_block
+instance = comp, \~ALTERA_ASDO_DATA1~~ibuf , ~ALTERA_ASDO_DATA1~~ibuf, hard_block, 1
+instance = comp, \~ALTERA_FLASH_nCE_nCSO~~ibuf , ~ALTERA_FLASH_nCE_nCSO~~ibuf, hard_block, 1
+instance = comp, \~ALTERA_DATA0~~ibuf , ~ALTERA_DATA0~~ibuf, hard_block, 1
