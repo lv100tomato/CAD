@@ -1,4 +1,3452 @@
-|register
+|Machine
+Out[0] <= ALU:inst5.out[0]
+Out[1] <= ALU:inst5.out[1]
+Out[2] <= ALU:inst5.out[2]
+Out[3] <= ALU:inst5.out[3]
+Out[4] <= ALU:inst5.out[4]
+Out[5] <= ALU:inst5.out[5]
+Out[6] <= ALU:inst5.out[6]
+Out[7] <= ALU:inst5.out[7]
+Out[8] <= ALU:inst5.out[8]
+Out[9] <= ALU:inst5.out[9]
+Out[10] <= ALU:inst5.out[10]
+Out[11] <= ALU:inst5.out[11]
+Out[12] <= ALU:inst5.out[12]
+Out[13] <= ALU:inst5.out[13]
+Out[14] <= ALU:inst5.out[14]
+Out[15] <= ALU:inst5.out[15]
+power => register:inst3.power
+power => inst[31].ACLR
+power => inst[30].ACLR
+power => inst[29].ACLR
+power => inst[28].ACLR
+power => inst[27].ACLR
+power => inst[26].ACLR
+power => inst[25].ACLR
+power => inst[24].ACLR
+power => inst[23].ACLR
+power => inst[22].ACLR
+power => inst[21].ACLR
+power => inst[20].ACLR
+power => inst[19].ACLR
+power => inst[18].ACLR
+power => inst[17].ACLR
+power => inst[16].ACLR
+power => inst[15].ACLR
+power => inst[14].ACLR
+power => inst[13].ACLR
+power => inst[12].ACLR
+power => inst[11].ACLR
+power => inst[10].ACLR
+power => inst[9].ACLR
+power => inst[8].ACLR
+power => inst[7].ACLR
+power => inst[6].ACLR
+power => inst[5].ACLR
+power => inst[4].ACLR
+power => inst[3].ACLR
+power => inst[2].ACLR
+power => inst[1].ACLR
+power => inst[0].ACLR
+power => inst[31].PRESET
+power => inst[30].PRESET
+power => inst[29].PRESET
+power => inst[28].PRESET
+power => inst[27].PRESET
+power => inst[26].PRESET
+power => inst[25].PRESET
+power => inst[24].PRESET
+power => inst[23].PRESET
+power => inst[22].PRESET
+power => inst[21].PRESET
+power => inst[20].PRESET
+power => inst[19].PRESET
+power => inst[18].PRESET
+power => inst[17].PRESET
+power => inst[16].PRESET
+power => inst[15].PRESET
+power => inst[14].PRESET
+power => inst[13].PRESET
+power => inst[12].PRESET
+power => inst[11].PRESET
+power => inst[10].PRESET
+power => inst[9].PRESET
+power => inst[8].PRESET
+power => inst[7].PRESET
+power => inst[6].PRESET
+power => inst[5].PRESET
+power => inst[4].PRESET
+power => inst[3].PRESET
+power => inst[2].PRESET
+power => inst[1].PRESET
+power => inst[0].PRESET
+clock => inst[31].CLK
+clock => inst[30].CLK
+clock => inst[29].CLK
+clock => inst[28].CLK
+clock => inst[27].CLK
+clock => inst[26].CLK
+clock => inst[25].CLK
+clock => inst[24].CLK
+clock => inst[23].CLK
+clock => inst[22].CLK
+clock => inst[21].CLK
+clock => inst[20].CLK
+clock => inst[19].CLK
+clock => inst[18].CLK
+clock => inst[17].CLK
+clock => inst[16].CLK
+clock => inst[15].CLK
+clock => inst[14].CLK
+clock => inst[13].CLK
+clock => inst[12].CLK
+clock => inst[11].CLK
+clock => inst[10].CLK
+clock => inst[9].CLK
+clock => inst[8].CLK
+clock => inst[7].CLK
+clock => inst[6].CLK
+clock => inst[5].CLK
+clock => inst[4].CLK
+clock => inst[3].CLK
+clock => inst[2].CLK
+clock => inst[1].CLK
+clock => inst[0].CLK
+clock => inst2.IN0
+In[0] => inst[0].DATAIN
+In[1] => inst[1].DATAIN
+In[2] => inst[2].DATAIN
+In[3] => inst[3].DATAIN
+In[4] => inst[4].DATAIN
+In[5] => inst[5].DATAIN
+In[6] => inst[6].DATAIN
+In[7] => inst[7].DATAIN
+In[8] => inst[8].DATAIN
+In[9] => inst[9].DATAIN
+In[10] => inst[10].DATAIN
+In[11] => inst[11].DATAIN
+In[12] => inst[12].DATAIN
+In[13] => inst[13].DATAIN
+In[14] => inst[14].DATAIN
+In[15] => inst[15].DATAIN
+In[16] => inst[16].DATAIN
+In[17] => inst[17].DATAIN
+In[18] => inst[18].DATAIN
+In[19] => inst[19].DATAIN
+In[20] => inst[20].DATAIN
+In[21] => inst[21].DATAIN
+In[22] => inst[22].DATAIN
+In[23] => inst[23].DATAIN
+In[24] => inst[24].DATAIN
+In[25] => inst[25].DATAIN
+In[26] => inst[26].DATAIN
+In[27] => inst[27].DATAIN
+In[28] => inst[28].DATAIN
+In[29] => inst[29].DATAIN
+In[30] => inst[30].DATAIN
+In[31] => inst[31].DATAIN
+
+
+|Machine|ALU:inst5
+cond[0] <= <GND>
+cond[1] <= <GND>
+cond[2] <= <GND>
+cond[3] <= <GND>
+out[0] <= simplemultiplexor:inst24.out[0]
+out[1] <= simplemultiplexor:inst24.out[1]
+out[2] <= simplemultiplexor:inst24.out[2]
+out[3] <= simplemultiplexor:inst24.out[3]
+out[4] <= simplemultiplexor:inst24.out[4]
+out[5] <= simplemultiplexor:inst24.out[5]
+out[6] <= simplemultiplexor:inst24.out[6]
+out[7] <= simplemultiplexor:inst24.out[7]
+out[8] <= simplemultiplexor:inst24.out[8]
+out[9] <= simplemultiplexor:inst24.out[9]
+out[10] <= simplemultiplexor:inst24.out[10]
+out[11] <= simplemultiplexor:inst24.out[11]
+out[12] <= simplemultiplexor:inst24.out[12]
+out[13] <= simplemultiplexor:inst24.out[13]
+out[14] <= simplemultiplexor:inst24.out[14]
+out[15] <= simplemultiplexor:inst24.out[15]
+opecode[0] => simplemultiplexor:inst18.switch
+opecode[0] => simplemultiplexor:inst19.switch
+opecode[0] => simplemultiplexor:inst20.switch
+opecode[1] => simplemultiplexor:inst21.switch
+opecode[1] => simplemultiplexor:inst22.switch
+opecode[2] => simplemultiplexor:inst23.switch
+opecode[3] => simplemultiplexor:inst24.switch
+dataA[0] => 16bit_fulladder:inst16.A[0]
+dataA[0] => 16bit_fulladder:inst.A[0]
+dataA[0] => 16bit_and:inst0.A[0]
+dataA[0] => 16bit_or:inst3.A[0]
+dataA[0] => 16bit_xor:inst4.A[0]
+dataA[1] => 16bit_fulladder:inst16.A[1]
+dataA[1] => 16bit_fulladder:inst.A[1]
+dataA[1] => 16bit_and:inst0.A[1]
+dataA[1] => 16bit_or:inst3.A[1]
+dataA[1] => 16bit_xor:inst4.A[1]
+dataA[2] => 16bit_fulladder:inst16.A[2]
+dataA[2] => 16bit_fulladder:inst.A[2]
+dataA[2] => 16bit_and:inst0.A[2]
+dataA[2] => 16bit_or:inst3.A[2]
+dataA[2] => 16bit_xor:inst4.A[2]
+dataA[3] => 16bit_fulladder:inst16.A[3]
+dataA[3] => 16bit_fulladder:inst.A[3]
+dataA[3] => 16bit_and:inst0.A[3]
+dataA[3] => 16bit_or:inst3.A[3]
+dataA[3] => 16bit_xor:inst4.A[3]
+dataA[4] => 16bit_fulladder:inst16.A[4]
+dataA[4] => 16bit_fulladder:inst.A[4]
+dataA[4] => 16bit_and:inst0.A[4]
+dataA[4] => 16bit_or:inst3.A[4]
+dataA[4] => 16bit_xor:inst4.A[4]
+dataA[5] => 16bit_fulladder:inst16.A[5]
+dataA[5] => 16bit_fulladder:inst.A[5]
+dataA[5] => 16bit_and:inst0.A[5]
+dataA[5] => 16bit_or:inst3.A[5]
+dataA[5] => 16bit_xor:inst4.A[5]
+dataA[6] => 16bit_fulladder:inst16.A[6]
+dataA[6] => 16bit_fulladder:inst.A[6]
+dataA[6] => 16bit_and:inst0.A[6]
+dataA[6] => 16bit_or:inst3.A[6]
+dataA[6] => 16bit_xor:inst4.A[6]
+dataA[7] => 16bit_fulladder:inst16.A[7]
+dataA[7] => 16bit_fulladder:inst.A[7]
+dataA[7] => 16bit_and:inst0.A[7]
+dataA[7] => 16bit_or:inst3.A[7]
+dataA[7] => 16bit_xor:inst4.A[7]
+dataA[8] => 16bit_fulladder:inst16.A[8]
+dataA[8] => 16bit_fulladder:inst.A[8]
+dataA[8] => 16bit_and:inst0.A[8]
+dataA[8] => 16bit_or:inst3.A[8]
+dataA[8] => 16bit_xor:inst4.A[8]
+dataA[9] => 16bit_fulladder:inst16.A[9]
+dataA[9] => 16bit_fulladder:inst.A[9]
+dataA[9] => 16bit_and:inst0.A[9]
+dataA[9] => 16bit_or:inst3.A[9]
+dataA[9] => 16bit_xor:inst4.A[9]
+dataA[10] => 16bit_fulladder:inst16.A[10]
+dataA[10] => 16bit_fulladder:inst.A[10]
+dataA[10] => 16bit_and:inst0.A[10]
+dataA[10] => 16bit_or:inst3.A[10]
+dataA[10] => 16bit_xor:inst4.A[10]
+dataA[11] => 16bit_fulladder:inst16.A[11]
+dataA[11] => 16bit_fulladder:inst.A[11]
+dataA[11] => 16bit_and:inst0.A[11]
+dataA[11] => 16bit_or:inst3.A[11]
+dataA[11] => 16bit_xor:inst4.A[11]
+dataA[12] => 16bit_fulladder:inst16.A[12]
+dataA[12] => 16bit_fulladder:inst.A[12]
+dataA[12] => 16bit_and:inst0.A[12]
+dataA[12] => 16bit_or:inst3.A[12]
+dataA[12] => 16bit_xor:inst4.A[12]
+dataA[13] => 16bit_fulladder:inst16.A[13]
+dataA[13] => 16bit_fulladder:inst.A[13]
+dataA[13] => 16bit_and:inst0.A[13]
+dataA[13] => 16bit_or:inst3.A[13]
+dataA[13] => 16bit_xor:inst4.A[13]
+dataA[14] => 16bit_fulladder:inst16.A[14]
+dataA[14] => 16bit_fulladder:inst.A[14]
+dataA[14] => 16bit_and:inst0.A[14]
+dataA[14] => 16bit_or:inst3.A[14]
+dataA[14] => 16bit_xor:inst4.A[14]
+dataA[15] => 16bit_fulladder:inst16.A[15]
+dataA[15] => 16bit_fulladder:inst.A[15]
+dataA[15] => 16bit_and:inst0.A[15]
+dataA[15] => 16bit_or:inst3.A[15]
+dataA[15] => 16bit_xor:inst4.A[15]
+dataB[0] => 16bit_fulladder:inst16.B[0]
+dataB[0] => 16bit_flipsign:inst17.In[0]
+dataB[0] => 16bit_and:inst0.B[0]
+dataB[0] => 16bit_or:inst3.B[0]
+dataB[0] => 16bit_xor:inst4.B[0]
+dataB[1] => 16bit_fulladder:inst16.B[1]
+dataB[1] => 16bit_flipsign:inst17.In[1]
+dataB[1] => 16bit_and:inst0.B[1]
+dataB[1] => 16bit_or:inst3.B[1]
+dataB[1] => 16bit_xor:inst4.B[1]
+dataB[2] => 16bit_fulladder:inst16.B[2]
+dataB[2] => 16bit_flipsign:inst17.In[2]
+dataB[2] => 16bit_and:inst0.B[2]
+dataB[2] => 16bit_or:inst3.B[2]
+dataB[2] => 16bit_xor:inst4.B[2]
+dataB[3] => 16bit_fulladder:inst16.B[3]
+dataB[3] => 16bit_flipsign:inst17.In[3]
+dataB[3] => 16bit_and:inst0.B[3]
+dataB[3] => 16bit_or:inst3.B[3]
+dataB[3] => 16bit_xor:inst4.B[3]
+dataB[4] => 16bit_fulladder:inst16.B[4]
+dataB[4] => 16bit_flipsign:inst17.In[4]
+dataB[4] => 16bit_and:inst0.B[4]
+dataB[4] => 16bit_or:inst3.B[4]
+dataB[4] => 16bit_xor:inst4.B[4]
+dataB[5] => 16bit_fulladder:inst16.B[5]
+dataB[5] => 16bit_flipsign:inst17.In[5]
+dataB[5] => 16bit_and:inst0.B[5]
+dataB[5] => 16bit_or:inst3.B[5]
+dataB[5] => 16bit_xor:inst4.B[5]
+dataB[6] => 16bit_fulladder:inst16.B[6]
+dataB[6] => 16bit_flipsign:inst17.In[6]
+dataB[6] => 16bit_and:inst0.B[6]
+dataB[6] => 16bit_or:inst3.B[6]
+dataB[6] => 16bit_xor:inst4.B[6]
+dataB[7] => 16bit_fulladder:inst16.B[7]
+dataB[7] => 16bit_flipsign:inst17.In[7]
+dataB[7] => 16bit_and:inst0.B[7]
+dataB[7] => 16bit_or:inst3.B[7]
+dataB[7] => 16bit_xor:inst4.B[7]
+dataB[8] => 16bit_fulladder:inst16.B[8]
+dataB[8] => 16bit_flipsign:inst17.In[8]
+dataB[8] => 16bit_and:inst0.B[8]
+dataB[8] => 16bit_or:inst3.B[8]
+dataB[8] => 16bit_xor:inst4.B[8]
+dataB[9] => 16bit_fulladder:inst16.B[9]
+dataB[9] => 16bit_flipsign:inst17.In[9]
+dataB[9] => 16bit_and:inst0.B[9]
+dataB[9] => 16bit_or:inst3.B[9]
+dataB[9] => 16bit_xor:inst4.B[9]
+dataB[10] => 16bit_fulladder:inst16.B[10]
+dataB[10] => 16bit_flipsign:inst17.In[10]
+dataB[10] => 16bit_and:inst0.B[10]
+dataB[10] => 16bit_or:inst3.B[10]
+dataB[10] => 16bit_xor:inst4.B[10]
+dataB[11] => 16bit_fulladder:inst16.B[11]
+dataB[11] => 16bit_flipsign:inst17.In[11]
+dataB[11] => 16bit_and:inst0.B[11]
+dataB[11] => 16bit_or:inst3.B[11]
+dataB[11] => 16bit_xor:inst4.B[11]
+dataB[12] => 16bit_fulladder:inst16.B[12]
+dataB[12] => 16bit_flipsign:inst17.In[12]
+dataB[12] => 16bit_and:inst0.B[12]
+dataB[12] => 16bit_or:inst3.B[12]
+dataB[12] => 16bit_xor:inst4.B[12]
+dataB[13] => 16bit_fulladder:inst16.B[13]
+dataB[13] => 16bit_flipsign:inst17.In[13]
+dataB[13] => 16bit_and:inst0.B[13]
+dataB[13] => 16bit_or:inst3.B[13]
+dataB[13] => 16bit_xor:inst4.B[13]
+dataB[14] => 16bit_fulladder:inst16.B[14]
+dataB[14] => 16bit_flipsign:inst17.In[14]
+dataB[14] => 16bit_and:inst0.B[14]
+dataB[14] => 16bit_or:inst3.B[14]
+dataB[14] => 16bit_xor:inst4.B[14]
+dataB[15] => 16bit_fulladder:inst16.B[15]
+dataB[15] => 16bit_flipsign:inst17.In[15]
+dataB[15] => 16bit_and:inst0.B[15]
+dataB[15] => 16bit_or:inst3.B[15]
+dataB[15] => 16bit_xor:inst4.B[15]
+
+
+|Machine|ALU:inst5|simplemultiplexor:inst24
+out[0] <= 16bit_or:inst35.out[0]
+out[1] <= 16bit_or:inst35.out[1]
+out[2] <= 16bit_or:inst35.out[2]
+out[3] <= 16bit_or:inst35.out[3]
+out[4] <= 16bit_or:inst35.out[4]
+out[5] <= 16bit_or:inst35.out[5]
+out[6] <= 16bit_or:inst35.out[6]
+out[7] <= 16bit_or:inst35.out[7]
+out[8] <= 16bit_or:inst35.out[8]
+out[9] <= 16bit_or:inst35.out[9]
+out[10] <= 16bit_or:inst35.out[10]
+out[11] <= 16bit_or:inst35.out[11]
+out[12] <= 16bit_or:inst35.out[12]
+out[13] <= 16bit_or:inst35.out[13]
+out[14] <= 16bit_or:inst35.out[14]
+out[15] <= 16bit_or:inst35.out[15]
+In0[0] => 16bit_and:inst18.A[0]
+In0[1] => 16bit_and:inst18.A[1]
+In0[2] => 16bit_and:inst18.A[2]
+In0[3] => 16bit_and:inst18.A[3]
+In0[4] => 16bit_and:inst18.A[4]
+In0[5] => 16bit_and:inst18.A[5]
+In0[6] => 16bit_and:inst18.A[6]
+In0[7] => 16bit_and:inst18.A[7]
+In0[8] => 16bit_and:inst18.A[8]
+In0[9] => 16bit_and:inst18.A[9]
+In0[10] => 16bit_and:inst18.A[10]
+In0[11] => 16bit_and:inst18.A[11]
+In0[12] => 16bit_and:inst18.A[12]
+In0[13] => 16bit_and:inst18.A[13]
+In0[14] => 16bit_and:inst18.A[14]
+In0[15] => 16bit_and:inst18.A[15]
+switch => inst19.IN0
+switch => inst20.IN0
+switch => inst21.IN0
+switch => inst22.IN0
+switch => inst23.IN0
+switch => inst24.IN0
+switch => inst25.IN0
+switch => inst26.IN0
+switch => inst27.IN0
+switch => inst28.IN0
+switch => inst29.IN0
+switch => inst30.IN0
+switch => inst31.IN0
+switch => inst32.IN0
+switch => inst33.IN0
+switch => inst34.IN0
+switch => 16bit_and:inst.B[0]
+switch => 16bit_and:inst.B[1]
+switch => 16bit_and:inst.B[2]
+switch => 16bit_and:inst.B[3]
+switch => 16bit_and:inst.B[4]
+switch => 16bit_and:inst.B[5]
+switch => 16bit_and:inst.B[6]
+switch => 16bit_and:inst.B[7]
+switch => 16bit_and:inst.B[8]
+switch => 16bit_and:inst.B[9]
+switch => 16bit_and:inst.B[10]
+switch => 16bit_and:inst.B[11]
+switch => 16bit_and:inst.B[12]
+switch => 16bit_and:inst.B[13]
+switch => 16bit_and:inst.B[14]
+switch => 16bit_and:inst.B[15]
+In1[0] => 16bit_and:inst.A[0]
+In1[1] => 16bit_and:inst.A[1]
+In1[2] => 16bit_and:inst.A[2]
+In1[3] => 16bit_and:inst.A[3]
+In1[4] => 16bit_and:inst.A[4]
+In1[5] => 16bit_and:inst.A[5]
+In1[6] => 16bit_and:inst.A[6]
+In1[7] => 16bit_and:inst.A[7]
+In1[8] => 16bit_and:inst.A[8]
+In1[9] => 16bit_and:inst.A[9]
+In1[10] => 16bit_and:inst.A[10]
+In1[11] => 16bit_and:inst.A[11]
+In1[12] => 16bit_and:inst.A[12]
+In1[13] => 16bit_and:inst.A[13]
+In1[14] => 16bit_and:inst.A[14]
+In1[15] => 16bit_and:inst.A[15]
+
+
+|Machine|ALU:inst5|simplemultiplexor:inst24|16bit_or:inst35
+out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+out[14] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+out[15] <= inst16.DB_MAX_OUTPUT_PORT_TYPE
+B[0] => inst.IN0
+B[1] => inst1.IN0
+B[2] => inst2.IN0
+B[3] => inst3.IN0
+B[4] => inst4.IN0
+B[5] => inst5.IN0
+B[6] => inst6.IN0
+B[7] => inst7.IN0
+B[8] => inst8.IN0
+B[9] => inst9.IN0
+B[10] => inst10.IN0
+B[11] => inst11.IN0
+B[12] => inst12.IN0
+B[13] => inst13.IN0
+B[14] => inst14.IN0
+B[15] => inst16.IN0
+A[0] => inst.IN1
+A[1] => inst1.IN1
+A[2] => inst2.IN1
+A[3] => inst3.IN1
+A[4] => inst4.IN1
+A[5] => inst5.IN1
+A[6] => inst6.IN1
+A[7] => inst7.IN1
+A[8] => inst8.IN1
+A[9] => inst9.IN1
+A[10] => inst10.IN1
+A[11] => inst11.IN1
+A[12] => inst12.IN1
+A[13] => inst13.IN1
+A[14] => inst14.IN1
+A[15] => inst16.IN1
+
+
+|Machine|ALU:inst5|simplemultiplexor:inst24|16bit_and:inst18
+out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+out[14] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+out[15] <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+A[0] => inst0.IN0
+A[1] => inst1.IN0
+A[2] => inst2.IN0
+A[3] => inst3.IN0
+A[4] => inst4.IN0
+A[5] => inst5.IN0
+A[6] => inst6.IN0
+A[7] => inst7.IN0
+A[8] => inst8.IN0
+A[9] => inst9.IN0
+A[10] => inst10.IN0
+A[11] => inst11.IN0
+A[12] => inst12.IN0
+A[13] => inst13.IN0
+A[14] => inst14.IN0
+A[15] => inst15.IN0
+B[0] => inst0.IN1
+B[1] => inst1.IN1
+B[2] => inst2.IN1
+B[3] => inst3.IN1
+B[4] => inst4.IN1
+B[5] => inst5.IN1
+B[6] => inst6.IN1
+B[7] => inst7.IN1
+B[8] => inst8.IN1
+B[9] => inst9.IN1
+B[10] => inst10.IN1
+B[11] => inst11.IN1
+B[12] => inst12.IN1
+B[13] => inst13.IN1
+B[14] => inst14.IN1
+B[15] => inst15.IN1
+
+
+|Machine|ALU:inst5|simplemultiplexor:inst24|16bit_and:inst
+out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+out[14] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+out[15] <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+A[0] => inst0.IN0
+A[1] => inst1.IN0
+A[2] => inst2.IN0
+A[3] => inst3.IN0
+A[4] => inst4.IN0
+A[5] => inst5.IN0
+A[6] => inst6.IN0
+A[7] => inst7.IN0
+A[8] => inst8.IN0
+A[9] => inst9.IN0
+A[10] => inst10.IN0
+A[11] => inst11.IN0
+A[12] => inst12.IN0
+A[13] => inst13.IN0
+A[14] => inst14.IN0
+A[15] => inst15.IN0
+B[0] => inst0.IN1
+B[1] => inst1.IN1
+B[2] => inst2.IN1
+B[3] => inst3.IN1
+B[4] => inst4.IN1
+B[5] => inst5.IN1
+B[6] => inst6.IN1
+B[7] => inst7.IN1
+B[8] => inst8.IN1
+B[9] => inst9.IN1
+B[10] => inst10.IN1
+B[11] => inst11.IN1
+B[12] => inst12.IN1
+B[13] => inst13.IN1
+B[14] => inst14.IN1
+B[15] => inst15.IN1
+
+
+|Machine|ALU:inst5|simplemultiplexor:inst23
+out[0] <= 16bit_or:inst35.out[0]
+out[1] <= 16bit_or:inst35.out[1]
+out[2] <= 16bit_or:inst35.out[2]
+out[3] <= 16bit_or:inst35.out[3]
+out[4] <= 16bit_or:inst35.out[4]
+out[5] <= 16bit_or:inst35.out[5]
+out[6] <= 16bit_or:inst35.out[6]
+out[7] <= 16bit_or:inst35.out[7]
+out[8] <= 16bit_or:inst35.out[8]
+out[9] <= 16bit_or:inst35.out[9]
+out[10] <= 16bit_or:inst35.out[10]
+out[11] <= 16bit_or:inst35.out[11]
+out[12] <= 16bit_or:inst35.out[12]
+out[13] <= 16bit_or:inst35.out[13]
+out[14] <= 16bit_or:inst35.out[14]
+out[15] <= 16bit_or:inst35.out[15]
+In0[0] => 16bit_and:inst18.A[0]
+In0[1] => 16bit_and:inst18.A[1]
+In0[2] => 16bit_and:inst18.A[2]
+In0[3] => 16bit_and:inst18.A[3]
+In0[4] => 16bit_and:inst18.A[4]
+In0[5] => 16bit_and:inst18.A[5]
+In0[6] => 16bit_and:inst18.A[6]
+In0[7] => 16bit_and:inst18.A[7]
+In0[8] => 16bit_and:inst18.A[8]
+In0[9] => 16bit_and:inst18.A[9]
+In0[10] => 16bit_and:inst18.A[10]
+In0[11] => 16bit_and:inst18.A[11]
+In0[12] => 16bit_and:inst18.A[12]
+In0[13] => 16bit_and:inst18.A[13]
+In0[14] => 16bit_and:inst18.A[14]
+In0[15] => 16bit_and:inst18.A[15]
+switch => inst19.IN0
+switch => inst20.IN0
+switch => inst21.IN0
+switch => inst22.IN0
+switch => inst23.IN0
+switch => inst24.IN0
+switch => inst25.IN0
+switch => inst26.IN0
+switch => inst27.IN0
+switch => inst28.IN0
+switch => inst29.IN0
+switch => inst30.IN0
+switch => inst31.IN0
+switch => inst32.IN0
+switch => inst33.IN0
+switch => inst34.IN0
+switch => 16bit_and:inst.B[0]
+switch => 16bit_and:inst.B[1]
+switch => 16bit_and:inst.B[2]
+switch => 16bit_and:inst.B[3]
+switch => 16bit_and:inst.B[4]
+switch => 16bit_and:inst.B[5]
+switch => 16bit_and:inst.B[6]
+switch => 16bit_and:inst.B[7]
+switch => 16bit_and:inst.B[8]
+switch => 16bit_and:inst.B[9]
+switch => 16bit_and:inst.B[10]
+switch => 16bit_and:inst.B[11]
+switch => 16bit_and:inst.B[12]
+switch => 16bit_and:inst.B[13]
+switch => 16bit_and:inst.B[14]
+switch => 16bit_and:inst.B[15]
+In1[0] => 16bit_and:inst.A[0]
+In1[1] => 16bit_and:inst.A[1]
+In1[2] => 16bit_and:inst.A[2]
+In1[3] => 16bit_and:inst.A[3]
+In1[4] => 16bit_and:inst.A[4]
+In1[5] => 16bit_and:inst.A[5]
+In1[6] => 16bit_and:inst.A[6]
+In1[7] => 16bit_and:inst.A[7]
+In1[8] => 16bit_and:inst.A[8]
+In1[9] => 16bit_and:inst.A[9]
+In1[10] => 16bit_and:inst.A[10]
+In1[11] => 16bit_and:inst.A[11]
+In1[12] => 16bit_and:inst.A[12]
+In1[13] => 16bit_and:inst.A[13]
+In1[14] => 16bit_and:inst.A[14]
+In1[15] => 16bit_and:inst.A[15]
+
+
+|Machine|ALU:inst5|simplemultiplexor:inst23|16bit_or:inst35
+out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+out[14] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+out[15] <= inst16.DB_MAX_OUTPUT_PORT_TYPE
+B[0] => inst.IN0
+B[1] => inst1.IN0
+B[2] => inst2.IN0
+B[3] => inst3.IN0
+B[4] => inst4.IN0
+B[5] => inst5.IN0
+B[6] => inst6.IN0
+B[7] => inst7.IN0
+B[8] => inst8.IN0
+B[9] => inst9.IN0
+B[10] => inst10.IN0
+B[11] => inst11.IN0
+B[12] => inst12.IN0
+B[13] => inst13.IN0
+B[14] => inst14.IN0
+B[15] => inst16.IN0
+A[0] => inst.IN1
+A[1] => inst1.IN1
+A[2] => inst2.IN1
+A[3] => inst3.IN1
+A[4] => inst4.IN1
+A[5] => inst5.IN1
+A[6] => inst6.IN1
+A[7] => inst7.IN1
+A[8] => inst8.IN1
+A[9] => inst9.IN1
+A[10] => inst10.IN1
+A[11] => inst11.IN1
+A[12] => inst12.IN1
+A[13] => inst13.IN1
+A[14] => inst14.IN1
+A[15] => inst16.IN1
+
+
+|Machine|ALU:inst5|simplemultiplexor:inst23|16bit_and:inst18
+out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+out[14] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+out[15] <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+A[0] => inst0.IN0
+A[1] => inst1.IN0
+A[2] => inst2.IN0
+A[3] => inst3.IN0
+A[4] => inst4.IN0
+A[5] => inst5.IN0
+A[6] => inst6.IN0
+A[7] => inst7.IN0
+A[8] => inst8.IN0
+A[9] => inst9.IN0
+A[10] => inst10.IN0
+A[11] => inst11.IN0
+A[12] => inst12.IN0
+A[13] => inst13.IN0
+A[14] => inst14.IN0
+A[15] => inst15.IN0
+B[0] => inst0.IN1
+B[1] => inst1.IN1
+B[2] => inst2.IN1
+B[3] => inst3.IN1
+B[4] => inst4.IN1
+B[5] => inst5.IN1
+B[6] => inst6.IN1
+B[7] => inst7.IN1
+B[8] => inst8.IN1
+B[9] => inst9.IN1
+B[10] => inst10.IN1
+B[11] => inst11.IN1
+B[12] => inst12.IN1
+B[13] => inst13.IN1
+B[14] => inst14.IN1
+B[15] => inst15.IN1
+
+
+|Machine|ALU:inst5|simplemultiplexor:inst23|16bit_and:inst
+out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+out[14] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+out[15] <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+A[0] => inst0.IN0
+A[1] => inst1.IN0
+A[2] => inst2.IN0
+A[3] => inst3.IN0
+A[4] => inst4.IN0
+A[5] => inst5.IN0
+A[6] => inst6.IN0
+A[7] => inst7.IN0
+A[8] => inst8.IN0
+A[9] => inst9.IN0
+A[10] => inst10.IN0
+A[11] => inst11.IN0
+A[12] => inst12.IN0
+A[13] => inst13.IN0
+A[14] => inst14.IN0
+A[15] => inst15.IN0
+B[0] => inst0.IN1
+B[1] => inst1.IN1
+B[2] => inst2.IN1
+B[3] => inst3.IN1
+B[4] => inst4.IN1
+B[5] => inst5.IN1
+B[6] => inst6.IN1
+B[7] => inst7.IN1
+B[8] => inst8.IN1
+B[9] => inst9.IN1
+B[10] => inst10.IN1
+B[11] => inst11.IN1
+B[12] => inst12.IN1
+B[13] => inst13.IN1
+B[14] => inst14.IN1
+B[15] => inst15.IN1
+
+
+|Machine|ALU:inst5|simplemultiplexor:inst21
+out[0] <= 16bit_or:inst35.out[0]
+out[1] <= 16bit_or:inst35.out[1]
+out[2] <= 16bit_or:inst35.out[2]
+out[3] <= 16bit_or:inst35.out[3]
+out[4] <= 16bit_or:inst35.out[4]
+out[5] <= 16bit_or:inst35.out[5]
+out[6] <= 16bit_or:inst35.out[6]
+out[7] <= 16bit_or:inst35.out[7]
+out[8] <= 16bit_or:inst35.out[8]
+out[9] <= 16bit_or:inst35.out[9]
+out[10] <= 16bit_or:inst35.out[10]
+out[11] <= 16bit_or:inst35.out[11]
+out[12] <= 16bit_or:inst35.out[12]
+out[13] <= 16bit_or:inst35.out[13]
+out[14] <= 16bit_or:inst35.out[14]
+out[15] <= 16bit_or:inst35.out[15]
+In0[0] => 16bit_and:inst18.A[0]
+In0[1] => 16bit_and:inst18.A[1]
+In0[2] => 16bit_and:inst18.A[2]
+In0[3] => 16bit_and:inst18.A[3]
+In0[4] => 16bit_and:inst18.A[4]
+In0[5] => 16bit_and:inst18.A[5]
+In0[6] => 16bit_and:inst18.A[6]
+In0[7] => 16bit_and:inst18.A[7]
+In0[8] => 16bit_and:inst18.A[8]
+In0[9] => 16bit_and:inst18.A[9]
+In0[10] => 16bit_and:inst18.A[10]
+In0[11] => 16bit_and:inst18.A[11]
+In0[12] => 16bit_and:inst18.A[12]
+In0[13] => 16bit_and:inst18.A[13]
+In0[14] => 16bit_and:inst18.A[14]
+In0[15] => 16bit_and:inst18.A[15]
+switch => inst19.IN0
+switch => inst20.IN0
+switch => inst21.IN0
+switch => inst22.IN0
+switch => inst23.IN0
+switch => inst24.IN0
+switch => inst25.IN0
+switch => inst26.IN0
+switch => inst27.IN0
+switch => inst28.IN0
+switch => inst29.IN0
+switch => inst30.IN0
+switch => inst31.IN0
+switch => inst32.IN0
+switch => inst33.IN0
+switch => inst34.IN0
+switch => 16bit_and:inst.B[0]
+switch => 16bit_and:inst.B[1]
+switch => 16bit_and:inst.B[2]
+switch => 16bit_and:inst.B[3]
+switch => 16bit_and:inst.B[4]
+switch => 16bit_and:inst.B[5]
+switch => 16bit_and:inst.B[6]
+switch => 16bit_and:inst.B[7]
+switch => 16bit_and:inst.B[8]
+switch => 16bit_and:inst.B[9]
+switch => 16bit_and:inst.B[10]
+switch => 16bit_and:inst.B[11]
+switch => 16bit_and:inst.B[12]
+switch => 16bit_and:inst.B[13]
+switch => 16bit_and:inst.B[14]
+switch => 16bit_and:inst.B[15]
+In1[0] => 16bit_and:inst.A[0]
+In1[1] => 16bit_and:inst.A[1]
+In1[2] => 16bit_and:inst.A[2]
+In1[3] => 16bit_and:inst.A[3]
+In1[4] => 16bit_and:inst.A[4]
+In1[5] => 16bit_and:inst.A[5]
+In1[6] => 16bit_and:inst.A[6]
+In1[7] => 16bit_and:inst.A[7]
+In1[8] => 16bit_and:inst.A[8]
+In1[9] => 16bit_and:inst.A[9]
+In1[10] => 16bit_and:inst.A[10]
+In1[11] => 16bit_and:inst.A[11]
+In1[12] => 16bit_and:inst.A[12]
+In1[13] => 16bit_and:inst.A[13]
+In1[14] => 16bit_and:inst.A[14]
+In1[15] => 16bit_and:inst.A[15]
+
+
+|Machine|ALU:inst5|simplemultiplexor:inst21|16bit_or:inst35
+out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+out[14] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+out[15] <= inst16.DB_MAX_OUTPUT_PORT_TYPE
+B[0] => inst.IN0
+B[1] => inst1.IN0
+B[2] => inst2.IN0
+B[3] => inst3.IN0
+B[4] => inst4.IN0
+B[5] => inst5.IN0
+B[6] => inst6.IN0
+B[7] => inst7.IN0
+B[8] => inst8.IN0
+B[9] => inst9.IN0
+B[10] => inst10.IN0
+B[11] => inst11.IN0
+B[12] => inst12.IN0
+B[13] => inst13.IN0
+B[14] => inst14.IN0
+B[15] => inst16.IN0
+A[0] => inst.IN1
+A[1] => inst1.IN1
+A[2] => inst2.IN1
+A[3] => inst3.IN1
+A[4] => inst4.IN1
+A[5] => inst5.IN1
+A[6] => inst6.IN1
+A[7] => inst7.IN1
+A[8] => inst8.IN1
+A[9] => inst9.IN1
+A[10] => inst10.IN1
+A[11] => inst11.IN1
+A[12] => inst12.IN1
+A[13] => inst13.IN1
+A[14] => inst14.IN1
+A[15] => inst16.IN1
+
+
+|Machine|ALU:inst5|simplemultiplexor:inst21|16bit_and:inst18
+out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+out[14] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+out[15] <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+A[0] => inst0.IN0
+A[1] => inst1.IN0
+A[2] => inst2.IN0
+A[3] => inst3.IN0
+A[4] => inst4.IN0
+A[5] => inst5.IN0
+A[6] => inst6.IN0
+A[7] => inst7.IN0
+A[8] => inst8.IN0
+A[9] => inst9.IN0
+A[10] => inst10.IN0
+A[11] => inst11.IN0
+A[12] => inst12.IN0
+A[13] => inst13.IN0
+A[14] => inst14.IN0
+A[15] => inst15.IN0
+B[0] => inst0.IN1
+B[1] => inst1.IN1
+B[2] => inst2.IN1
+B[3] => inst3.IN1
+B[4] => inst4.IN1
+B[5] => inst5.IN1
+B[6] => inst6.IN1
+B[7] => inst7.IN1
+B[8] => inst8.IN1
+B[9] => inst9.IN1
+B[10] => inst10.IN1
+B[11] => inst11.IN1
+B[12] => inst12.IN1
+B[13] => inst13.IN1
+B[14] => inst14.IN1
+B[15] => inst15.IN1
+
+
+|Machine|ALU:inst5|simplemultiplexor:inst21|16bit_and:inst
+out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+out[14] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+out[15] <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+A[0] => inst0.IN0
+A[1] => inst1.IN0
+A[2] => inst2.IN0
+A[3] => inst3.IN0
+A[4] => inst4.IN0
+A[5] => inst5.IN0
+A[6] => inst6.IN0
+A[7] => inst7.IN0
+A[8] => inst8.IN0
+A[9] => inst9.IN0
+A[10] => inst10.IN0
+A[11] => inst11.IN0
+A[12] => inst12.IN0
+A[13] => inst13.IN0
+A[14] => inst14.IN0
+A[15] => inst15.IN0
+B[0] => inst0.IN1
+B[1] => inst1.IN1
+B[2] => inst2.IN1
+B[3] => inst3.IN1
+B[4] => inst4.IN1
+B[5] => inst5.IN1
+B[6] => inst6.IN1
+B[7] => inst7.IN1
+B[8] => inst8.IN1
+B[9] => inst9.IN1
+B[10] => inst10.IN1
+B[11] => inst11.IN1
+B[12] => inst12.IN1
+B[13] => inst13.IN1
+B[14] => inst14.IN1
+B[15] => inst15.IN1
+
+
+|Machine|ALU:inst5|simplemultiplexor:inst18
+out[0] <= 16bit_or:inst35.out[0]
+out[1] <= 16bit_or:inst35.out[1]
+out[2] <= 16bit_or:inst35.out[2]
+out[3] <= 16bit_or:inst35.out[3]
+out[4] <= 16bit_or:inst35.out[4]
+out[5] <= 16bit_or:inst35.out[5]
+out[6] <= 16bit_or:inst35.out[6]
+out[7] <= 16bit_or:inst35.out[7]
+out[8] <= 16bit_or:inst35.out[8]
+out[9] <= 16bit_or:inst35.out[9]
+out[10] <= 16bit_or:inst35.out[10]
+out[11] <= 16bit_or:inst35.out[11]
+out[12] <= 16bit_or:inst35.out[12]
+out[13] <= 16bit_or:inst35.out[13]
+out[14] <= 16bit_or:inst35.out[14]
+out[15] <= 16bit_or:inst35.out[15]
+In0[0] => 16bit_and:inst18.A[0]
+In0[1] => 16bit_and:inst18.A[1]
+In0[2] => 16bit_and:inst18.A[2]
+In0[3] => 16bit_and:inst18.A[3]
+In0[4] => 16bit_and:inst18.A[4]
+In0[5] => 16bit_and:inst18.A[5]
+In0[6] => 16bit_and:inst18.A[6]
+In0[7] => 16bit_and:inst18.A[7]
+In0[8] => 16bit_and:inst18.A[8]
+In0[9] => 16bit_and:inst18.A[9]
+In0[10] => 16bit_and:inst18.A[10]
+In0[11] => 16bit_and:inst18.A[11]
+In0[12] => 16bit_and:inst18.A[12]
+In0[13] => 16bit_and:inst18.A[13]
+In0[14] => 16bit_and:inst18.A[14]
+In0[15] => 16bit_and:inst18.A[15]
+switch => inst19.IN0
+switch => inst20.IN0
+switch => inst21.IN0
+switch => inst22.IN0
+switch => inst23.IN0
+switch => inst24.IN0
+switch => inst25.IN0
+switch => inst26.IN0
+switch => inst27.IN0
+switch => inst28.IN0
+switch => inst29.IN0
+switch => inst30.IN0
+switch => inst31.IN0
+switch => inst32.IN0
+switch => inst33.IN0
+switch => inst34.IN0
+switch => 16bit_and:inst.B[0]
+switch => 16bit_and:inst.B[1]
+switch => 16bit_and:inst.B[2]
+switch => 16bit_and:inst.B[3]
+switch => 16bit_and:inst.B[4]
+switch => 16bit_and:inst.B[5]
+switch => 16bit_and:inst.B[6]
+switch => 16bit_and:inst.B[7]
+switch => 16bit_and:inst.B[8]
+switch => 16bit_and:inst.B[9]
+switch => 16bit_and:inst.B[10]
+switch => 16bit_and:inst.B[11]
+switch => 16bit_and:inst.B[12]
+switch => 16bit_and:inst.B[13]
+switch => 16bit_and:inst.B[14]
+switch => 16bit_and:inst.B[15]
+In1[0] => 16bit_and:inst.A[0]
+In1[1] => 16bit_and:inst.A[1]
+In1[2] => 16bit_and:inst.A[2]
+In1[3] => 16bit_and:inst.A[3]
+In1[4] => 16bit_and:inst.A[4]
+In1[5] => 16bit_and:inst.A[5]
+In1[6] => 16bit_and:inst.A[6]
+In1[7] => 16bit_and:inst.A[7]
+In1[8] => 16bit_and:inst.A[8]
+In1[9] => 16bit_and:inst.A[9]
+In1[10] => 16bit_and:inst.A[10]
+In1[11] => 16bit_and:inst.A[11]
+In1[12] => 16bit_and:inst.A[12]
+In1[13] => 16bit_and:inst.A[13]
+In1[14] => 16bit_and:inst.A[14]
+In1[15] => 16bit_and:inst.A[15]
+
+
+|Machine|ALU:inst5|simplemultiplexor:inst18|16bit_or:inst35
+out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+out[14] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+out[15] <= inst16.DB_MAX_OUTPUT_PORT_TYPE
+B[0] => inst.IN0
+B[1] => inst1.IN0
+B[2] => inst2.IN0
+B[3] => inst3.IN0
+B[4] => inst4.IN0
+B[5] => inst5.IN0
+B[6] => inst6.IN0
+B[7] => inst7.IN0
+B[8] => inst8.IN0
+B[9] => inst9.IN0
+B[10] => inst10.IN0
+B[11] => inst11.IN0
+B[12] => inst12.IN0
+B[13] => inst13.IN0
+B[14] => inst14.IN0
+B[15] => inst16.IN0
+A[0] => inst.IN1
+A[1] => inst1.IN1
+A[2] => inst2.IN1
+A[3] => inst3.IN1
+A[4] => inst4.IN1
+A[5] => inst5.IN1
+A[6] => inst6.IN1
+A[7] => inst7.IN1
+A[8] => inst8.IN1
+A[9] => inst9.IN1
+A[10] => inst10.IN1
+A[11] => inst11.IN1
+A[12] => inst12.IN1
+A[13] => inst13.IN1
+A[14] => inst14.IN1
+A[15] => inst16.IN1
+
+
+|Machine|ALU:inst5|simplemultiplexor:inst18|16bit_and:inst18
+out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+out[14] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+out[15] <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+A[0] => inst0.IN0
+A[1] => inst1.IN0
+A[2] => inst2.IN0
+A[3] => inst3.IN0
+A[4] => inst4.IN0
+A[5] => inst5.IN0
+A[6] => inst6.IN0
+A[7] => inst7.IN0
+A[8] => inst8.IN0
+A[9] => inst9.IN0
+A[10] => inst10.IN0
+A[11] => inst11.IN0
+A[12] => inst12.IN0
+A[13] => inst13.IN0
+A[14] => inst14.IN0
+A[15] => inst15.IN0
+B[0] => inst0.IN1
+B[1] => inst1.IN1
+B[2] => inst2.IN1
+B[3] => inst3.IN1
+B[4] => inst4.IN1
+B[5] => inst5.IN1
+B[6] => inst6.IN1
+B[7] => inst7.IN1
+B[8] => inst8.IN1
+B[9] => inst9.IN1
+B[10] => inst10.IN1
+B[11] => inst11.IN1
+B[12] => inst12.IN1
+B[13] => inst13.IN1
+B[14] => inst14.IN1
+B[15] => inst15.IN1
+
+
+|Machine|ALU:inst5|simplemultiplexor:inst18|16bit_and:inst
+out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+out[14] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+out[15] <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+A[0] => inst0.IN0
+A[1] => inst1.IN0
+A[2] => inst2.IN0
+A[3] => inst3.IN0
+A[4] => inst4.IN0
+A[5] => inst5.IN0
+A[6] => inst6.IN0
+A[7] => inst7.IN0
+A[8] => inst8.IN0
+A[9] => inst9.IN0
+A[10] => inst10.IN0
+A[11] => inst11.IN0
+A[12] => inst12.IN0
+A[13] => inst13.IN0
+A[14] => inst14.IN0
+A[15] => inst15.IN0
+B[0] => inst0.IN1
+B[1] => inst1.IN1
+B[2] => inst2.IN1
+B[3] => inst3.IN1
+B[4] => inst4.IN1
+B[5] => inst5.IN1
+B[6] => inst6.IN1
+B[7] => inst7.IN1
+B[8] => inst8.IN1
+B[9] => inst9.IN1
+B[10] => inst10.IN1
+B[11] => inst11.IN1
+B[12] => inst12.IN1
+B[13] => inst13.IN1
+B[14] => inst14.IN1
+B[15] => inst15.IN1
+
+
+|Machine|ALU:inst5|16bit_fulladder:inst16
+Out16 <= 2bit_BCLA:inst14.Gout
+A[0] => carry_lookahead:inst16.A
+A[1] => carry_lookahead:inst17.A
+A[2] => carry_lookahead:inst18.A
+A[3] => carry_lookahead:inst19.A
+A[4] => carry_lookahead:inst20.A
+A[5] => carry_lookahead:inst21.A
+A[6] => carry_lookahead:inst22.A
+A[7] => carry_lookahead:inst23.A
+A[8] => carry_lookahead:inst24.A
+A[9] => carry_lookahead:inst25.A
+A[10] => carry_lookahead:inst26.A
+A[11] => carry_lookahead:inst27.A
+A[12] => carry_lookahead:inst28.A
+A[13] => carry_lookahead:inst29.A
+A[14] => carry_lookahead:inst30.A
+A[15] => carry_lookahead:inst31.A
+B[0] => carry_lookahead:inst16.B
+B[1] => carry_lookahead:inst17.B
+B[2] => carry_lookahead:inst18.B
+B[3] => carry_lookahead:inst19.B
+B[4] => carry_lookahead:inst20.B
+B[5] => carry_lookahead:inst21.B
+B[6] => carry_lookahead:inst22.B
+B[7] => carry_lookahead:inst23.B
+B[8] => carry_lookahead:inst24.B
+B[9] => carry_lookahead:inst25.B
+B[10] => carry_lookahead:inst26.B
+B[11] => carry_lookahead:inst27.B
+B[12] => carry_lookahead:inst28.B
+B[13] => carry_lookahead:inst29.B
+B[14] => carry_lookahead:inst30.B
+B[15] => carry_lookahead:inst31.B
+Out[0] <= inst32.DB_MAX_OUTPUT_PORT_TYPE
+Out[1] <= inst33.DB_MAX_OUTPUT_PORT_TYPE
+Out[2] <= inst34.DB_MAX_OUTPUT_PORT_TYPE
+Out[3] <= inst35.DB_MAX_OUTPUT_PORT_TYPE
+Out[4] <= inst36.DB_MAX_OUTPUT_PORT_TYPE
+Out[5] <= inst37.DB_MAX_OUTPUT_PORT_TYPE
+Out[6] <= inst38.DB_MAX_OUTPUT_PORT_TYPE
+Out[7] <= inst39.DB_MAX_OUTPUT_PORT_TYPE
+Out[8] <= inst40.DB_MAX_OUTPUT_PORT_TYPE
+Out[9] <= inst41.DB_MAX_OUTPUT_PORT_TYPE
+Out[10] <= inst42.DB_MAX_OUTPUT_PORT_TYPE
+Out[11] <= inst43.DB_MAX_OUTPUT_PORT_TYPE
+Out[12] <= inst44.DB_MAX_OUTPUT_PORT_TYPE
+Out[13] <= inst45.DB_MAX_OUTPUT_PORT_TYPE
+Out[14] <= inst46.DB_MAX_OUTPUT_PORT_TYPE
+Out[15] <= inst47.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_fulladder:inst16|2bit_BCLA:inst14
+Cout <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+G0 => inst7.IN0
+G0 => inst.IN0
+P0 => inst6.IN0
+P0 => inst8.IN0
+Cin => inst6.IN1
+Gout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+G1 => inst2.IN0
+P1 => inst.IN1
+P1 => inst8.IN1
+Pout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_fulladder:inst16|2bit_BCLA:inst12
+Cout <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+G0 => inst7.IN0
+G0 => inst.IN0
+P0 => inst6.IN0
+P0 => inst8.IN0
+Cin => inst6.IN1
+Gout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+G1 => inst2.IN0
+P1 => inst.IN1
+P1 => inst8.IN1
+Pout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_fulladder:inst16|2bit_BCLA:inst8
+Cout <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+G0 => inst7.IN0
+G0 => inst.IN0
+P0 => inst6.IN0
+P0 => inst8.IN0
+Cin => inst6.IN1
+Gout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+G1 => inst2.IN0
+P1 => inst.IN1
+P1 => inst8.IN1
+Pout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_fulladder:inst16|2bit_BCLA:inst
+Cout <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+G0 => inst7.IN0
+G0 => inst.IN0
+P0 => inst6.IN0
+P0 => inst8.IN0
+Cin => inst6.IN1
+Gout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+G1 => inst2.IN0
+P1 => inst.IN1
+P1 => inst8.IN1
+Pout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_fulladder:inst16|carry_lookahead:inst16
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_fulladder:inst16|carry_lookahead:inst17
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_fulladder:inst16|2bit_BCLA:inst1
+Cout <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+G0 => inst7.IN0
+G0 => inst.IN0
+P0 => inst6.IN0
+P0 => inst8.IN0
+Cin => inst6.IN1
+Gout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+G1 => inst2.IN0
+P1 => inst.IN1
+P1 => inst8.IN1
+Pout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_fulladder:inst16|carry_lookahead:inst18
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_fulladder:inst16|carry_lookahead:inst19
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_fulladder:inst16|2bit_BCLA:inst9
+Cout <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+G0 => inst7.IN0
+G0 => inst.IN0
+P0 => inst6.IN0
+P0 => inst8.IN0
+Cin => inst6.IN1
+Gout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+G1 => inst2.IN0
+P1 => inst.IN1
+P1 => inst8.IN1
+Pout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_fulladder:inst16|2bit_BCLA:inst2
+Cout <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+G0 => inst7.IN0
+G0 => inst.IN0
+P0 => inst6.IN0
+P0 => inst8.IN0
+Cin => inst6.IN1
+Gout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+G1 => inst2.IN0
+P1 => inst.IN1
+P1 => inst8.IN1
+Pout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_fulladder:inst16|carry_lookahead:inst20
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_fulladder:inst16|carry_lookahead:inst21
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_fulladder:inst16|2bit_BCLA:inst3
+Cout <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+G0 => inst7.IN0
+G0 => inst.IN0
+P0 => inst6.IN0
+P0 => inst8.IN0
+Cin => inst6.IN1
+Gout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+G1 => inst2.IN0
+P1 => inst.IN1
+P1 => inst8.IN1
+Pout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_fulladder:inst16|carry_lookahead:inst22
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_fulladder:inst16|carry_lookahead:inst23
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_fulladder:inst16|2bit_BCLA:inst13
+Cout <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+G0 => inst7.IN0
+G0 => inst.IN0
+P0 => inst6.IN0
+P0 => inst8.IN0
+Cin => inst6.IN1
+Gout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+G1 => inst2.IN0
+P1 => inst.IN1
+P1 => inst8.IN1
+Pout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_fulladder:inst16|2bit_BCLA:inst10
+Cout <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+G0 => inst7.IN0
+G0 => inst.IN0
+P0 => inst6.IN0
+P0 => inst8.IN0
+Cin => inst6.IN1
+Gout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+G1 => inst2.IN0
+P1 => inst.IN1
+P1 => inst8.IN1
+Pout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_fulladder:inst16|2bit_BCLA:inst4
+Cout <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+G0 => inst7.IN0
+G0 => inst.IN0
+P0 => inst6.IN0
+P0 => inst8.IN0
+Cin => inst6.IN1
+Gout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+G1 => inst2.IN0
+P1 => inst.IN1
+P1 => inst8.IN1
+Pout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_fulladder:inst16|carry_lookahead:inst24
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_fulladder:inst16|carry_lookahead:inst25
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_fulladder:inst16|2bit_BCLA:inst5
+Cout <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+G0 => inst7.IN0
+G0 => inst.IN0
+P0 => inst6.IN0
+P0 => inst8.IN0
+Cin => inst6.IN1
+Gout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+G1 => inst2.IN0
+P1 => inst.IN1
+P1 => inst8.IN1
+Pout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_fulladder:inst16|carry_lookahead:inst26
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_fulladder:inst16|carry_lookahead:inst27
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_fulladder:inst16|2bit_BCLA:inst11
+Cout <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+G0 => inst7.IN0
+G0 => inst.IN0
+P0 => inst6.IN0
+P0 => inst8.IN0
+Cin => inst6.IN1
+Gout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+G1 => inst2.IN0
+P1 => inst.IN1
+P1 => inst8.IN1
+Pout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_fulladder:inst16|2bit_BCLA:inst6
+Cout <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+G0 => inst7.IN0
+G0 => inst.IN0
+P0 => inst6.IN0
+P0 => inst8.IN0
+Cin => inst6.IN1
+Gout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+G1 => inst2.IN0
+P1 => inst.IN1
+P1 => inst8.IN1
+Pout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_fulladder:inst16|carry_lookahead:inst28
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_fulladder:inst16|carry_lookahead:inst29
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_fulladder:inst16|2bit_BCLA:inst7
+Cout <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+G0 => inst7.IN0
+G0 => inst.IN0
+P0 => inst6.IN0
+P0 => inst8.IN0
+Cin => inst6.IN1
+Gout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+G1 => inst2.IN0
+P1 => inst.IN1
+P1 => inst8.IN1
+Pout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_fulladder:inst16|carry_lookahead:inst30
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_fulladder:inst16|carry_lookahead:inst31
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_fulladder:inst
+Out16 <= 2bit_BCLA:inst14.Gout
+A[0] => carry_lookahead:inst16.A
+A[1] => carry_lookahead:inst17.A
+A[2] => carry_lookahead:inst18.A
+A[3] => carry_lookahead:inst19.A
+A[4] => carry_lookahead:inst20.A
+A[5] => carry_lookahead:inst21.A
+A[6] => carry_lookahead:inst22.A
+A[7] => carry_lookahead:inst23.A
+A[8] => carry_lookahead:inst24.A
+A[9] => carry_lookahead:inst25.A
+A[10] => carry_lookahead:inst26.A
+A[11] => carry_lookahead:inst27.A
+A[12] => carry_lookahead:inst28.A
+A[13] => carry_lookahead:inst29.A
+A[14] => carry_lookahead:inst30.A
+A[15] => carry_lookahead:inst31.A
+B[0] => carry_lookahead:inst16.B
+B[1] => carry_lookahead:inst17.B
+B[2] => carry_lookahead:inst18.B
+B[3] => carry_lookahead:inst19.B
+B[4] => carry_lookahead:inst20.B
+B[5] => carry_lookahead:inst21.B
+B[6] => carry_lookahead:inst22.B
+B[7] => carry_lookahead:inst23.B
+B[8] => carry_lookahead:inst24.B
+B[9] => carry_lookahead:inst25.B
+B[10] => carry_lookahead:inst26.B
+B[11] => carry_lookahead:inst27.B
+B[12] => carry_lookahead:inst28.B
+B[13] => carry_lookahead:inst29.B
+B[14] => carry_lookahead:inst30.B
+B[15] => carry_lookahead:inst31.B
+Out[0] <= inst32.DB_MAX_OUTPUT_PORT_TYPE
+Out[1] <= inst33.DB_MAX_OUTPUT_PORT_TYPE
+Out[2] <= inst34.DB_MAX_OUTPUT_PORT_TYPE
+Out[3] <= inst35.DB_MAX_OUTPUT_PORT_TYPE
+Out[4] <= inst36.DB_MAX_OUTPUT_PORT_TYPE
+Out[5] <= inst37.DB_MAX_OUTPUT_PORT_TYPE
+Out[6] <= inst38.DB_MAX_OUTPUT_PORT_TYPE
+Out[7] <= inst39.DB_MAX_OUTPUT_PORT_TYPE
+Out[8] <= inst40.DB_MAX_OUTPUT_PORT_TYPE
+Out[9] <= inst41.DB_MAX_OUTPUT_PORT_TYPE
+Out[10] <= inst42.DB_MAX_OUTPUT_PORT_TYPE
+Out[11] <= inst43.DB_MAX_OUTPUT_PORT_TYPE
+Out[12] <= inst44.DB_MAX_OUTPUT_PORT_TYPE
+Out[13] <= inst45.DB_MAX_OUTPUT_PORT_TYPE
+Out[14] <= inst46.DB_MAX_OUTPUT_PORT_TYPE
+Out[15] <= inst47.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_fulladder:inst|2bit_BCLA:inst14
+Cout <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+G0 => inst7.IN0
+G0 => inst.IN0
+P0 => inst6.IN0
+P0 => inst8.IN0
+Cin => inst6.IN1
+Gout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+G1 => inst2.IN0
+P1 => inst.IN1
+P1 => inst8.IN1
+Pout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_fulladder:inst|2bit_BCLA:inst12
+Cout <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+G0 => inst7.IN0
+G0 => inst.IN0
+P0 => inst6.IN0
+P0 => inst8.IN0
+Cin => inst6.IN1
+Gout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+G1 => inst2.IN0
+P1 => inst.IN1
+P1 => inst8.IN1
+Pout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_fulladder:inst|2bit_BCLA:inst8
+Cout <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+G0 => inst7.IN0
+G0 => inst.IN0
+P0 => inst6.IN0
+P0 => inst8.IN0
+Cin => inst6.IN1
+Gout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+G1 => inst2.IN0
+P1 => inst.IN1
+P1 => inst8.IN1
+Pout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_fulladder:inst|2bit_BCLA:inst
+Cout <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+G0 => inst7.IN0
+G0 => inst.IN0
+P0 => inst6.IN0
+P0 => inst8.IN0
+Cin => inst6.IN1
+Gout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+G1 => inst2.IN0
+P1 => inst.IN1
+P1 => inst8.IN1
+Pout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_fulladder:inst|carry_lookahead:inst16
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_fulladder:inst|carry_lookahead:inst17
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_fulladder:inst|2bit_BCLA:inst1
+Cout <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+G0 => inst7.IN0
+G0 => inst.IN0
+P0 => inst6.IN0
+P0 => inst8.IN0
+Cin => inst6.IN1
+Gout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+G1 => inst2.IN0
+P1 => inst.IN1
+P1 => inst8.IN1
+Pout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_fulladder:inst|carry_lookahead:inst18
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_fulladder:inst|carry_lookahead:inst19
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_fulladder:inst|2bit_BCLA:inst9
+Cout <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+G0 => inst7.IN0
+G0 => inst.IN0
+P0 => inst6.IN0
+P0 => inst8.IN0
+Cin => inst6.IN1
+Gout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+G1 => inst2.IN0
+P1 => inst.IN1
+P1 => inst8.IN1
+Pout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_fulladder:inst|2bit_BCLA:inst2
+Cout <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+G0 => inst7.IN0
+G0 => inst.IN0
+P0 => inst6.IN0
+P0 => inst8.IN0
+Cin => inst6.IN1
+Gout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+G1 => inst2.IN0
+P1 => inst.IN1
+P1 => inst8.IN1
+Pout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_fulladder:inst|carry_lookahead:inst20
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_fulladder:inst|carry_lookahead:inst21
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_fulladder:inst|2bit_BCLA:inst3
+Cout <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+G0 => inst7.IN0
+G0 => inst.IN0
+P0 => inst6.IN0
+P0 => inst8.IN0
+Cin => inst6.IN1
+Gout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+G1 => inst2.IN0
+P1 => inst.IN1
+P1 => inst8.IN1
+Pout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_fulladder:inst|carry_lookahead:inst22
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_fulladder:inst|carry_lookahead:inst23
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_fulladder:inst|2bit_BCLA:inst13
+Cout <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+G0 => inst7.IN0
+G0 => inst.IN0
+P0 => inst6.IN0
+P0 => inst8.IN0
+Cin => inst6.IN1
+Gout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+G1 => inst2.IN0
+P1 => inst.IN1
+P1 => inst8.IN1
+Pout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_fulladder:inst|2bit_BCLA:inst10
+Cout <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+G0 => inst7.IN0
+G0 => inst.IN0
+P0 => inst6.IN0
+P0 => inst8.IN0
+Cin => inst6.IN1
+Gout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+G1 => inst2.IN0
+P1 => inst.IN1
+P1 => inst8.IN1
+Pout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_fulladder:inst|2bit_BCLA:inst4
+Cout <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+G0 => inst7.IN0
+G0 => inst.IN0
+P0 => inst6.IN0
+P0 => inst8.IN0
+Cin => inst6.IN1
+Gout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+G1 => inst2.IN0
+P1 => inst.IN1
+P1 => inst8.IN1
+Pout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_fulladder:inst|carry_lookahead:inst24
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_fulladder:inst|carry_lookahead:inst25
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_fulladder:inst|2bit_BCLA:inst5
+Cout <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+G0 => inst7.IN0
+G0 => inst.IN0
+P0 => inst6.IN0
+P0 => inst8.IN0
+Cin => inst6.IN1
+Gout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+G1 => inst2.IN0
+P1 => inst.IN1
+P1 => inst8.IN1
+Pout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_fulladder:inst|carry_lookahead:inst26
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_fulladder:inst|carry_lookahead:inst27
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_fulladder:inst|2bit_BCLA:inst11
+Cout <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+G0 => inst7.IN0
+G0 => inst.IN0
+P0 => inst6.IN0
+P0 => inst8.IN0
+Cin => inst6.IN1
+Gout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+G1 => inst2.IN0
+P1 => inst.IN1
+P1 => inst8.IN1
+Pout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_fulladder:inst|2bit_BCLA:inst6
+Cout <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+G0 => inst7.IN0
+G0 => inst.IN0
+P0 => inst6.IN0
+P0 => inst8.IN0
+Cin => inst6.IN1
+Gout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+G1 => inst2.IN0
+P1 => inst.IN1
+P1 => inst8.IN1
+Pout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_fulladder:inst|carry_lookahead:inst28
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_fulladder:inst|carry_lookahead:inst29
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_fulladder:inst|2bit_BCLA:inst7
+Cout <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+G0 => inst7.IN0
+G0 => inst.IN0
+P0 => inst6.IN0
+P0 => inst8.IN0
+Cin => inst6.IN1
+Gout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+G1 => inst2.IN0
+P1 => inst.IN1
+P1 => inst8.IN1
+Pout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_fulladder:inst|carry_lookahead:inst30
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_fulladder:inst|carry_lookahead:inst31
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_flipsign:inst17
+out[0] <= 16bit_fulladder:inst3.Out[0]
+out[1] <= 16bit_fulladder:inst3.Out[1]
+out[2] <= 16bit_fulladder:inst3.Out[2]
+out[3] <= 16bit_fulladder:inst3.Out[3]
+out[4] <= 16bit_fulladder:inst3.Out[4]
+out[5] <= 16bit_fulladder:inst3.Out[5]
+out[6] <= 16bit_fulladder:inst3.Out[6]
+out[7] <= 16bit_fulladder:inst3.Out[7]
+out[8] <= 16bit_fulladder:inst3.Out[8]
+out[9] <= 16bit_fulladder:inst3.Out[9]
+out[10] <= 16bit_fulladder:inst3.Out[10]
+out[11] <= 16bit_fulladder:inst3.Out[11]
+out[12] <= 16bit_fulladder:inst3.Out[12]
+out[13] <= 16bit_fulladder:inst3.Out[13]
+out[14] <= 16bit_fulladder:inst3.Out[14]
+out[15] <= 16bit_fulladder:inst3.Out[15]
+In[0] => 16bit_xor:inst.A[0]
+In[1] => 16bit_xor:inst.A[1]
+In[2] => 16bit_xor:inst.A[2]
+In[3] => 16bit_xor:inst.A[3]
+In[4] => 16bit_xor:inst.A[4]
+In[5] => 16bit_xor:inst.A[5]
+In[6] => 16bit_xor:inst.A[6]
+In[7] => 16bit_xor:inst.A[7]
+In[8] => 16bit_xor:inst.A[8]
+In[9] => 16bit_xor:inst.A[9]
+In[10] => 16bit_xor:inst.A[10]
+In[11] => 16bit_xor:inst.A[11]
+In[12] => 16bit_xor:inst.A[12]
+In[13] => 16bit_xor:inst.A[13]
+In[14] => 16bit_xor:inst.A[14]
+In[15] => 16bit_xor:inst.A[15]
+
+
+|Machine|ALU:inst5|16bit_flipsign:inst17|16bit_fulladder:inst3
+Out16 <= 2bit_BCLA:inst14.Gout
+A[0] => carry_lookahead:inst16.A
+A[1] => carry_lookahead:inst17.A
+A[2] => carry_lookahead:inst18.A
+A[3] => carry_lookahead:inst19.A
+A[4] => carry_lookahead:inst20.A
+A[5] => carry_lookahead:inst21.A
+A[6] => carry_lookahead:inst22.A
+A[7] => carry_lookahead:inst23.A
+A[8] => carry_lookahead:inst24.A
+A[9] => carry_lookahead:inst25.A
+A[10] => carry_lookahead:inst26.A
+A[11] => carry_lookahead:inst27.A
+A[12] => carry_lookahead:inst28.A
+A[13] => carry_lookahead:inst29.A
+A[14] => carry_lookahead:inst30.A
+A[15] => carry_lookahead:inst31.A
+B[0] => carry_lookahead:inst16.B
+B[1] => carry_lookahead:inst17.B
+B[2] => carry_lookahead:inst18.B
+B[3] => carry_lookahead:inst19.B
+B[4] => carry_lookahead:inst20.B
+B[5] => carry_lookahead:inst21.B
+B[6] => carry_lookahead:inst22.B
+B[7] => carry_lookahead:inst23.B
+B[8] => carry_lookahead:inst24.B
+B[9] => carry_lookahead:inst25.B
+B[10] => carry_lookahead:inst26.B
+B[11] => carry_lookahead:inst27.B
+B[12] => carry_lookahead:inst28.B
+B[13] => carry_lookahead:inst29.B
+B[14] => carry_lookahead:inst30.B
+B[15] => carry_lookahead:inst31.B
+Out[0] <= inst32.DB_MAX_OUTPUT_PORT_TYPE
+Out[1] <= inst33.DB_MAX_OUTPUT_PORT_TYPE
+Out[2] <= inst34.DB_MAX_OUTPUT_PORT_TYPE
+Out[3] <= inst35.DB_MAX_OUTPUT_PORT_TYPE
+Out[4] <= inst36.DB_MAX_OUTPUT_PORT_TYPE
+Out[5] <= inst37.DB_MAX_OUTPUT_PORT_TYPE
+Out[6] <= inst38.DB_MAX_OUTPUT_PORT_TYPE
+Out[7] <= inst39.DB_MAX_OUTPUT_PORT_TYPE
+Out[8] <= inst40.DB_MAX_OUTPUT_PORT_TYPE
+Out[9] <= inst41.DB_MAX_OUTPUT_PORT_TYPE
+Out[10] <= inst42.DB_MAX_OUTPUT_PORT_TYPE
+Out[11] <= inst43.DB_MAX_OUTPUT_PORT_TYPE
+Out[12] <= inst44.DB_MAX_OUTPUT_PORT_TYPE
+Out[13] <= inst45.DB_MAX_OUTPUT_PORT_TYPE
+Out[14] <= inst46.DB_MAX_OUTPUT_PORT_TYPE
+Out[15] <= inst47.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_flipsign:inst17|16bit_fulladder:inst3|2bit_BCLA:inst14
+Cout <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+G0 => inst7.IN0
+G0 => inst.IN0
+P0 => inst6.IN0
+P0 => inst8.IN0
+Cin => inst6.IN1
+Gout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+G1 => inst2.IN0
+P1 => inst.IN1
+P1 => inst8.IN1
+Pout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_flipsign:inst17|16bit_fulladder:inst3|2bit_BCLA:inst12
+Cout <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+G0 => inst7.IN0
+G0 => inst.IN0
+P0 => inst6.IN0
+P0 => inst8.IN0
+Cin => inst6.IN1
+Gout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+G1 => inst2.IN0
+P1 => inst.IN1
+P1 => inst8.IN1
+Pout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_flipsign:inst17|16bit_fulladder:inst3|2bit_BCLA:inst8
+Cout <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+G0 => inst7.IN0
+G0 => inst.IN0
+P0 => inst6.IN0
+P0 => inst8.IN0
+Cin => inst6.IN1
+Gout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+G1 => inst2.IN0
+P1 => inst.IN1
+P1 => inst8.IN1
+Pout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_flipsign:inst17|16bit_fulladder:inst3|2bit_BCLA:inst
+Cout <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+G0 => inst7.IN0
+G0 => inst.IN0
+P0 => inst6.IN0
+P0 => inst8.IN0
+Cin => inst6.IN1
+Gout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+G1 => inst2.IN0
+P1 => inst.IN1
+P1 => inst8.IN1
+Pout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_flipsign:inst17|16bit_fulladder:inst3|carry_lookahead:inst16
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_flipsign:inst17|16bit_fulladder:inst3|carry_lookahead:inst17
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_flipsign:inst17|16bit_fulladder:inst3|2bit_BCLA:inst1
+Cout <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+G0 => inst7.IN0
+G0 => inst.IN0
+P0 => inst6.IN0
+P0 => inst8.IN0
+Cin => inst6.IN1
+Gout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+G1 => inst2.IN0
+P1 => inst.IN1
+P1 => inst8.IN1
+Pout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_flipsign:inst17|16bit_fulladder:inst3|carry_lookahead:inst18
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_flipsign:inst17|16bit_fulladder:inst3|carry_lookahead:inst19
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_flipsign:inst17|16bit_fulladder:inst3|2bit_BCLA:inst9
+Cout <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+G0 => inst7.IN0
+G0 => inst.IN0
+P0 => inst6.IN0
+P0 => inst8.IN0
+Cin => inst6.IN1
+Gout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+G1 => inst2.IN0
+P1 => inst.IN1
+P1 => inst8.IN1
+Pout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_flipsign:inst17|16bit_fulladder:inst3|2bit_BCLA:inst2
+Cout <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+G0 => inst7.IN0
+G0 => inst.IN0
+P0 => inst6.IN0
+P0 => inst8.IN0
+Cin => inst6.IN1
+Gout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+G1 => inst2.IN0
+P1 => inst.IN1
+P1 => inst8.IN1
+Pout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_flipsign:inst17|16bit_fulladder:inst3|carry_lookahead:inst20
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_flipsign:inst17|16bit_fulladder:inst3|carry_lookahead:inst21
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_flipsign:inst17|16bit_fulladder:inst3|2bit_BCLA:inst3
+Cout <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+G0 => inst7.IN0
+G0 => inst.IN0
+P0 => inst6.IN0
+P0 => inst8.IN0
+Cin => inst6.IN1
+Gout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+G1 => inst2.IN0
+P1 => inst.IN1
+P1 => inst8.IN1
+Pout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_flipsign:inst17|16bit_fulladder:inst3|carry_lookahead:inst22
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_flipsign:inst17|16bit_fulladder:inst3|carry_lookahead:inst23
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_flipsign:inst17|16bit_fulladder:inst3|2bit_BCLA:inst13
+Cout <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+G0 => inst7.IN0
+G0 => inst.IN0
+P0 => inst6.IN0
+P0 => inst8.IN0
+Cin => inst6.IN1
+Gout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+G1 => inst2.IN0
+P1 => inst.IN1
+P1 => inst8.IN1
+Pout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_flipsign:inst17|16bit_fulladder:inst3|2bit_BCLA:inst10
+Cout <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+G0 => inst7.IN0
+G0 => inst.IN0
+P0 => inst6.IN0
+P0 => inst8.IN0
+Cin => inst6.IN1
+Gout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+G1 => inst2.IN0
+P1 => inst.IN1
+P1 => inst8.IN1
+Pout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_flipsign:inst17|16bit_fulladder:inst3|2bit_BCLA:inst4
+Cout <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+G0 => inst7.IN0
+G0 => inst.IN0
+P0 => inst6.IN0
+P0 => inst8.IN0
+Cin => inst6.IN1
+Gout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+G1 => inst2.IN0
+P1 => inst.IN1
+P1 => inst8.IN1
+Pout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_flipsign:inst17|16bit_fulladder:inst3|carry_lookahead:inst24
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_flipsign:inst17|16bit_fulladder:inst3|carry_lookahead:inst25
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_flipsign:inst17|16bit_fulladder:inst3|2bit_BCLA:inst5
+Cout <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+G0 => inst7.IN0
+G0 => inst.IN0
+P0 => inst6.IN0
+P0 => inst8.IN0
+Cin => inst6.IN1
+Gout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+G1 => inst2.IN0
+P1 => inst.IN1
+P1 => inst8.IN1
+Pout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_flipsign:inst17|16bit_fulladder:inst3|carry_lookahead:inst26
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_flipsign:inst17|16bit_fulladder:inst3|carry_lookahead:inst27
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_flipsign:inst17|16bit_fulladder:inst3|2bit_BCLA:inst11
+Cout <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+G0 => inst7.IN0
+G0 => inst.IN0
+P0 => inst6.IN0
+P0 => inst8.IN0
+Cin => inst6.IN1
+Gout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+G1 => inst2.IN0
+P1 => inst.IN1
+P1 => inst8.IN1
+Pout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_flipsign:inst17|16bit_fulladder:inst3|2bit_BCLA:inst6
+Cout <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+G0 => inst7.IN0
+G0 => inst.IN0
+P0 => inst6.IN0
+P0 => inst8.IN0
+Cin => inst6.IN1
+Gout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+G1 => inst2.IN0
+P1 => inst.IN1
+P1 => inst8.IN1
+Pout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_flipsign:inst17|16bit_fulladder:inst3|carry_lookahead:inst28
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_flipsign:inst17|16bit_fulladder:inst3|carry_lookahead:inst29
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_flipsign:inst17|16bit_fulladder:inst3|2bit_BCLA:inst7
+Cout <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+G0 => inst7.IN0
+G0 => inst.IN0
+P0 => inst6.IN0
+P0 => inst8.IN0
+Cin => inst6.IN1
+Gout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+G1 => inst2.IN0
+P1 => inst.IN1
+P1 => inst8.IN1
+Pout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_flipsign:inst17|16bit_fulladder:inst3|carry_lookahead:inst30
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_flipsign:inst17|16bit_fulladder:inst3|carry_lookahead:inst31
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|ALU:inst5|16bit_flipsign:inst17|16bit_xor:inst
+out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= inst16.DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= inst17.DB_MAX_OUTPUT_PORT_TYPE
+out[14] <= inst18.DB_MAX_OUTPUT_PORT_TYPE
+out[15] <= inst19.DB_MAX_OUTPUT_PORT_TYPE
+A[0] => inst.IN0
+A[1] => inst1.IN0
+A[2] => inst2.IN0
+A[3] => inst4.IN0
+A[4] => inst8.IN0
+A[5] => inst9.IN0
+A[6] => inst10.IN0
+A[7] => inst11.IN0
+A[8] => inst12.IN0
+A[9] => inst13.IN0
+A[10] => inst14.IN0
+A[11] => inst15.IN0
+A[12] => inst16.IN0
+A[13] => inst17.IN0
+A[14] => inst18.IN0
+A[15] => inst19.IN0
+B[0] => inst.IN1
+B[1] => inst1.IN1
+B[2] => inst2.IN1
+B[3] => inst4.IN1
+B[4] => inst8.IN1
+B[5] => inst9.IN1
+B[6] => inst10.IN1
+B[7] => inst11.IN1
+B[8] => inst12.IN1
+B[9] => inst13.IN1
+B[10] => inst14.IN1
+B[11] => inst15.IN1
+B[12] => inst16.IN1
+B[13] => inst17.IN1
+B[14] => inst18.IN1
+B[15] => inst19.IN1
+
+
+|Machine|ALU:inst5|simplemultiplexor:inst19
+out[0] <= 16bit_or:inst35.out[0]
+out[1] <= 16bit_or:inst35.out[1]
+out[2] <= 16bit_or:inst35.out[2]
+out[3] <= 16bit_or:inst35.out[3]
+out[4] <= 16bit_or:inst35.out[4]
+out[5] <= 16bit_or:inst35.out[5]
+out[6] <= 16bit_or:inst35.out[6]
+out[7] <= 16bit_or:inst35.out[7]
+out[8] <= 16bit_or:inst35.out[8]
+out[9] <= 16bit_or:inst35.out[9]
+out[10] <= 16bit_or:inst35.out[10]
+out[11] <= 16bit_or:inst35.out[11]
+out[12] <= 16bit_or:inst35.out[12]
+out[13] <= 16bit_or:inst35.out[13]
+out[14] <= 16bit_or:inst35.out[14]
+out[15] <= 16bit_or:inst35.out[15]
+In0[0] => 16bit_and:inst18.A[0]
+In0[1] => 16bit_and:inst18.A[1]
+In0[2] => 16bit_and:inst18.A[2]
+In0[3] => 16bit_and:inst18.A[3]
+In0[4] => 16bit_and:inst18.A[4]
+In0[5] => 16bit_and:inst18.A[5]
+In0[6] => 16bit_and:inst18.A[6]
+In0[7] => 16bit_and:inst18.A[7]
+In0[8] => 16bit_and:inst18.A[8]
+In0[9] => 16bit_and:inst18.A[9]
+In0[10] => 16bit_and:inst18.A[10]
+In0[11] => 16bit_and:inst18.A[11]
+In0[12] => 16bit_and:inst18.A[12]
+In0[13] => 16bit_and:inst18.A[13]
+In0[14] => 16bit_and:inst18.A[14]
+In0[15] => 16bit_and:inst18.A[15]
+switch => inst19.IN0
+switch => inst20.IN0
+switch => inst21.IN0
+switch => inst22.IN0
+switch => inst23.IN0
+switch => inst24.IN0
+switch => inst25.IN0
+switch => inst26.IN0
+switch => inst27.IN0
+switch => inst28.IN0
+switch => inst29.IN0
+switch => inst30.IN0
+switch => inst31.IN0
+switch => inst32.IN0
+switch => inst33.IN0
+switch => inst34.IN0
+switch => 16bit_and:inst.B[0]
+switch => 16bit_and:inst.B[1]
+switch => 16bit_and:inst.B[2]
+switch => 16bit_and:inst.B[3]
+switch => 16bit_and:inst.B[4]
+switch => 16bit_and:inst.B[5]
+switch => 16bit_and:inst.B[6]
+switch => 16bit_and:inst.B[7]
+switch => 16bit_and:inst.B[8]
+switch => 16bit_and:inst.B[9]
+switch => 16bit_and:inst.B[10]
+switch => 16bit_and:inst.B[11]
+switch => 16bit_and:inst.B[12]
+switch => 16bit_and:inst.B[13]
+switch => 16bit_and:inst.B[14]
+switch => 16bit_and:inst.B[15]
+In1[0] => 16bit_and:inst.A[0]
+In1[1] => 16bit_and:inst.A[1]
+In1[2] => 16bit_and:inst.A[2]
+In1[3] => 16bit_and:inst.A[3]
+In1[4] => 16bit_and:inst.A[4]
+In1[5] => 16bit_and:inst.A[5]
+In1[6] => 16bit_and:inst.A[6]
+In1[7] => 16bit_and:inst.A[7]
+In1[8] => 16bit_and:inst.A[8]
+In1[9] => 16bit_and:inst.A[9]
+In1[10] => 16bit_and:inst.A[10]
+In1[11] => 16bit_and:inst.A[11]
+In1[12] => 16bit_and:inst.A[12]
+In1[13] => 16bit_and:inst.A[13]
+In1[14] => 16bit_and:inst.A[14]
+In1[15] => 16bit_and:inst.A[15]
+
+
+|Machine|ALU:inst5|simplemultiplexor:inst19|16bit_or:inst35
+out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+out[14] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+out[15] <= inst16.DB_MAX_OUTPUT_PORT_TYPE
+B[0] => inst.IN0
+B[1] => inst1.IN0
+B[2] => inst2.IN0
+B[3] => inst3.IN0
+B[4] => inst4.IN0
+B[5] => inst5.IN0
+B[6] => inst6.IN0
+B[7] => inst7.IN0
+B[8] => inst8.IN0
+B[9] => inst9.IN0
+B[10] => inst10.IN0
+B[11] => inst11.IN0
+B[12] => inst12.IN0
+B[13] => inst13.IN0
+B[14] => inst14.IN0
+B[15] => inst16.IN0
+A[0] => inst.IN1
+A[1] => inst1.IN1
+A[2] => inst2.IN1
+A[3] => inst3.IN1
+A[4] => inst4.IN1
+A[5] => inst5.IN1
+A[6] => inst6.IN1
+A[7] => inst7.IN1
+A[8] => inst8.IN1
+A[9] => inst9.IN1
+A[10] => inst10.IN1
+A[11] => inst11.IN1
+A[12] => inst12.IN1
+A[13] => inst13.IN1
+A[14] => inst14.IN1
+A[15] => inst16.IN1
+
+
+|Machine|ALU:inst5|simplemultiplexor:inst19|16bit_and:inst18
+out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+out[14] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+out[15] <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+A[0] => inst0.IN0
+A[1] => inst1.IN0
+A[2] => inst2.IN0
+A[3] => inst3.IN0
+A[4] => inst4.IN0
+A[5] => inst5.IN0
+A[6] => inst6.IN0
+A[7] => inst7.IN0
+A[8] => inst8.IN0
+A[9] => inst9.IN0
+A[10] => inst10.IN0
+A[11] => inst11.IN0
+A[12] => inst12.IN0
+A[13] => inst13.IN0
+A[14] => inst14.IN0
+A[15] => inst15.IN0
+B[0] => inst0.IN1
+B[1] => inst1.IN1
+B[2] => inst2.IN1
+B[3] => inst3.IN1
+B[4] => inst4.IN1
+B[5] => inst5.IN1
+B[6] => inst6.IN1
+B[7] => inst7.IN1
+B[8] => inst8.IN1
+B[9] => inst9.IN1
+B[10] => inst10.IN1
+B[11] => inst11.IN1
+B[12] => inst12.IN1
+B[13] => inst13.IN1
+B[14] => inst14.IN1
+B[15] => inst15.IN1
+
+
+|Machine|ALU:inst5|simplemultiplexor:inst19|16bit_and:inst
+out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+out[14] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+out[15] <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+A[0] => inst0.IN0
+A[1] => inst1.IN0
+A[2] => inst2.IN0
+A[3] => inst3.IN0
+A[4] => inst4.IN0
+A[5] => inst5.IN0
+A[6] => inst6.IN0
+A[7] => inst7.IN0
+A[8] => inst8.IN0
+A[9] => inst9.IN0
+A[10] => inst10.IN0
+A[11] => inst11.IN0
+A[12] => inst12.IN0
+A[13] => inst13.IN0
+A[14] => inst14.IN0
+A[15] => inst15.IN0
+B[0] => inst0.IN1
+B[1] => inst1.IN1
+B[2] => inst2.IN1
+B[3] => inst3.IN1
+B[4] => inst4.IN1
+B[5] => inst5.IN1
+B[6] => inst6.IN1
+B[7] => inst7.IN1
+B[8] => inst8.IN1
+B[9] => inst9.IN1
+B[10] => inst10.IN1
+B[11] => inst11.IN1
+B[12] => inst12.IN1
+B[13] => inst13.IN1
+B[14] => inst14.IN1
+B[15] => inst15.IN1
+
+
+|Machine|ALU:inst5|16bit_and:inst0
+out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+out[14] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+out[15] <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+A[0] => inst0.IN0
+A[1] => inst1.IN0
+A[2] => inst2.IN0
+A[3] => inst3.IN0
+A[4] => inst4.IN0
+A[5] => inst5.IN0
+A[6] => inst6.IN0
+A[7] => inst7.IN0
+A[8] => inst8.IN0
+A[9] => inst9.IN0
+A[10] => inst10.IN0
+A[11] => inst11.IN0
+A[12] => inst12.IN0
+A[13] => inst13.IN0
+A[14] => inst14.IN0
+A[15] => inst15.IN0
+B[0] => inst0.IN1
+B[1] => inst1.IN1
+B[2] => inst2.IN1
+B[3] => inst3.IN1
+B[4] => inst4.IN1
+B[5] => inst5.IN1
+B[6] => inst6.IN1
+B[7] => inst7.IN1
+B[8] => inst8.IN1
+B[9] => inst9.IN1
+B[10] => inst10.IN1
+B[11] => inst11.IN1
+B[12] => inst12.IN1
+B[13] => inst13.IN1
+B[14] => inst14.IN1
+B[15] => inst15.IN1
+
+
+|Machine|ALU:inst5|16bit_or:inst3
+out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+out[14] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+out[15] <= inst16.DB_MAX_OUTPUT_PORT_TYPE
+B[0] => inst.IN0
+B[1] => inst1.IN0
+B[2] => inst2.IN0
+B[3] => inst3.IN0
+B[4] => inst4.IN0
+B[5] => inst5.IN0
+B[6] => inst6.IN0
+B[7] => inst7.IN0
+B[8] => inst8.IN0
+B[9] => inst9.IN0
+B[10] => inst10.IN0
+B[11] => inst11.IN0
+B[12] => inst12.IN0
+B[13] => inst13.IN0
+B[14] => inst14.IN0
+B[15] => inst16.IN0
+A[0] => inst.IN1
+A[1] => inst1.IN1
+A[2] => inst2.IN1
+A[3] => inst3.IN1
+A[4] => inst4.IN1
+A[5] => inst5.IN1
+A[6] => inst6.IN1
+A[7] => inst7.IN1
+A[8] => inst8.IN1
+A[9] => inst9.IN1
+A[10] => inst10.IN1
+A[11] => inst11.IN1
+A[12] => inst12.IN1
+A[13] => inst13.IN1
+A[14] => inst14.IN1
+A[15] => inst16.IN1
+
+
+|Machine|ALU:inst5|simplemultiplexor:inst22
+out[0] <= 16bit_or:inst35.out[0]
+out[1] <= 16bit_or:inst35.out[1]
+out[2] <= 16bit_or:inst35.out[2]
+out[3] <= 16bit_or:inst35.out[3]
+out[4] <= 16bit_or:inst35.out[4]
+out[5] <= 16bit_or:inst35.out[5]
+out[6] <= 16bit_or:inst35.out[6]
+out[7] <= 16bit_or:inst35.out[7]
+out[8] <= 16bit_or:inst35.out[8]
+out[9] <= 16bit_or:inst35.out[9]
+out[10] <= 16bit_or:inst35.out[10]
+out[11] <= 16bit_or:inst35.out[11]
+out[12] <= 16bit_or:inst35.out[12]
+out[13] <= 16bit_or:inst35.out[13]
+out[14] <= 16bit_or:inst35.out[14]
+out[15] <= 16bit_or:inst35.out[15]
+In0[0] => 16bit_and:inst18.A[0]
+In0[1] => 16bit_and:inst18.A[1]
+In0[2] => 16bit_and:inst18.A[2]
+In0[3] => 16bit_and:inst18.A[3]
+In0[4] => 16bit_and:inst18.A[4]
+In0[5] => 16bit_and:inst18.A[5]
+In0[6] => 16bit_and:inst18.A[6]
+In0[7] => 16bit_and:inst18.A[7]
+In0[8] => 16bit_and:inst18.A[8]
+In0[9] => 16bit_and:inst18.A[9]
+In0[10] => 16bit_and:inst18.A[10]
+In0[11] => 16bit_and:inst18.A[11]
+In0[12] => 16bit_and:inst18.A[12]
+In0[13] => 16bit_and:inst18.A[13]
+In0[14] => 16bit_and:inst18.A[14]
+In0[15] => 16bit_and:inst18.A[15]
+switch => inst19.IN0
+switch => inst20.IN0
+switch => inst21.IN0
+switch => inst22.IN0
+switch => inst23.IN0
+switch => inst24.IN0
+switch => inst25.IN0
+switch => inst26.IN0
+switch => inst27.IN0
+switch => inst28.IN0
+switch => inst29.IN0
+switch => inst30.IN0
+switch => inst31.IN0
+switch => inst32.IN0
+switch => inst33.IN0
+switch => inst34.IN0
+switch => 16bit_and:inst.B[0]
+switch => 16bit_and:inst.B[1]
+switch => 16bit_and:inst.B[2]
+switch => 16bit_and:inst.B[3]
+switch => 16bit_and:inst.B[4]
+switch => 16bit_and:inst.B[5]
+switch => 16bit_and:inst.B[6]
+switch => 16bit_and:inst.B[7]
+switch => 16bit_and:inst.B[8]
+switch => 16bit_and:inst.B[9]
+switch => 16bit_and:inst.B[10]
+switch => 16bit_and:inst.B[11]
+switch => 16bit_and:inst.B[12]
+switch => 16bit_and:inst.B[13]
+switch => 16bit_and:inst.B[14]
+switch => 16bit_and:inst.B[15]
+In1[0] => 16bit_and:inst.A[0]
+In1[1] => 16bit_and:inst.A[1]
+In1[2] => 16bit_and:inst.A[2]
+In1[3] => 16bit_and:inst.A[3]
+In1[4] => 16bit_and:inst.A[4]
+In1[5] => 16bit_and:inst.A[5]
+In1[6] => 16bit_and:inst.A[6]
+In1[7] => 16bit_and:inst.A[7]
+In1[8] => 16bit_and:inst.A[8]
+In1[9] => 16bit_and:inst.A[9]
+In1[10] => 16bit_and:inst.A[10]
+In1[11] => 16bit_and:inst.A[11]
+In1[12] => 16bit_and:inst.A[12]
+In1[13] => 16bit_and:inst.A[13]
+In1[14] => 16bit_and:inst.A[14]
+In1[15] => 16bit_and:inst.A[15]
+
+
+|Machine|ALU:inst5|simplemultiplexor:inst22|16bit_or:inst35
+out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+out[14] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+out[15] <= inst16.DB_MAX_OUTPUT_PORT_TYPE
+B[0] => inst.IN0
+B[1] => inst1.IN0
+B[2] => inst2.IN0
+B[3] => inst3.IN0
+B[4] => inst4.IN0
+B[5] => inst5.IN0
+B[6] => inst6.IN0
+B[7] => inst7.IN0
+B[8] => inst8.IN0
+B[9] => inst9.IN0
+B[10] => inst10.IN0
+B[11] => inst11.IN0
+B[12] => inst12.IN0
+B[13] => inst13.IN0
+B[14] => inst14.IN0
+B[15] => inst16.IN0
+A[0] => inst.IN1
+A[1] => inst1.IN1
+A[2] => inst2.IN1
+A[3] => inst3.IN1
+A[4] => inst4.IN1
+A[5] => inst5.IN1
+A[6] => inst6.IN1
+A[7] => inst7.IN1
+A[8] => inst8.IN1
+A[9] => inst9.IN1
+A[10] => inst10.IN1
+A[11] => inst11.IN1
+A[12] => inst12.IN1
+A[13] => inst13.IN1
+A[14] => inst14.IN1
+A[15] => inst16.IN1
+
+
+|Machine|ALU:inst5|simplemultiplexor:inst22|16bit_and:inst18
+out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+out[14] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+out[15] <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+A[0] => inst0.IN0
+A[1] => inst1.IN0
+A[2] => inst2.IN0
+A[3] => inst3.IN0
+A[4] => inst4.IN0
+A[5] => inst5.IN0
+A[6] => inst6.IN0
+A[7] => inst7.IN0
+A[8] => inst8.IN0
+A[9] => inst9.IN0
+A[10] => inst10.IN0
+A[11] => inst11.IN0
+A[12] => inst12.IN0
+A[13] => inst13.IN0
+A[14] => inst14.IN0
+A[15] => inst15.IN0
+B[0] => inst0.IN1
+B[1] => inst1.IN1
+B[2] => inst2.IN1
+B[3] => inst3.IN1
+B[4] => inst4.IN1
+B[5] => inst5.IN1
+B[6] => inst6.IN1
+B[7] => inst7.IN1
+B[8] => inst8.IN1
+B[9] => inst9.IN1
+B[10] => inst10.IN1
+B[11] => inst11.IN1
+B[12] => inst12.IN1
+B[13] => inst13.IN1
+B[14] => inst14.IN1
+B[15] => inst15.IN1
+
+
+|Machine|ALU:inst5|simplemultiplexor:inst22|16bit_and:inst
+out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+out[14] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+out[15] <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+A[0] => inst0.IN0
+A[1] => inst1.IN0
+A[2] => inst2.IN0
+A[3] => inst3.IN0
+A[4] => inst4.IN0
+A[5] => inst5.IN0
+A[6] => inst6.IN0
+A[7] => inst7.IN0
+A[8] => inst8.IN0
+A[9] => inst9.IN0
+A[10] => inst10.IN0
+A[11] => inst11.IN0
+A[12] => inst12.IN0
+A[13] => inst13.IN0
+A[14] => inst14.IN0
+A[15] => inst15.IN0
+B[0] => inst0.IN1
+B[1] => inst1.IN1
+B[2] => inst2.IN1
+B[3] => inst3.IN1
+B[4] => inst4.IN1
+B[5] => inst5.IN1
+B[6] => inst6.IN1
+B[7] => inst7.IN1
+B[8] => inst8.IN1
+B[9] => inst9.IN1
+B[10] => inst10.IN1
+B[11] => inst11.IN1
+B[12] => inst12.IN1
+B[13] => inst13.IN1
+B[14] => inst14.IN1
+B[15] => inst15.IN1
+
+
+|Machine|ALU:inst5|simplemultiplexor:inst20
+out[0] <= 16bit_or:inst35.out[0]
+out[1] <= 16bit_or:inst35.out[1]
+out[2] <= 16bit_or:inst35.out[2]
+out[3] <= 16bit_or:inst35.out[3]
+out[4] <= 16bit_or:inst35.out[4]
+out[5] <= 16bit_or:inst35.out[5]
+out[6] <= 16bit_or:inst35.out[6]
+out[7] <= 16bit_or:inst35.out[7]
+out[8] <= 16bit_or:inst35.out[8]
+out[9] <= 16bit_or:inst35.out[9]
+out[10] <= 16bit_or:inst35.out[10]
+out[11] <= 16bit_or:inst35.out[11]
+out[12] <= 16bit_or:inst35.out[12]
+out[13] <= 16bit_or:inst35.out[13]
+out[14] <= 16bit_or:inst35.out[14]
+out[15] <= 16bit_or:inst35.out[15]
+In0[0] => 16bit_and:inst18.A[0]
+In0[1] => 16bit_and:inst18.A[1]
+In0[2] => 16bit_and:inst18.A[2]
+In0[3] => 16bit_and:inst18.A[3]
+In0[4] => 16bit_and:inst18.A[4]
+In0[5] => 16bit_and:inst18.A[5]
+In0[6] => 16bit_and:inst18.A[6]
+In0[7] => 16bit_and:inst18.A[7]
+In0[8] => 16bit_and:inst18.A[8]
+In0[9] => 16bit_and:inst18.A[9]
+In0[10] => 16bit_and:inst18.A[10]
+In0[11] => 16bit_and:inst18.A[11]
+In0[12] => 16bit_and:inst18.A[12]
+In0[13] => 16bit_and:inst18.A[13]
+In0[14] => 16bit_and:inst18.A[14]
+In0[15] => 16bit_and:inst18.A[15]
+switch => inst19.IN0
+switch => inst20.IN0
+switch => inst21.IN0
+switch => inst22.IN0
+switch => inst23.IN0
+switch => inst24.IN0
+switch => inst25.IN0
+switch => inst26.IN0
+switch => inst27.IN0
+switch => inst28.IN0
+switch => inst29.IN0
+switch => inst30.IN0
+switch => inst31.IN0
+switch => inst32.IN0
+switch => inst33.IN0
+switch => inst34.IN0
+switch => 16bit_and:inst.B[0]
+switch => 16bit_and:inst.B[1]
+switch => 16bit_and:inst.B[2]
+switch => 16bit_and:inst.B[3]
+switch => 16bit_and:inst.B[4]
+switch => 16bit_and:inst.B[5]
+switch => 16bit_and:inst.B[6]
+switch => 16bit_and:inst.B[7]
+switch => 16bit_and:inst.B[8]
+switch => 16bit_and:inst.B[9]
+switch => 16bit_and:inst.B[10]
+switch => 16bit_and:inst.B[11]
+switch => 16bit_and:inst.B[12]
+switch => 16bit_and:inst.B[13]
+switch => 16bit_and:inst.B[14]
+switch => 16bit_and:inst.B[15]
+In1[0] => 16bit_and:inst.A[0]
+In1[1] => 16bit_and:inst.A[1]
+In1[2] => 16bit_and:inst.A[2]
+In1[3] => 16bit_and:inst.A[3]
+In1[4] => 16bit_and:inst.A[4]
+In1[5] => 16bit_and:inst.A[5]
+In1[6] => 16bit_and:inst.A[6]
+In1[7] => 16bit_and:inst.A[7]
+In1[8] => 16bit_and:inst.A[8]
+In1[9] => 16bit_and:inst.A[9]
+In1[10] => 16bit_and:inst.A[10]
+In1[11] => 16bit_and:inst.A[11]
+In1[12] => 16bit_and:inst.A[12]
+In1[13] => 16bit_and:inst.A[13]
+In1[14] => 16bit_and:inst.A[14]
+In1[15] => 16bit_and:inst.A[15]
+
+
+|Machine|ALU:inst5|simplemultiplexor:inst20|16bit_or:inst35
+out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+out[14] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+out[15] <= inst16.DB_MAX_OUTPUT_PORT_TYPE
+B[0] => inst.IN0
+B[1] => inst1.IN0
+B[2] => inst2.IN0
+B[3] => inst3.IN0
+B[4] => inst4.IN0
+B[5] => inst5.IN0
+B[6] => inst6.IN0
+B[7] => inst7.IN0
+B[8] => inst8.IN0
+B[9] => inst9.IN0
+B[10] => inst10.IN0
+B[11] => inst11.IN0
+B[12] => inst12.IN0
+B[13] => inst13.IN0
+B[14] => inst14.IN0
+B[15] => inst16.IN0
+A[0] => inst.IN1
+A[1] => inst1.IN1
+A[2] => inst2.IN1
+A[3] => inst3.IN1
+A[4] => inst4.IN1
+A[5] => inst5.IN1
+A[6] => inst6.IN1
+A[7] => inst7.IN1
+A[8] => inst8.IN1
+A[9] => inst9.IN1
+A[10] => inst10.IN1
+A[11] => inst11.IN1
+A[12] => inst12.IN1
+A[13] => inst13.IN1
+A[14] => inst14.IN1
+A[15] => inst16.IN1
+
+
+|Machine|ALU:inst5|simplemultiplexor:inst20|16bit_and:inst18
+out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+out[14] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+out[15] <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+A[0] => inst0.IN0
+A[1] => inst1.IN0
+A[2] => inst2.IN0
+A[3] => inst3.IN0
+A[4] => inst4.IN0
+A[5] => inst5.IN0
+A[6] => inst6.IN0
+A[7] => inst7.IN0
+A[8] => inst8.IN0
+A[9] => inst9.IN0
+A[10] => inst10.IN0
+A[11] => inst11.IN0
+A[12] => inst12.IN0
+A[13] => inst13.IN0
+A[14] => inst14.IN0
+A[15] => inst15.IN0
+B[0] => inst0.IN1
+B[1] => inst1.IN1
+B[2] => inst2.IN1
+B[3] => inst3.IN1
+B[4] => inst4.IN1
+B[5] => inst5.IN1
+B[6] => inst6.IN1
+B[7] => inst7.IN1
+B[8] => inst8.IN1
+B[9] => inst9.IN1
+B[10] => inst10.IN1
+B[11] => inst11.IN1
+B[12] => inst12.IN1
+B[13] => inst13.IN1
+B[14] => inst14.IN1
+B[15] => inst15.IN1
+
+
+|Machine|ALU:inst5|simplemultiplexor:inst20|16bit_and:inst
+out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+out[14] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+out[15] <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+A[0] => inst0.IN0
+A[1] => inst1.IN0
+A[2] => inst2.IN0
+A[3] => inst3.IN0
+A[4] => inst4.IN0
+A[5] => inst5.IN0
+A[6] => inst6.IN0
+A[7] => inst7.IN0
+A[8] => inst8.IN0
+A[9] => inst9.IN0
+A[10] => inst10.IN0
+A[11] => inst11.IN0
+A[12] => inst12.IN0
+A[13] => inst13.IN0
+A[14] => inst14.IN0
+A[15] => inst15.IN0
+B[0] => inst0.IN1
+B[1] => inst1.IN1
+B[2] => inst2.IN1
+B[3] => inst3.IN1
+B[4] => inst4.IN1
+B[5] => inst5.IN1
+B[6] => inst6.IN1
+B[7] => inst7.IN1
+B[8] => inst8.IN1
+B[9] => inst9.IN1
+B[10] => inst10.IN1
+B[11] => inst11.IN1
+B[12] => inst12.IN1
+B[13] => inst13.IN1
+B[14] => inst14.IN1
+B[15] => inst15.IN1
+
+
+|Machine|ALU:inst5|16bit_xor:inst4
+out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= inst16.DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= inst17.DB_MAX_OUTPUT_PORT_TYPE
+out[14] <= inst18.DB_MAX_OUTPUT_PORT_TYPE
+out[15] <= inst19.DB_MAX_OUTPUT_PORT_TYPE
+A[0] => inst.IN0
+A[1] => inst1.IN0
+A[2] => inst2.IN0
+A[3] => inst4.IN0
+A[4] => inst8.IN0
+A[5] => inst9.IN0
+A[6] => inst10.IN0
+A[7] => inst11.IN0
+A[8] => inst12.IN0
+A[9] => inst13.IN0
+A[10] => inst14.IN0
+A[11] => inst15.IN0
+A[12] => inst16.IN0
+A[13] => inst17.IN0
+A[14] => inst18.IN0
+A[15] => inst19.IN0
+B[0] => inst.IN1
+B[1] => inst1.IN1
+B[2] => inst2.IN1
+B[3] => inst4.IN1
+B[4] => inst8.IN1
+B[5] => inst9.IN1
+B[6] => inst10.IN1
+B[7] => inst11.IN1
+B[8] => inst12.IN1
+B[9] => inst13.IN1
+B[10] => inst14.IN1
+B[11] => inst15.IN1
+B[12] => inst16.IN1
+B[13] => inst17.IN1
+B[14] => inst18.IN1
+B[15] => inst19.IN1
+
+
+|Machine|register:inst3
 out1[0] <= simplemultiplexor:inst109.out[0]
 out1[1] <= simplemultiplexor:inst109.out[1]
 out1[2] <= simplemultiplexor:inst109.out[2]
@@ -654,7 +4102,7 @@ out2[14] <= simplemultiplexor:inst110.out[14]
 out2[15] <= simplemultiplexor:inst110.out[15]
 
 
-|register|simplemultiplexor:inst109
+|Machine|register:inst3|simplemultiplexor:inst109
 out[0] <= 16bit_or:inst35.out[0]
 out[1] <= 16bit_or:inst35.out[1]
 out[2] <= 16bit_or:inst35.out[2]
@@ -737,7 +4185,7 @@ In1[14] => 16bit_and:inst.A[14]
 In1[15] => 16bit_and:inst.A[15]
 
 
-|register|simplemultiplexor:inst109|16bit_or:inst35
+|Machine|register:inst3|simplemultiplexor:inst109|16bit_or:inst35
 out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -788,7 +4236,7 @@ A[14] => inst14.IN1
 A[15] => inst16.IN1
 
 
-|register|simplemultiplexor:inst109|16bit_and:inst18
+|Machine|register:inst3|simplemultiplexor:inst109|16bit_and:inst18
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -839,7 +4287,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst109|16bit_and:inst
+|Machine|register:inst3|simplemultiplexor:inst109|16bit_and:inst
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -890,7 +4338,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst105
+|Machine|register:inst3|simplemultiplexor:inst105
 out[0] <= 16bit_or:inst35.out[0]
 out[1] <= 16bit_or:inst35.out[1]
 out[2] <= 16bit_or:inst35.out[2]
@@ -973,7 +4421,7 @@ In1[14] => 16bit_and:inst.A[14]
 In1[15] => 16bit_and:inst.A[15]
 
 
-|register|simplemultiplexor:inst105|16bit_or:inst35
+|Machine|register:inst3|simplemultiplexor:inst105|16bit_or:inst35
 out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -1024,7 +4472,7 @@ A[14] => inst14.IN1
 A[15] => inst16.IN1
 
 
-|register|simplemultiplexor:inst105|16bit_and:inst18
+|Machine|register:inst3|simplemultiplexor:inst105|16bit_and:inst18
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -1075,7 +4523,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst105|16bit_and:inst
+|Machine|register:inst3|simplemultiplexor:inst105|16bit_and:inst
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -1126,7 +4574,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst97
+|Machine|register:inst3|simplemultiplexor:inst97
 out[0] <= 16bit_or:inst35.out[0]
 out[1] <= 16bit_or:inst35.out[1]
 out[2] <= 16bit_or:inst35.out[2]
@@ -1209,7 +4657,7 @@ In1[14] => 16bit_and:inst.A[14]
 In1[15] => 16bit_and:inst.A[15]
 
 
-|register|simplemultiplexor:inst97|16bit_or:inst35
+|Machine|register:inst3|simplemultiplexor:inst97|16bit_or:inst35
 out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -1260,7 +4708,7 @@ A[14] => inst14.IN1
 A[15] => inst16.IN1
 
 
-|register|simplemultiplexor:inst97|16bit_and:inst18
+|Machine|register:inst3|simplemultiplexor:inst97|16bit_and:inst18
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -1311,7 +4759,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst97|16bit_and:inst
+|Machine|register:inst3|simplemultiplexor:inst97|16bit_and:inst
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -1362,7 +4810,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst81
+|Machine|register:inst3|simplemultiplexor:inst81
 out[0] <= 16bit_or:inst35.out[0]
 out[1] <= 16bit_or:inst35.out[1]
 out[2] <= 16bit_or:inst35.out[2]
@@ -1445,7 +4893,7 @@ In1[14] => 16bit_and:inst.A[14]
 In1[15] => 16bit_and:inst.A[15]
 
 
-|register|simplemultiplexor:inst81|16bit_or:inst35
+|Machine|register:inst3|simplemultiplexor:inst81|16bit_or:inst35
 out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -1496,7 +4944,7 @@ A[14] => inst14.IN1
 A[15] => inst16.IN1
 
 
-|register|simplemultiplexor:inst81|16bit_and:inst18
+|Machine|register:inst3|simplemultiplexor:inst81|16bit_and:inst18
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -1547,7 +4995,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst81|16bit_and:inst
+|Machine|register:inst3|simplemultiplexor:inst81|16bit_and:inst
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -1598,7 +5046,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst32
+|Machine|register:inst3|simplemultiplexor:inst32
 out[0] <= 16bit_or:inst35.out[0]
 out[1] <= 16bit_or:inst35.out[1]
 out[2] <= 16bit_or:inst35.out[2]
@@ -1681,7 +5129,7 @@ In1[14] => 16bit_and:inst.A[14]
 In1[15] => 16bit_and:inst.A[15]
 
 
-|register|simplemultiplexor:inst32|16bit_or:inst35
+|Machine|register:inst3|simplemultiplexor:inst32|16bit_or:inst35
 out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -1732,7 +5180,7 @@ A[14] => inst14.IN1
 A[15] => inst16.IN1
 
 
-|register|simplemultiplexor:inst32|16bit_and:inst18
+|Machine|register:inst3|simplemultiplexor:inst32|16bit_and:inst18
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -1783,7 +5231,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst32|16bit_and:inst
+|Machine|register:inst3|simplemultiplexor:inst32|16bit_and:inst
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -1834,7 +5282,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|16bit_register_1part:inst0
+|Machine|register:inst3|16bit_register_1part:inst0
 read[0] <= inst[0].DB_MAX_OUTPUT_PORT_TYPE
 read[1] <= inst[1].DB_MAX_OUTPUT_PORT_TYPE
 read[2] <= inst[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -1917,7 +5365,7 @@ write[14] => inst[14].DATAIN
 write[15] => inst[15].DATAIN
 
 
-|register|select_convayer:inst111
+|Machine|register:inst3|select_convayer:inst111
 out0 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 In => inst2.IN0
 In => inst.IN0
@@ -1926,7 +5374,7 @@ select => inst.IN1
 out1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|register|select_convayer:inst127
+|Machine|register:inst3|select_convayer:inst127
 out0 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 In => inst2.IN0
 In => inst.IN0
@@ -1935,7 +5383,7 @@ select => inst.IN1
 out1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|register|select_convayer:inst135
+|Machine|register:inst3|select_convayer:inst135
 out0 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 In => inst2.IN0
 In => inst.IN0
@@ -1944,7 +5392,7 @@ select => inst.IN1
 out1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|register|select_convayer:inst139
+|Machine|register:inst3|select_convayer:inst139
 out0 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 In => inst2.IN0
 In => inst.IN0
@@ -1953,7 +5401,7 @@ select => inst.IN1
 out1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|register|select_convayer:inst141
+|Machine|register:inst3|select_convayer:inst141
 out0 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 In => inst2.IN0
 In => inst.IN0
@@ -1962,7 +5410,7 @@ select => inst.IN1
 out1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|register|16bit_register_1part:inst1
+|Machine|register:inst3|16bit_register_1part:inst1
 read[0] <= inst[0].DB_MAX_OUTPUT_PORT_TYPE
 read[1] <= inst[1].DB_MAX_OUTPUT_PORT_TYPE
 read[2] <= inst[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -2045,7 +5493,7 @@ write[14] => inst[14].DATAIN
 write[15] => inst[15].DATAIN
 
 
-|register|simplemultiplexor:inst320
+|Machine|register:inst3|simplemultiplexor:inst320
 out[0] <= 16bit_or:inst35.out[0]
 out[1] <= 16bit_or:inst35.out[1]
 out[2] <= 16bit_or:inst35.out[2]
@@ -2128,7 +5576,7 @@ In1[14] => 16bit_and:inst.A[14]
 In1[15] => 16bit_and:inst.A[15]
 
 
-|register|simplemultiplexor:inst320|16bit_or:inst35
+|Machine|register:inst3|simplemultiplexor:inst320|16bit_or:inst35
 out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -2179,7 +5627,7 @@ A[14] => inst14.IN1
 A[15] => inst16.IN1
 
 
-|register|simplemultiplexor:inst320|16bit_and:inst18
+|Machine|register:inst3|simplemultiplexor:inst320|16bit_and:inst18
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -2230,7 +5678,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst320|16bit_and:inst
+|Machine|register:inst3|simplemultiplexor:inst320|16bit_and:inst
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -2281,7 +5729,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|16bit_register_1part:inst2
+|Machine|register:inst3|16bit_register_1part:inst2
 read[0] <= inst[0].DB_MAX_OUTPUT_PORT_TYPE
 read[1] <= inst[1].DB_MAX_OUTPUT_PORT_TYPE
 read[2] <= inst[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -2364,7 +5812,7 @@ write[14] => inst[14].DATAIN
 write[15] => inst[15].DATAIN
 
 
-|register|select_convayer:inst112
+|Machine|register:inst3|select_convayer:inst112
 out0 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 In => inst2.IN0
 In => inst.IN0
@@ -2373,7 +5821,7 @@ select => inst.IN1
 out1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|register|16bit_register_1part:inst3
+|Machine|register:inst3|16bit_register_1part:inst3
 read[0] <= inst[0].DB_MAX_OUTPUT_PORT_TYPE
 read[1] <= inst[1].DB_MAX_OUTPUT_PORT_TYPE
 read[2] <= inst[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -2456,7 +5904,7 @@ write[14] => inst[14].DATAIN
 write[15] => inst[15].DATAIN
 
 
-|register|simplemultiplexor:inst83
+|Machine|register:inst3|simplemultiplexor:inst83
 out[0] <= 16bit_or:inst35.out[0]
 out[1] <= 16bit_or:inst35.out[1]
 out[2] <= 16bit_or:inst35.out[2]
@@ -2539,7 +5987,7 @@ In1[14] => 16bit_and:inst.A[14]
 In1[15] => 16bit_and:inst.A[15]
 
 
-|register|simplemultiplexor:inst83|16bit_or:inst35
+|Machine|register:inst3|simplemultiplexor:inst83|16bit_or:inst35
 out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -2590,7 +6038,7 @@ A[14] => inst14.IN1
 A[15] => inst16.IN1
 
 
-|register|simplemultiplexor:inst83|16bit_and:inst18
+|Machine|register:inst3|simplemultiplexor:inst83|16bit_and:inst18
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -2641,7 +6089,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst83|16bit_and:inst
+|Machine|register:inst3|simplemultiplexor:inst83|16bit_and:inst
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -2692,7 +6140,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst33
+|Machine|register:inst3|simplemultiplexor:inst33
 out[0] <= 16bit_or:inst35.out[0]
 out[1] <= 16bit_or:inst35.out[1]
 out[2] <= 16bit_or:inst35.out[2]
@@ -2775,7 +6223,7 @@ In1[14] => 16bit_and:inst.A[14]
 In1[15] => 16bit_and:inst.A[15]
 
 
-|register|simplemultiplexor:inst33|16bit_or:inst35
+|Machine|register:inst3|simplemultiplexor:inst33|16bit_or:inst35
 out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -2826,7 +6274,7 @@ A[14] => inst14.IN1
 A[15] => inst16.IN1
 
 
-|register|simplemultiplexor:inst33|16bit_and:inst18
+|Machine|register:inst3|simplemultiplexor:inst33|16bit_and:inst18
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -2877,7 +6325,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst33|16bit_and:inst
+|Machine|register:inst3|simplemultiplexor:inst33|16bit_and:inst
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -2928,7 +6376,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|16bit_register_1part:inst4
+|Machine|register:inst3|16bit_register_1part:inst4
 read[0] <= inst[0].DB_MAX_OUTPUT_PORT_TYPE
 read[1] <= inst[1].DB_MAX_OUTPUT_PORT_TYPE
 read[2] <= inst[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -3011,7 +6459,7 @@ write[14] => inst[14].DATAIN
 write[15] => inst[15].DATAIN
 
 
-|register|select_convayer:inst113
+|Machine|register:inst3|select_convayer:inst113
 out0 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 In => inst2.IN0
 In => inst.IN0
@@ -3020,7 +6468,7 @@ select => inst.IN1
 out1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|register|select_convayer:inst128
+|Machine|register:inst3|select_convayer:inst128
 out0 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 In => inst2.IN0
 In => inst.IN0
@@ -3029,7 +6477,7 @@ select => inst.IN1
 out1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|register|16bit_register_1part:inst5
+|Machine|register:inst3|16bit_register_1part:inst5
 read[0] <= inst[0].DB_MAX_OUTPUT_PORT_TYPE
 read[1] <= inst[1].DB_MAX_OUTPUT_PORT_TYPE
 read[2] <= inst[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -3112,7 +6560,7 @@ write[14] => inst[14].DATAIN
 write[15] => inst[15].DATAIN
 
 
-|register|simplemultiplexor:inst40
+|Machine|register:inst3|simplemultiplexor:inst40
 out[0] <= 16bit_or:inst35.out[0]
 out[1] <= 16bit_or:inst35.out[1]
 out[2] <= 16bit_or:inst35.out[2]
@@ -3195,7 +6643,7 @@ In1[14] => 16bit_and:inst.A[14]
 In1[15] => 16bit_and:inst.A[15]
 
 
-|register|simplemultiplexor:inst40|16bit_or:inst35
+|Machine|register:inst3|simplemultiplexor:inst40|16bit_or:inst35
 out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -3246,7 +6694,7 @@ A[14] => inst14.IN1
 A[15] => inst16.IN1
 
 
-|register|simplemultiplexor:inst40|16bit_and:inst18
+|Machine|register:inst3|simplemultiplexor:inst40|16bit_and:inst18
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -3297,7 +6745,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst40|16bit_and:inst
+|Machine|register:inst3|simplemultiplexor:inst40|16bit_and:inst
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -3348,7 +6796,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|16bit_register_1part:inst6
+|Machine|register:inst3|16bit_register_1part:inst6
 read[0] <= inst[0].DB_MAX_OUTPUT_PORT_TYPE
 read[1] <= inst[1].DB_MAX_OUTPUT_PORT_TYPE
 read[2] <= inst[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -3431,7 +6879,7 @@ write[14] => inst[14].DATAIN
 write[15] => inst[15].DATAIN
 
 
-|register|select_convayer:inst114
+|Machine|register:inst3|select_convayer:inst114
 out0 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 In => inst2.IN0
 In => inst.IN0
@@ -3440,7 +6888,7 @@ select => inst.IN1
 out1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|register|16bit_register_1part:inst7
+|Machine|register:inst3|16bit_register_1part:inst7
 read[0] <= inst[0].DB_MAX_OUTPUT_PORT_TYPE
 read[1] <= inst[1].DB_MAX_OUTPUT_PORT_TYPE
 read[2] <= inst[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -3523,7 +6971,7 @@ write[14] => inst[14].DATAIN
 write[15] => inst[15].DATAIN
 
 
-|register|simplemultiplexor:inst99
+|Machine|register:inst3|simplemultiplexor:inst99
 out[0] <= 16bit_or:inst35.out[0]
 out[1] <= 16bit_or:inst35.out[1]
 out[2] <= 16bit_or:inst35.out[2]
@@ -3606,7 +7054,7 @@ In1[14] => 16bit_and:inst.A[14]
 In1[15] => 16bit_and:inst.A[15]
 
 
-|register|simplemultiplexor:inst99|16bit_or:inst35
+|Machine|register:inst3|simplemultiplexor:inst99|16bit_or:inst35
 out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -3657,7 +7105,7 @@ A[14] => inst14.IN1
 A[15] => inst16.IN1
 
 
-|register|simplemultiplexor:inst99|16bit_and:inst18
+|Machine|register:inst3|simplemultiplexor:inst99|16bit_and:inst18
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -3708,7 +7156,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst99|16bit_and:inst
+|Machine|register:inst3|simplemultiplexor:inst99|16bit_and:inst
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -3759,7 +7207,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst85
+|Machine|register:inst3|simplemultiplexor:inst85
 out[0] <= 16bit_or:inst35.out[0]
 out[1] <= 16bit_or:inst35.out[1]
 out[2] <= 16bit_or:inst35.out[2]
@@ -3842,7 +7290,7 @@ In1[14] => 16bit_and:inst.A[14]
 In1[15] => 16bit_and:inst.A[15]
 
 
-|register|simplemultiplexor:inst85|16bit_or:inst35
+|Machine|register:inst3|simplemultiplexor:inst85|16bit_or:inst35
 out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -3893,7 +7341,7 @@ A[14] => inst14.IN1
 A[15] => inst16.IN1
 
 
-|register|simplemultiplexor:inst85|16bit_and:inst18
+|Machine|register:inst3|simplemultiplexor:inst85|16bit_and:inst18
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -3944,7 +7392,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst85|16bit_and:inst
+|Machine|register:inst3|simplemultiplexor:inst85|16bit_and:inst
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -3995,7 +7443,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst34
+|Machine|register:inst3|simplemultiplexor:inst34
 out[0] <= 16bit_or:inst35.out[0]
 out[1] <= 16bit_or:inst35.out[1]
 out[2] <= 16bit_or:inst35.out[2]
@@ -4078,7 +7526,7 @@ In1[14] => 16bit_and:inst.A[14]
 In1[15] => 16bit_and:inst.A[15]
 
 
-|register|simplemultiplexor:inst34|16bit_or:inst35
+|Machine|register:inst3|simplemultiplexor:inst34|16bit_or:inst35
 out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -4129,7 +7577,7 @@ A[14] => inst14.IN1
 A[15] => inst16.IN1
 
 
-|register|simplemultiplexor:inst34|16bit_and:inst18
+|Machine|register:inst3|simplemultiplexor:inst34|16bit_and:inst18
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -4180,7 +7628,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst34|16bit_and:inst
+|Machine|register:inst3|simplemultiplexor:inst34|16bit_and:inst
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -4231,7 +7679,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|16bit_register_1part:inst8
+|Machine|register:inst3|16bit_register_1part:inst8
 read[0] <= inst[0].DB_MAX_OUTPUT_PORT_TYPE
 read[1] <= inst[1].DB_MAX_OUTPUT_PORT_TYPE
 read[2] <= inst[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -4314,7 +7762,7 @@ write[14] => inst[14].DATAIN
 write[15] => inst[15].DATAIN
 
 
-|register|select_convayer:inst115
+|Machine|register:inst3|select_convayer:inst115
 out0 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 In => inst2.IN0
 In => inst.IN0
@@ -4323,7 +7771,7 @@ select => inst.IN1
 out1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|register|select_convayer:inst129
+|Machine|register:inst3|select_convayer:inst129
 out0 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 In => inst2.IN0
 In => inst.IN0
@@ -4332,7 +7780,7 @@ select => inst.IN1
 out1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|register|select_convayer:inst136
+|Machine|register:inst3|select_convayer:inst136
 out0 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 In => inst2.IN0
 In => inst.IN0
@@ -4341,7 +7789,7 @@ select => inst.IN1
 out1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|register|16bit_register_1part:inst9
+|Machine|register:inst3|16bit_register_1part:inst9
 read[0] <= inst[0].DB_MAX_OUTPUT_PORT_TYPE
 read[1] <= inst[1].DB_MAX_OUTPUT_PORT_TYPE
 read[2] <= inst[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -4424,7 +7872,7 @@ write[14] => inst[14].DATAIN
 write[15] => inst[15].DATAIN
 
 
-|register|simplemultiplexor:inst41
+|Machine|register:inst3|simplemultiplexor:inst41
 out[0] <= 16bit_or:inst35.out[0]
 out[1] <= 16bit_or:inst35.out[1]
 out[2] <= 16bit_or:inst35.out[2]
@@ -4507,7 +7955,7 @@ In1[14] => 16bit_and:inst.A[14]
 In1[15] => 16bit_and:inst.A[15]
 
 
-|register|simplemultiplexor:inst41|16bit_or:inst35
+|Machine|register:inst3|simplemultiplexor:inst41|16bit_or:inst35
 out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -4558,7 +8006,7 @@ A[14] => inst14.IN1
 A[15] => inst16.IN1
 
 
-|register|simplemultiplexor:inst41|16bit_and:inst18
+|Machine|register:inst3|simplemultiplexor:inst41|16bit_and:inst18
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -4609,7 +8057,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst41|16bit_and:inst
+|Machine|register:inst3|simplemultiplexor:inst41|16bit_and:inst
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -4660,7 +8108,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|16bit_register_1part:inst10
+|Machine|register:inst3|16bit_register_1part:inst10
 read[0] <= inst[0].DB_MAX_OUTPUT_PORT_TYPE
 read[1] <= inst[1].DB_MAX_OUTPUT_PORT_TYPE
 read[2] <= inst[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -4743,7 +8191,7 @@ write[14] => inst[14].DATAIN
 write[15] => inst[15].DATAIN
 
 
-|register|select_convayer:inst116
+|Machine|register:inst3|select_convayer:inst116
 out0 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 In => inst2.IN0
 In => inst.IN0
@@ -4752,7 +8200,7 @@ select => inst.IN1
 out1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|register|16bit_register_1part:inst11
+|Machine|register:inst3|16bit_register_1part:inst11
 read[0] <= inst[0].DB_MAX_OUTPUT_PORT_TYPE
 read[1] <= inst[1].DB_MAX_OUTPUT_PORT_TYPE
 read[2] <= inst[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -4835,7 +8283,7 @@ write[14] => inst[14].DATAIN
 write[15] => inst[15].DATAIN
 
 
-|register|simplemultiplexor:inst87
+|Machine|register:inst3|simplemultiplexor:inst87
 out[0] <= 16bit_or:inst35.out[0]
 out[1] <= 16bit_or:inst35.out[1]
 out[2] <= 16bit_or:inst35.out[2]
@@ -4918,7 +8366,7 @@ In1[14] => 16bit_and:inst.A[14]
 In1[15] => 16bit_and:inst.A[15]
 
 
-|register|simplemultiplexor:inst87|16bit_or:inst35
+|Machine|register:inst3|simplemultiplexor:inst87|16bit_or:inst35
 out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -4969,7 +8417,7 @@ A[14] => inst14.IN1
 A[15] => inst16.IN1
 
 
-|register|simplemultiplexor:inst87|16bit_and:inst18
+|Machine|register:inst3|simplemultiplexor:inst87|16bit_and:inst18
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -5020,7 +8468,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst87|16bit_and:inst
+|Machine|register:inst3|simplemultiplexor:inst87|16bit_and:inst
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -5071,7 +8519,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst35
+|Machine|register:inst3|simplemultiplexor:inst35
 out[0] <= 16bit_or:inst35.out[0]
 out[1] <= 16bit_or:inst35.out[1]
 out[2] <= 16bit_or:inst35.out[2]
@@ -5154,7 +8602,7 @@ In1[14] => 16bit_and:inst.A[14]
 In1[15] => 16bit_and:inst.A[15]
 
 
-|register|simplemultiplexor:inst35|16bit_or:inst35
+|Machine|register:inst3|simplemultiplexor:inst35|16bit_or:inst35
 out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -5205,7 +8653,7 @@ A[14] => inst14.IN1
 A[15] => inst16.IN1
 
 
-|register|simplemultiplexor:inst35|16bit_and:inst18
+|Machine|register:inst3|simplemultiplexor:inst35|16bit_and:inst18
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -5256,7 +8704,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst35|16bit_and:inst
+|Machine|register:inst3|simplemultiplexor:inst35|16bit_and:inst
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -5307,7 +8755,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|16bit_register_1part:inst12
+|Machine|register:inst3|16bit_register_1part:inst12
 read[0] <= inst[0].DB_MAX_OUTPUT_PORT_TYPE
 read[1] <= inst[1].DB_MAX_OUTPUT_PORT_TYPE
 read[2] <= inst[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -5390,7 +8838,7 @@ write[14] => inst[14].DATAIN
 write[15] => inst[15].DATAIN
 
 
-|register|select_convayer:inst117
+|Machine|register:inst3|select_convayer:inst117
 out0 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 In => inst2.IN0
 In => inst.IN0
@@ -5399,7 +8847,7 @@ select => inst.IN1
 out1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|register|select_convayer:inst130
+|Machine|register:inst3|select_convayer:inst130
 out0 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 In => inst2.IN0
 In => inst.IN0
@@ -5408,7 +8856,7 @@ select => inst.IN1
 out1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|register|16bit_register_1part:inst13
+|Machine|register:inst3|16bit_register_1part:inst13
 read[0] <= inst[0].DB_MAX_OUTPUT_PORT_TYPE
 read[1] <= inst[1].DB_MAX_OUTPUT_PORT_TYPE
 read[2] <= inst[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -5491,7 +8939,7 @@ write[14] => inst[14].DATAIN
 write[15] => inst[15].DATAIN
 
 
-|register|simplemultiplexor:inst42
+|Machine|register:inst3|simplemultiplexor:inst42
 out[0] <= 16bit_or:inst35.out[0]
 out[1] <= 16bit_or:inst35.out[1]
 out[2] <= 16bit_or:inst35.out[2]
@@ -5574,7 +9022,7 @@ In1[14] => 16bit_and:inst.A[14]
 In1[15] => 16bit_and:inst.A[15]
 
 
-|register|simplemultiplexor:inst42|16bit_or:inst35
+|Machine|register:inst3|simplemultiplexor:inst42|16bit_or:inst35
 out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -5625,7 +9073,7 @@ A[14] => inst14.IN1
 A[15] => inst16.IN1
 
 
-|register|simplemultiplexor:inst42|16bit_and:inst18
+|Machine|register:inst3|simplemultiplexor:inst42|16bit_and:inst18
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -5676,7 +9124,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst42|16bit_and:inst
+|Machine|register:inst3|simplemultiplexor:inst42|16bit_and:inst
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -5727,7 +9175,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|16bit_register_1part:inst14
+|Machine|register:inst3|16bit_register_1part:inst14
 read[0] <= inst[0].DB_MAX_OUTPUT_PORT_TYPE
 read[1] <= inst[1].DB_MAX_OUTPUT_PORT_TYPE
 read[2] <= inst[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -5810,7 +9258,7 @@ write[14] => inst[14].DATAIN
 write[15] => inst[15].DATAIN
 
 
-|register|select_convayer:inst118
+|Machine|register:inst3|select_convayer:inst118
 out0 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 In => inst2.IN0
 In => inst.IN0
@@ -5819,7 +9267,7 @@ select => inst.IN1
 out1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|register|16bit_register_1part:inst15
+|Machine|register:inst3|16bit_register_1part:inst15
 read[0] <= inst[0].DB_MAX_OUTPUT_PORT_TYPE
 read[1] <= inst[1].DB_MAX_OUTPUT_PORT_TYPE
 read[2] <= inst[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -5902,7 +9350,7 @@ write[14] => inst[14].DATAIN
 write[15] => inst[15].DATAIN
 
 
-|register|simplemultiplexor:inst107
+|Machine|register:inst3|simplemultiplexor:inst107
 out[0] <= 16bit_or:inst35.out[0]
 out[1] <= 16bit_or:inst35.out[1]
 out[2] <= 16bit_or:inst35.out[2]
@@ -5985,7 +9433,7 @@ In1[14] => 16bit_and:inst.A[14]
 In1[15] => 16bit_and:inst.A[15]
 
 
-|register|simplemultiplexor:inst107|16bit_or:inst35
+|Machine|register:inst3|simplemultiplexor:inst107|16bit_or:inst35
 out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -6036,7 +9484,7 @@ A[14] => inst14.IN1
 A[15] => inst16.IN1
 
 
-|register|simplemultiplexor:inst107|16bit_and:inst18
+|Machine|register:inst3|simplemultiplexor:inst107|16bit_and:inst18
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -6087,7 +9535,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst107|16bit_and:inst
+|Machine|register:inst3|simplemultiplexor:inst107|16bit_and:inst
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -6138,7 +9586,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst101
+|Machine|register:inst3|simplemultiplexor:inst101
 out[0] <= 16bit_or:inst35.out[0]
 out[1] <= 16bit_or:inst35.out[1]
 out[2] <= 16bit_or:inst35.out[2]
@@ -6221,7 +9669,7 @@ In1[14] => 16bit_and:inst.A[14]
 In1[15] => 16bit_and:inst.A[15]
 
 
-|register|simplemultiplexor:inst101|16bit_or:inst35
+|Machine|register:inst3|simplemultiplexor:inst101|16bit_or:inst35
 out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -6272,7 +9720,7 @@ A[14] => inst14.IN1
 A[15] => inst16.IN1
 
 
-|register|simplemultiplexor:inst101|16bit_and:inst18
+|Machine|register:inst3|simplemultiplexor:inst101|16bit_and:inst18
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -6323,7 +9771,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst101|16bit_and:inst
+|Machine|register:inst3|simplemultiplexor:inst101|16bit_and:inst
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -6374,7 +9822,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst89
+|Machine|register:inst3|simplemultiplexor:inst89
 out[0] <= 16bit_or:inst35.out[0]
 out[1] <= 16bit_or:inst35.out[1]
 out[2] <= 16bit_or:inst35.out[2]
@@ -6457,7 +9905,7 @@ In1[14] => 16bit_and:inst.A[14]
 In1[15] => 16bit_and:inst.A[15]
 
 
-|register|simplemultiplexor:inst89|16bit_or:inst35
+|Machine|register:inst3|simplemultiplexor:inst89|16bit_or:inst35
 out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -6508,7 +9956,7 @@ A[14] => inst14.IN1
 A[15] => inst16.IN1
 
 
-|register|simplemultiplexor:inst89|16bit_and:inst18
+|Machine|register:inst3|simplemultiplexor:inst89|16bit_and:inst18
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -6559,7 +10007,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst89|16bit_and:inst
+|Machine|register:inst3|simplemultiplexor:inst89|16bit_and:inst
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -6610,7 +10058,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst36
+|Machine|register:inst3|simplemultiplexor:inst36
 out[0] <= 16bit_or:inst35.out[0]
 out[1] <= 16bit_or:inst35.out[1]
 out[2] <= 16bit_or:inst35.out[2]
@@ -6693,7 +10141,7 @@ In1[14] => 16bit_and:inst.A[14]
 In1[15] => 16bit_and:inst.A[15]
 
 
-|register|simplemultiplexor:inst36|16bit_or:inst35
+|Machine|register:inst3|simplemultiplexor:inst36|16bit_or:inst35
 out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -6744,7 +10192,7 @@ A[14] => inst14.IN1
 A[15] => inst16.IN1
 
 
-|register|simplemultiplexor:inst36|16bit_and:inst18
+|Machine|register:inst3|simplemultiplexor:inst36|16bit_and:inst18
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -6795,7 +10243,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst36|16bit_and:inst
+|Machine|register:inst3|simplemultiplexor:inst36|16bit_and:inst
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -6846,7 +10294,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|16bit_register_1part:inst16
+|Machine|register:inst3|16bit_register_1part:inst16
 read[0] <= inst[0].DB_MAX_OUTPUT_PORT_TYPE
 read[1] <= inst[1].DB_MAX_OUTPUT_PORT_TYPE
 read[2] <= inst[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -6929,7 +10377,7 @@ write[14] => inst[14].DATAIN
 write[15] => inst[15].DATAIN
 
 
-|register|select_convayer:inst119
+|Machine|register:inst3|select_convayer:inst119
 out0 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 In => inst2.IN0
 In => inst.IN0
@@ -6938,7 +10386,7 @@ select => inst.IN1
 out1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|register|select_convayer:inst131
+|Machine|register:inst3|select_convayer:inst131
 out0 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 In => inst2.IN0
 In => inst.IN0
@@ -6947,7 +10395,7 @@ select => inst.IN1
 out1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|register|select_convayer:inst137
+|Machine|register:inst3|select_convayer:inst137
 out0 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 In => inst2.IN0
 In => inst.IN0
@@ -6956,7 +10404,7 @@ select => inst.IN1
 out1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|register|select_convayer:inst140
+|Machine|register:inst3|select_convayer:inst140
 out0 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 In => inst2.IN0
 In => inst.IN0
@@ -6965,7 +10413,7 @@ select => inst.IN1
 out1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|register|16bit_register_1part:inst17
+|Machine|register:inst3|16bit_register_1part:inst17
 read[0] <= inst[0].DB_MAX_OUTPUT_PORT_TYPE
 read[1] <= inst[1].DB_MAX_OUTPUT_PORT_TYPE
 read[2] <= inst[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -7048,7 +10496,7 @@ write[14] => inst[14].DATAIN
 write[15] => inst[15].DATAIN
 
 
-|register|simplemultiplexor:inst43
+|Machine|register:inst3|simplemultiplexor:inst43
 out[0] <= 16bit_or:inst35.out[0]
 out[1] <= 16bit_or:inst35.out[1]
 out[2] <= 16bit_or:inst35.out[2]
@@ -7131,7 +10579,7 @@ In1[14] => 16bit_and:inst.A[14]
 In1[15] => 16bit_and:inst.A[15]
 
 
-|register|simplemultiplexor:inst43|16bit_or:inst35
+|Machine|register:inst3|simplemultiplexor:inst43|16bit_or:inst35
 out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -7182,7 +10630,7 @@ A[14] => inst14.IN1
 A[15] => inst16.IN1
 
 
-|register|simplemultiplexor:inst43|16bit_and:inst18
+|Machine|register:inst3|simplemultiplexor:inst43|16bit_and:inst18
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -7233,7 +10681,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst43|16bit_and:inst
+|Machine|register:inst3|simplemultiplexor:inst43|16bit_and:inst
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -7284,7 +10732,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|16bit_register_1part:inst18
+|Machine|register:inst3|16bit_register_1part:inst18
 read[0] <= inst[0].DB_MAX_OUTPUT_PORT_TYPE
 read[1] <= inst[1].DB_MAX_OUTPUT_PORT_TYPE
 read[2] <= inst[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -7367,7 +10815,7 @@ write[14] => inst[14].DATAIN
 write[15] => inst[15].DATAIN
 
 
-|register|select_convayer:inst120
+|Machine|register:inst3|select_convayer:inst120
 out0 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 In => inst2.IN0
 In => inst.IN0
@@ -7376,7 +10824,7 @@ select => inst.IN1
 out1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|register|16bit_register_1part:inst19
+|Machine|register:inst3|16bit_register_1part:inst19
 read[0] <= inst[0].DB_MAX_OUTPUT_PORT_TYPE
 read[1] <= inst[1].DB_MAX_OUTPUT_PORT_TYPE
 read[2] <= inst[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -7459,7 +10907,7 @@ write[14] => inst[14].DATAIN
 write[15] => inst[15].DATAIN
 
 
-|register|simplemultiplexor:inst91
+|Machine|register:inst3|simplemultiplexor:inst91
 out[0] <= 16bit_or:inst35.out[0]
 out[1] <= 16bit_or:inst35.out[1]
 out[2] <= 16bit_or:inst35.out[2]
@@ -7542,7 +10990,7 @@ In1[14] => 16bit_and:inst.A[14]
 In1[15] => 16bit_and:inst.A[15]
 
 
-|register|simplemultiplexor:inst91|16bit_or:inst35
+|Machine|register:inst3|simplemultiplexor:inst91|16bit_or:inst35
 out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -7593,7 +11041,7 @@ A[14] => inst14.IN1
 A[15] => inst16.IN1
 
 
-|register|simplemultiplexor:inst91|16bit_and:inst18
+|Machine|register:inst3|simplemultiplexor:inst91|16bit_and:inst18
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -7644,7 +11092,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst91|16bit_and:inst
+|Machine|register:inst3|simplemultiplexor:inst91|16bit_and:inst
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -7695,7 +11143,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst37
+|Machine|register:inst3|simplemultiplexor:inst37
 out[0] <= 16bit_or:inst35.out[0]
 out[1] <= 16bit_or:inst35.out[1]
 out[2] <= 16bit_or:inst35.out[2]
@@ -7778,7 +11226,7 @@ In1[14] => 16bit_and:inst.A[14]
 In1[15] => 16bit_and:inst.A[15]
 
 
-|register|simplemultiplexor:inst37|16bit_or:inst35
+|Machine|register:inst3|simplemultiplexor:inst37|16bit_or:inst35
 out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -7829,7 +11277,7 @@ A[14] => inst14.IN1
 A[15] => inst16.IN1
 
 
-|register|simplemultiplexor:inst37|16bit_and:inst18
+|Machine|register:inst3|simplemultiplexor:inst37|16bit_and:inst18
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -7880,7 +11328,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst37|16bit_and:inst
+|Machine|register:inst3|simplemultiplexor:inst37|16bit_and:inst
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -7931,7 +11379,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|16bit_register_1part:inst20
+|Machine|register:inst3|16bit_register_1part:inst20
 read[0] <= inst[0].DB_MAX_OUTPUT_PORT_TYPE
 read[1] <= inst[1].DB_MAX_OUTPUT_PORT_TYPE
 read[2] <= inst[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -8014,7 +11462,7 @@ write[14] => inst[14].DATAIN
 write[15] => inst[15].DATAIN
 
 
-|register|select_convayer:inst121
+|Machine|register:inst3|select_convayer:inst121
 out0 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 In => inst2.IN0
 In => inst.IN0
@@ -8023,7 +11471,7 @@ select => inst.IN1
 out1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|register|select_convayer:inst132
+|Machine|register:inst3|select_convayer:inst132
 out0 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 In => inst2.IN0
 In => inst.IN0
@@ -8032,7 +11480,7 @@ select => inst.IN1
 out1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|register|16bit_register_1part:inst21
+|Machine|register:inst3|16bit_register_1part:inst21
 read[0] <= inst[0].DB_MAX_OUTPUT_PORT_TYPE
 read[1] <= inst[1].DB_MAX_OUTPUT_PORT_TYPE
 read[2] <= inst[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -8115,7 +11563,7 @@ write[14] => inst[14].DATAIN
 write[15] => inst[15].DATAIN
 
 
-|register|simplemultiplexor:inst44
+|Machine|register:inst3|simplemultiplexor:inst44
 out[0] <= 16bit_or:inst35.out[0]
 out[1] <= 16bit_or:inst35.out[1]
 out[2] <= 16bit_or:inst35.out[2]
@@ -8198,7 +11646,7 @@ In1[14] => 16bit_and:inst.A[14]
 In1[15] => 16bit_and:inst.A[15]
 
 
-|register|simplemultiplexor:inst44|16bit_or:inst35
+|Machine|register:inst3|simplemultiplexor:inst44|16bit_or:inst35
 out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -8249,7 +11697,7 @@ A[14] => inst14.IN1
 A[15] => inst16.IN1
 
 
-|register|simplemultiplexor:inst44|16bit_and:inst18
+|Machine|register:inst3|simplemultiplexor:inst44|16bit_and:inst18
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -8300,7 +11748,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst44|16bit_and:inst
+|Machine|register:inst3|simplemultiplexor:inst44|16bit_and:inst
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -8351,7 +11799,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|16bit_register_1part:inst22
+|Machine|register:inst3|16bit_register_1part:inst22
 read[0] <= inst[0].DB_MAX_OUTPUT_PORT_TYPE
 read[1] <= inst[1].DB_MAX_OUTPUT_PORT_TYPE
 read[2] <= inst[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -8434,7 +11882,7 @@ write[14] => inst[14].DATAIN
 write[15] => inst[15].DATAIN
 
 
-|register|select_convayer:inst122
+|Machine|register:inst3|select_convayer:inst122
 out0 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 In => inst2.IN0
 In => inst.IN0
@@ -8443,7 +11891,7 @@ select => inst.IN1
 out1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|register|16bit_register_1part:inst23
+|Machine|register:inst3|16bit_register_1part:inst23
 read[0] <= inst[0].DB_MAX_OUTPUT_PORT_TYPE
 read[1] <= inst[1].DB_MAX_OUTPUT_PORT_TYPE
 read[2] <= inst[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -8526,7 +11974,7 @@ write[14] => inst[14].DATAIN
 write[15] => inst[15].DATAIN
 
 
-|register|simplemultiplexor:inst103
+|Machine|register:inst3|simplemultiplexor:inst103
 out[0] <= 16bit_or:inst35.out[0]
 out[1] <= 16bit_or:inst35.out[1]
 out[2] <= 16bit_or:inst35.out[2]
@@ -8609,7 +12057,7 @@ In1[14] => 16bit_and:inst.A[14]
 In1[15] => 16bit_and:inst.A[15]
 
 
-|register|simplemultiplexor:inst103|16bit_or:inst35
+|Machine|register:inst3|simplemultiplexor:inst103|16bit_or:inst35
 out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -8660,7 +12108,7 @@ A[14] => inst14.IN1
 A[15] => inst16.IN1
 
 
-|register|simplemultiplexor:inst103|16bit_and:inst18
+|Machine|register:inst3|simplemultiplexor:inst103|16bit_and:inst18
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -8711,7 +12159,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst103|16bit_and:inst
+|Machine|register:inst3|simplemultiplexor:inst103|16bit_and:inst
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -8762,7 +12210,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst93
+|Machine|register:inst3|simplemultiplexor:inst93
 out[0] <= 16bit_or:inst35.out[0]
 out[1] <= 16bit_or:inst35.out[1]
 out[2] <= 16bit_or:inst35.out[2]
@@ -8845,7 +12293,7 @@ In1[14] => 16bit_and:inst.A[14]
 In1[15] => 16bit_and:inst.A[15]
 
 
-|register|simplemultiplexor:inst93|16bit_or:inst35
+|Machine|register:inst3|simplemultiplexor:inst93|16bit_or:inst35
 out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -8896,7 +12344,7 @@ A[14] => inst14.IN1
 A[15] => inst16.IN1
 
 
-|register|simplemultiplexor:inst93|16bit_and:inst18
+|Machine|register:inst3|simplemultiplexor:inst93|16bit_and:inst18
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -8947,7 +12395,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst93|16bit_and:inst
+|Machine|register:inst3|simplemultiplexor:inst93|16bit_and:inst
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -8998,7 +12446,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst38
+|Machine|register:inst3|simplemultiplexor:inst38
 out[0] <= 16bit_or:inst35.out[0]
 out[1] <= 16bit_or:inst35.out[1]
 out[2] <= 16bit_or:inst35.out[2]
@@ -9081,7 +12529,7 @@ In1[14] => 16bit_and:inst.A[14]
 In1[15] => 16bit_and:inst.A[15]
 
 
-|register|simplemultiplexor:inst38|16bit_or:inst35
+|Machine|register:inst3|simplemultiplexor:inst38|16bit_or:inst35
 out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -9132,7 +12580,7 @@ A[14] => inst14.IN1
 A[15] => inst16.IN1
 
 
-|register|simplemultiplexor:inst38|16bit_and:inst18
+|Machine|register:inst3|simplemultiplexor:inst38|16bit_and:inst18
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -9183,7 +12631,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst38|16bit_and:inst
+|Machine|register:inst3|simplemultiplexor:inst38|16bit_and:inst
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -9234,7 +12682,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|16bit_register_1part:inst24
+|Machine|register:inst3|16bit_register_1part:inst24
 read[0] <= inst[0].DB_MAX_OUTPUT_PORT_TYPE
 read[1] <= inst[1].DB_MAX_OUTPUT_PORT_TYPE
 read[2] <= inst[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -9317,7 +12765,7 @@ write[14] => inst[14].DATAIN
 write[15] => inst[15].DATAIN
 
 
-|register|select_convayer:inst123
+|Machine|register:inst3|select_convayer:inst123
 out0 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 In => inst2.IN0
 In => inst.IN0
@@ -9326,7 +12774,7 @@ select => inst.IN1
 out1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|register|select_convayer:inst133
+|Machine|register:inst3|select_convayer:inst133
 out0 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 In => inst2.IN0
 In => inst.IN0
@@ -9335,7 +12783,7 @@ select => inst.IN1
 out1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|register|select_convayer:inst138
+|Machine|register:inst3|select_convayer:inst138
 out0 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 In => inst2.IN0
 In => inst.IN0
@@ -9344,7 +12792,7 @@ select => inst.IN1
 out1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|register|16bit_register_1part:inst25
+|Machine|register:inst3|16bit_register_1part:inst25
 read[0] <= inst[0].DB_MAX_OUTPUT_PORT_TYPE
 read[1] <= inst[1].DB_MAX_OUTPUT_PORT_TYPE
 read[2] <= inst[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -9427,7 +12875,7 @@ write[14] => inst[14].DATAIN
 write[15] => inst[15].DATAIN
 
 
-|register|simplemultiplexor:inst45
+|Machine|register:inst3|simplemultiplexor:inst45
 out[0] <= 16bit_or:inst35.out[0]
 out[1] <= 16bit_or:inst35.out[1]
 out[2] <= 16bit_or:inst35.out[2]
@@ -9510,7 +12958,7 @@ In1[14] => 16bit_and:inst.A[14]
 In1[15] => 16bit_and:inst.A[15]
 
 
-|register|simplemultiplexor:inst45|16bit_or:inst35
+|Machine|register:inst3|simplemultiplexor:inst45|16bit_or:inst35
 out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -9561,7 +13009,7 @@ A[14] => inst14.IN1
 A[15] => inst16.IN1
 
 
-|register|simplemultiplexor:inst45|16bit_and:inst18
+|Machine|register:inst3|simplemultiplexor:inst45|16bit_and:inst18
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -9612,7 +13060,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst45|16bit_and:inst
+|Machine|register:inst3|simplemultiplexor:inst45|16bit_and:inst
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -9663,7 +13111,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|16bit_register_1part:inst26
+|Machine|register:inst3|16bit_register_1part:inst26
 read[0] <= inst[0].DB_MAX_OUTPUT_PORT_TYPE
 read[1] <= inst[1].DB_MAX_OUTPUT_PORT_TYPE
 read[2] <= inst[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -9746,7 +13194,7 @@ write[14] => inst[14].DATAIN
 write[15] => inst[15].DATAIN
 
 
-|register|select_convayer:inst124
+|Machine|register:inst3|select_convayer:inst124
 out0 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 In => inst2.IN0
 In => inst.IN0
@@ -9755,7 +13203,7 @@ select => inst.IN1
 out1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|register|16bit_register_1part:inst27
+|Machine|register:inst3|16bit_register_1part:inst27
 read[0] <= inst[0].DB_MAX_OUTPUT_PORT_TYPE
 read[1] <= inst[1].DB_MAX_OUTPUT_PORT_TYPE
 read[2] <= inst[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -9838,7 +13286,7 @@ write[14] => inst[14].DATAIN
 write[15] => inst[15].DATAIN
 
 
-|register|simplemultiplexor:inst95
+|Machine|register:inst3|simplemultiplexor:inst95
 out[0] <= 16bit_or:inst35.out[0]
 out[1] <= 16bit_or:inst35.out[1]
 out[2] <= 16bit_or:inst35.out[2]
@@ -9921,7 +13369,7 @@ In1[14] => 16bit_and:inst.A[14]
 In1[15] => 16bit_and:inst.A[15]
 
 
-|register|simplemultiplexor:inst95|16bit_or:inst35
+|Machine|register:inst3|simplemultiplexor:inst95|16bit_or:inst35
 out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -9972,7 +13420,7 @@ A[14] => inst14.IN1
 A[15] => inst16.IN1
 
 
-|register|simplemultiplexor:inst95|16bit_and:inst18
+|Machine|register:inst3|simplemultiplexor:inst95|16bit_and:inst18
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -10023,7 +13471,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst95|16bit_and:inst
+|Machine|register:inst3|simplemultiplexor:inst95|16bit_and:inst
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -10074,7 +13522,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst39
+|Machine|register:inst3|simplemultiplexor:inst39
 out[0] <= 16bit_or:inst35.out[0]
 out[1] <= 16bit_or:inst35.out[1]
 out[2] <= 16bit_or:inst35.out[2]
@@ -10157,7 +13605,7 @@ In1[14] => 16bit_and:inst.A[14]
 In1[15] => 16bit_and:inst.A[15]
 
 
-|register|simplemultiplexor:inst39|16bit_or:inst35
+|Machine|register:inst3|simplemultiplexor:inst39|16bit_or:inst35
 out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -10208,7 +13656,7 @@ A[14] => inst14.IN1
 A[15] => inst16.IN1
 
 
-|register|simplemultiplexor:inst39|16bit_and:inst18
+|Machine|register:inst3|simplemultiplexor:inst39|16bit_and:inst18
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -10259,7 +13707,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst39|16bit_and:inst
+|Machine|register:inst3|simplemultiplexor:inst39|16bit_and:inst
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -10310,7 +13758,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|16bit_register_1part:inst28
+|Machine|register:inst3|16bit_register_1part:inst28
 read[0] <= inst[0].DB_MAX_OUTPUT_PORT_TYPE
 read[1] <= inst[1].DB_MAX_OUTPUT_PORT_TYPE
 read[2] <= inst[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -10393,7 +13841,7 @@ write[14] => inst[14].DATAIN
 write[15] => inst[15].DATAIN
 
 
-|register|select_convayer:inst125
+|Machine|register:inst3|select_convayer:inst125
 out0 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 In => inst2.IN0
 In => inst.IN0
@@ -10402,7 +13850,7 @@ select => inst.IN1
 out1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|register|select_convayer:inst134
+|Machine|register:inst3|select_convayer:inst134
 out0 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 In => inst2.IN0
 In => inst.IN0
@@ -10411,7 +13859,7 @@ select => inst.IN1
 out1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|register|16bit_register_1part:inst29
+|Machine|register:inst3|16bit_register_1part:inst29
 read[0] <= inst[0].DB_MAX_OUTPUT_PORT_TYPE
 read[1] <= inst[1].DB_MAX_OUTPUT_PORT_TYPE
 read[2] <= inst[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -10494,7 +13942,7 @@ write[14] => inst[14].DATAIN
 write[15] => inst[15].DATAIN
 
 
-|register|simplemultiplexor:inst46
+|Machine|register:inst3|simplemultiplexor:inst46
 out[0] <= 16bit_or:inst35.out[0]
 out[1] <= 16bit_or:inst35.out[1]
 out[2] <= 16bit_or:inst35.out[2]
@@ -10577,7 +14025,7 @@ In1[14] => 16bit_and:inst.A[14]
 In1[15] => 16bit_and:inst.A[15]
 
 
-|register|simplemultiplexor:inst46|16bit_or:inst35
+|Machine|register:inst3|simplemultiplexor:inst46|16bit_or:inst35
 out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -10628,7 +14076,7 @@ A[14] => inst14.IN1
 A[15] => inst16.IN1
 
 
-|register|simplemultiplexor:inst46|16bit_and:inst18
+|Machine|register:inst3|simplemultiplexor:inst46|16bit_and:inst18
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -10679,7 +14127,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst46|16bit_and:inst
+|Machine|register:inst3|simplemultiplexor:inst46|16bit_and:inst
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -10730,7 +14178,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|16bit_register_1part:inst30
+|Machine|register:inst3|16bit_register_1part:inst30
 read[0] <= inst[0].DB_MAX_OUTPUT_PORT_TYPE
 read[1] <= inst[1].DB_MAX_OUTPUT_PORT_TYPE
 read[2] <= inst[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -10813,7 +14261,7 @@ write[14] => inst[14].DATAIN
 write[15] => inst[15].DATAIN
 
 
-|register|select_convayer:inst126
+|Machine|register:inst3|select_convayer:inst126
 out0 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 In => inst2.IN0
 In => inst.IN0
@@ -10822,7 +14270,7 @@ select => inst.IN1
 out1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|register|16bit_register_1part:inst31
+|Machine|register:inst3|16bit_register_1part:inst31
 read[0] <= inst[0].DB_MAX_OUTPUT_PORT_TYPE
 read[1] <= inst[1].DB_MAX_OUTPUT_PORT_TYPE
 read[2] <= inst[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -10905,7 +14353,7 @@ write[14] => inst[14].DATAIN
 write[15] => inst[15].DATAIN
 
 
-|register|simplemultiplexor:inst110
+|Machine|register:inst3|simplemultiplexor:inst110
 out[0] <= 16bit_or:inst35.out[0]
 out[1] <= 16bit_or:inst35.out[1]
 out[2] <= 16bit_or:inst35.out[2]
@@ -10988,7 +14436,7 @@ In1[14] => 16bit_and:inst.A[14]
 In1[15] => 16bit_and:inst.A[15]
 
 
-|register|simplemultiplexor:inst110|16bit_or:inst35
+|Machine|register:inst3|simplemultiplexor:inst110|16bit_or:inst35
 out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -11039,7 +14487,7 @@ A[14] => inst14.IN1
 A[15] => inst16.IN1
 
 
-|register|simplemultiplexor:inst110|16bit_and:inst18
+|Machine|register:inst3|simplemultiplexor:inst110|16bit_and:inst18
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -11090,7 +14538,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst110|16bit_and:inst
+|Machine|register:inst3|simplemultiplexor:inst110|16bit_and:inst
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -11141,7 +14589,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst106
+|Machine|register:inst3|simplemultiplexor:inst106
 out[0] <= 16bit_or:inst35.out[0]
 out[1] <= 16bit_or:inst35.out[1]
 out[2] <= 16bit_or:inst35.out[2]
@@ -11224,7 +14672,7 @@ In1[14] => 16bit_and:inst.A[14]
 In1[15] => 16bit_and:inst.A[15]
 
 
-|register|simplemultiplexor:inst106|16bit_or:inst35
+|Machine|register:inst3|simplemultiplexor:inst106|16bit_or:inst35
 out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -11275,7 +14723,7 @@ A[14] => inst14.IN1
 A[15] => inst16.IN1
 
 
-|register|simplemultiplexor:inst106|16bit_and:inst18
+|Machine|register:inst3|simplemultiplexor:inst106|16bit_and:inst18
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -11326,7 +14774,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst106|16bit_and:inst
+|Machine|register:inst3|simplemultiplexor:inst106|16bit_and:inst
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -11377,7 +14825,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst98
+|Machine|register:inst3|simplemultiplexor:inst98
 out[0] <= 16bit_or:inst35.out[0]
 out[1] <= 16bit_or:inst35.out[1]
 out[2] <= 16bit_or:inst35.out[2]
@@ -11460,7 +14908,7 @@ In1[14] => 16bit_and:inst.A[14]
 In1[15] => 16bit_and:inst.A[15]
 
 
-|register|simplemultiplexor:inst98|16bit_or:inst35
+|Machine|register:inst3|simplemultiplexor:inst98|16bit_or:inst35
 out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -11511,7 +14959,7 @@ A[14] => inst14.IN1
 A[15] => inst16.IN1
 
 
-|register|simplemultiplexor:inst98|16bit_and:inst18
+|Machine|register:inst3|simplemultiplexor:inst98|16bit_and:inst18
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -11562,7 +15010,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst98|16bit_and:inst
+|Machine|register:inst3|simplemultiplexor:inst98|16bit_and:inst
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -11613,7 +15061,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst82
+|Machine|register:inst3|simplemultiplexor:inst82
 out[0] <= 16bit_or:inst35.out[0]
 out[1] <= 16bit_or:inst35.out[1]
 out[2] <= 16bit_or:inst35.out[2]
@@ -11696,7 +15144,7 @@ In1[14] => 16bit_and:inst.A[14]
 In1[15] => 16bit_and:inst.A[15]
 
 
-|register|simplemultiplexor:inst82|16bit_or:inst35
+|Machine|register:inst3|simplemultiplexor:inst82|16bit_or:inst35
 out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -11747,7 +15195,7 @@ A[14] => inst14.IN1
 A[15] => inst16.IN1
 
 
-|register|simplemultiplexor:inst82|16bit_and:inst18
+|Machine|register:inst3|simplemultiplexor:inst82|16bit_and:inst18
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -11798,7 +15246,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst82|16bit_and:inst
+|Machine|register:inst3|simplemultiplexor:inst82|16bit_and:inst
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -11849,7 +15297,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst47
+|Machine|register:inst3|simplemultiplexor:inst47
 out[0] <= 16bit_or:inst35.out[0]
 out[1] <= 16bit_or:inst35.out[1]
 out[2] <= 16bit_or:inst35.out[2]
@@ -11932,7 +15380,7 @@ In1[14] => 16bit_and:inst.A[14]
 In1[15] => 16bit_and:inst.A[15]
 
 
-|register|simplemultiplexor:inst47|16bit_or:inst35
+|Machine|register:inst3|simplemultiplexor:inst47|16bit_or:inst35
 out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -11983,7 +15431,7 @@ A[14] => inst14.IN1
 A[15] => inst16.IN1
 
 
-|register|simplemultiplexor:inst47|16bit_and:inst18
+|Machine|register:inst3|simplemultiplexor:inst47|16bit_and:inst18
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -12034,7 +15482,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst47|16bit_and:inst
+|Machine|register:inst3|simplemultiplexor:inst47|16bit_and:inst
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -12085,7 +15533,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst55
+|Machine|register:inst3|simplemultiplexor:inst55
 out[0] <= 16bit_or:inst35.out[0]
 out[1] <= 16bit_or:inst35.out[1]
 out[2] <= 16bit_or:inst35.out[2]
@@ -12168,7 +15616,7 @@ In1[14] => 16bit_and:inst.A[14]
 In1[15] => 16bit_and:inst.A[15]
 
 
-|register|simplemultiplexor:inst55|16bit_or:inst35
+|Machine|register:inst3|simplemultiplexor:inst55|16bit_or:inst35
 out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -12219,7 +15667,7 @@ A[14] => inst14.IN1
 A[15] => inst16.IN1
 
 
-|register|simplemultiplexor:inst55|16bit_and:inst18
+|Machine|register:inst3|simplemultiplexor:inst55|16bit_and:inst18
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -12270,7 +15718,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst55|16bit_and:inst
+|Machine|register:inst3|simplemultiplexor:inst55|16bit_and:inst
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -12321,7 +15769,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst84
+|Machine|register:inst3|simplemultiplexor:inst84
 out[0] <= 16bit_or:inst35.out[0]
 out[1] <= 16bit_or:inst35.out[1]
 out[2] <= 16bit_or:inst35.out[2]
@@ -12404,7 +15852,7 @@ In1[14] => 16bit_and:inst.A[14]
 In1[15] => 16bit_and:inst.A[15]
 
 
-|register|simplemultiplexor:inst84|16bit_or:inst35
+|Machine|register:inst3|simplemultiplexor:inst84|16bit_or:inst35
 out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -12455,7 +15903,7 @@ A[14] => inst14.IN1
 A[15] => inst16.IN1
 
 
-|register|simplemultiplexor:inst84|16bit_and:inst18
+|Machine|register:inst3|simplemultiplexor:inst84|16bit_and:inst18
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -12506,7 +15954,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst84|16bit_and:inst
+|Machine|register:inst3|simplemultiplexor:inst84|16bit_and:inst
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -12557,7 +16005,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst48
+|Machine|register:inst3|simplemultiplexor:inst48
 out[0] <= 16bit_or:inst35.out[0]
 out[1] <= 16bit_or:inst35.out[1]
 out[2] <= 16bit_or:inst35.out[2]
@@ -12640,7 +16088,7 @@ In1[14] => 16bit_and:inst.A[14]
 In1[15] => 16bit_and:inst.A[15]
 
 
-|register|simplemultiplexor:inst48|16bit_or:inst35
+|Machine|register:inst3|simplemultiplexor:inst48|16bit_or:inst35
 out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -12691,7 +16139,7 @@ A[14] => inst14.IN1
 A[15] => inst16.IN1
 
 
-|register|simplemultiplexor:inst48|16bit_and:inst18
+|Machine|register:inst3|simplemultiplexor:inst48|16bit_and:inst18
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -12742,7 +16190,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst48|16bit_and:inst
+|Machine|register:inst3|simplemultiplexor:inst48|16bit_and:inst
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -12793,7 +16241,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst56
+|Machine|register:inst3|simplemultiplexor:inst56
 out[0] <= 16bit_or:inst35.out[0]
 out[1] <= 16bit_or:inst35.out[1]
 out[2] <= 16bit_or:inst35.out[2]
@@ -12876,7 +16324,7 @@ In1[14] => 16bit_and:inst.A[14]
 In1[15] => 16bit_and:inst.A[15]
 
 
-|register|simplemultiplexor:inst56|16bit_or:inst35
+|Machine|register:inst3|simplemultiplexor:inst56|16bit_or:inst35
 out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -12927,7 +16375,7 @@ A[14] => inst14.IN1
 A[15] => inst16.IN1
 
 
-|register|simplemultiplexor:inst56|16bit_and:inst18
+|Machine|register:inst3|simplemultiplexor:inst56|16bit_and:inst18
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -12978,7 +16426,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst56|16bit_and:inst
+|Machine|register:inst3|simplemultiplexor:inst56|16bit_and:inst
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -13029,7 +16477,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst100
+|Machine|register:inst3|simplemultiplexor:inst100
 out[0] <= 16bit_or:inst35.out[0]
 out[1] <= 16bit_or:inst35.out[1]
 out[2] <= 16bit_or:inst35.out[2]
@@ -13112,7 +16560,7 @@ In1[14] => 16bit_and:inst.A[14]
 In1[15] => 16bit_and:inst.A[15]
 
 
-|register|simplemultiplexor:inst100|16bit_or:inst35
+|Machine|register:inst3|simplemultiplexor:inst100|16bit_or:inst35
 out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -13163,7 +16611,7 @@ A[14] => inst14.IN1
 A[15] => inst16.IN1
 
 
-|register|simplemultiplexor:inst100|16bit_and:inst18
+|Machine|register:inst3|simplemultiplexor:inst100|16bit_and:inst18
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -13214,7 +16662,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst100|16bit_and:inst
+|Machine|register:inst3|simplemultiplexor:inst100|16bit_and:inst
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -13265,7 +16713,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst86
+|Machine|register:inst3|simplemultiplexor:inst86
 out[0] <= 16bit_or:inst35.out[0]
 out[1] <= 16bit_or:inst35.out[1]
 out[2] <= 16bit_or:inst35.out[2]
@@ -13348,7 +16796,7 @@ In1[14] => 16bit_and:inst.A[14]
 In1[15] => 16bit_and:inst.A[15]
 
 
-|register|simplemultiplexor:inst86|16bit_or:inst35
+|Machine|register:inst3|simplemultiplexor:inst86|16bit_or:inst35
 out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -13399,7 +16847,7 @@ A[14] => inst14.IN1
 A[15] => inst16.IN1
 
 
-|register|simplemultiplexor:inst86|16bit_and:inst18
+|Machine|register:inst3|simplemultiplexor:inst86|16bit_and:inst18
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -13450,7 +16898,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst86|16bit_and:inst
+|Machine|register:inst3|simplemultiplexor:inst86|16bit_and:inst
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -13501,7 +16949,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst49
+|Machine|register:inst3|simplemultiplexor:inst49
 out[0] <= 16bit_or:inst35.out[0]
 out[1] <= 16bit_or:inst35.out[1]
 out[2] <= 16bit_or:inst35.out[2]
@@ -13584,7 +17032,7 @@ In1[14] => 16bit_and:inst.A[14]
 In1[15] => 16bit_and:inst.A[15]
 
 
-|register|simplemultiplexor:inst49|16bit_or:inst35
+|Machine|register:inst3|simplemultiplexor:inst49|16bit_or:inst35
 out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -13635,7 +17083,7 @@ A[14] => inst14.IN1
 A[15] => inst16.IN1
 
 
-|register|simplemultiplexor:inst49|16bit_and:inst18
+|Machine|register:inst3|simplemultiplexor:inst49|16bit_and:inst18
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -13686,7 +17134,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst49|16bit_and:inst
+|Machine|register:inst3|simplemultiplexor:inst49|16bit_and:inst
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -13737,7 +17185,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst57
+|Machine|register:inst3|simplemultiplexor:inst57
 out[0] <= 16bit_or:inst35.out[0]
 out[1] <= 16bit_or:inst35.out[1]
 out[2] <= 16bit_or:inst35.out[2]
@@ -13820,7 +17268,7 @@ In1[14] => 16bit_and:inst.A[14]
 In1[15] => 16bit_and:inst.A[15]
 
 
-|register|simplemultiplexor:inst57|16bit_or:inst35
+|Machine|register:inst3|simplemultiplexor:inst57|16bit_or:inst35
 out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -13871,7 +17319,7 @@ A[14] => inst14.IN1
 A[15] => inst16.IN1
 
 
-|register|simplemultiplexor:inst57|16bit_and:inst18
+|Machine|register:inst3|simplemultiplexor:inst57|16bit_and:inst18
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -13922,7 +17370,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst57|16bit_and:inst
+|Machine|register:inst3|simplemultiplexor:inst57|16bit_and:inst
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -13973,7 +17421,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst88
+|Machine|register:inst3|simplemultiplexor:inst88
 out[0] <= 16bit_or:inst35.out[0]
 out[1] <= 16bit_or:inst35.out[1]
 out[2] <= 16bit_or:inst35.out[2]
@@ -14056,7 +17504,7 @@ In1[14] => 16bit_and:inst.A[14]
 In1[15] => 16bit_and:inst.A[15]
 
 
-|register|simplemultiplexor:inst88|16bit_or:inst35
+|Machine|register:inst3|simplemultiplexor:inst88|16bit_or:inst35
 out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -14107,7 +17555,7 @@ A[14] => inst14.IN1
 A[15] => inst16.IN1
 
 
-|register|simplemultiplexor:inst88|16bit_and:inst18
+|Machine|register:inst3|simplemultiplexor:inst88|16bit_and:inst18
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -14158,7 +17606,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst88|16bit_and:inst
+|Machine|register:inst3|simplemultiplexor:inst88|16bit_and:inst
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -14209,7 +17657,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst50
+|Machine|register:inst3|simplemultiplexor:inst50
 out[0] <= 16bit_or:inst35.out[0]
 out[1] <= 16bit_or:inst35.out[1]
 out[2] <= 16bit_or:inst35.out[2]
@@ -14292,7 +17740,7 @@ In1[14] => 16bit_and:inst.A[14]
 In1[15] => 16bit_and:inst.A[15]
 
 
-|register|simplemultiplexor:inst50|16bit_or:inst35
+|Machine|register:inst3|simplemultiplexor:inst50|16bit_or:inst35
 out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -14343,7 +17791,7 @@ A[14] => inst14.IN1
 A[15] => inst16.IN1
 
 
-|register|simplemultiplexor:inst50|16bit_and:inst18
+|Machine|register:inst3|simplemultiplexor:inst50|16bit_and:inst18
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -14394,7 +17842,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst50|16bit_and:inst
+|Machine|register:inst3|simplemultiplexor:inst50|16bit_and:inst
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -14445,7 +17893,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst58
+|Machine|register:inst3|simplemultiplexor:inst58
 out[0] <= 16bit_or:inst35.out[0]
 out[1] <= 16bit_or:inst35.out[1]
 out[2] <= 16bit_or:inst35.out[2]
@@ -14528,7 +17976,7 @@ In1[14] => 16bit_and:inst.A[14]
 In1[15] => 16bit_and:inst.A[15]
 
 
-|register|simplemultiplexor:inst58|16bit_or:inst35
+|Machine|register:inst3|simplemultiplexor:inst58|16bit_or:inst35
 out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -14579,7 +18027,7 @@ A[14] => inst14.IN1
 A[15] => inst16.IN1
 
 
-|register|simplemultiplexor:inst58|16bit_and:inst18
+|Machine|register:inst3|simplemultiplexor:inst58|16bit_and:inst18
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -14630,7 +18078,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst58|16bit_and:inst
+|Machine|register:inst3|simplemultiplexor:inst58|16bit_and:inst
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -14681,7 +18129,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst108
+|Machine|register:inst3|simplemultiplexor:inst108
 out[0] <= 16bit_or:inst35.out[0]
 out[1] <= 16bit_or:inst35.out[1]
 out[2] <= 16bit_or:inst35.out[2]
@@ -14764,7 +18212,7 @@ In1[14] => 16bit_and:inst.A[14]
 In1[15] => 16bit_and:inst.A[15]
 
 
-|register|simplemultiplexor:inst108|16bit_or:inst35
+|Machine|register:inst3|simplemultiplexor:inst108|16bit_or:inst35
 out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -14815,7 +18263,7 @@ A[14] => inst14.IN1
 A[15] => inst16.IN1
 
 
-|register|simplemultiplexor:inst108|16bit_and:inst18
+|Machine|register:inst3|simplemultiplexor:inst108|16bit_and:inst18
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -14866,7 +18314,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst108|16bit_and:inst
+|Machine|register:inst3|simplemultiplexor:inst108|16bit_and:inst
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -14917,7 +18365,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst102
+|Machine|register:inst3|simplemultiplexor:inst102
 out[0] <= 16bit_or:inst35.out[0]
 out[1] <= 16bit_or:inst35.out[1]
 out[2] <= 16bit_or:inst35.out[2]
@@ -15000,7 +18448,7 @@ In1[14] => 16bit_and:inst.A[14]
 In1[15] => 16bit_and:inst.A[15]
 
 
-|register|simplemultiplexor:inst102|16bit_or:inst35
+|Machine|register:inst3|simplemultiplexor:inst102|16bit_or:inst35
 out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -15051,7 +18499,7 @@ A[14] => inst14.IN1
 A[15] => inst16.IN1
 
 
-|register|simplemultiplexor:inst102|16bit_and:inst18
+|Machine|register:inst3|simplemultiplexor:inst102|16bit_and:inst18
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -15102,7 +18550,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst102|16bit_and:inst
+|Machine|register:inst3|simplemultiplexor:inst102|16bit_and:inst
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -15153,7 +18601,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst90
+|Machine|register:inst3|simplemultiplexor:inst90
 out[0] <= 16bit_or:inst35.out[0]
 out[1] <= 16bit_or:inst35.out[1]
 out[2] <= 16bit_or:inst35.out[2]
@@ -15236,7 +18684,7 @@ In1[14] => 16bit_and:inst.A[14]
 In1[15] => 16bit_and:inst.A[15]
 
 
-|register|simplemultiplexor:inst90|16bit_or:inst35
+|Machine|register:inst3|simplemultiplexor:inst90|16bit_or:inst35
 out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -15287,7 +18735,7 @@ A[14] => inst14.IN1
 A[15] => inst16.IN1
 
 
-|register|simplemultiplexor:inst90|16bit_and:inst18
+|Machine|register:inst3|simplemultiplexor:inst90|16bit_and:inst18
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -15338,7 +18786,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst90|16bit_and:inst
+|Machine|register:inst3|simplemultiplexor:inst90|16bit_and:inst
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -15389,7 +18837,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst51
+|Machine|register:inst3|simplemultiplexor:inst51
 out[0] <= 16bit_or:inst35.out[0]
 out[1] <= 16bit_or:inst35.out[1]
 out[2] <= 16bit_or:inst35.out[2]
@@ -15472,7 +18920,7 @@ In1[14] => 16bit_and:inst.A[14]
 In1[15] => 16bit_and:inst.A[15]
 
 
-|register|simplemultiplexor:inst51|16bit_or:inst35
+|Machine|register:inst3|simplemultiplexor:inst51|16bit_or:inst35
 out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -15523,7 +18971,7 @@ A[14] => inst14.IN1
 A[15] => inst16.IN1
 
 
-|register|simplemultiplexor:inst51|16bit_and:inst18
+|Machine|register:inst3|simplemultiplexor:inst51|16bit_and:inst18
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -15574,7 +19022,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst51|16bit_and:inst
+|Machine|register:inst3|simplemultiplexor:inst51|16bit_and:inst
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -15625,7 +19073,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst59
+|Machine|register:inst3|simplemultiplexor:inst59
 out[0] <= 16bit_or:inst35.out[0]
 out[1] <= 16bit_or:inst35.out[1]
 out[2] <= 16bit_or:inst35.out[2]
@@ -15708,7 +19156,7 @@ In1[14] => 16bit_and:inst.A[14]
 In1[15] => 16bit_and:inst.A[15]
 
 
-|register|simplemultiplexor:inst59|16bit_or:inst35
+|Machine|register:inst3|simplemultiplexor:inst59|16bit_or:inst35
 out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -15759,7 +19207,7 @@ A[14] => inst14.IN1
 A[15] => inst16.IN1
 
 
-|register|simplemultiplexor:inst59|16bit_and:inst18
+|Machine|register:inst3|simplemultiplexor:inst59|16bit_and:inst18
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -15810,7 +19258,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst59|16bit_and:inst
+|Machine|register:inst3|simplemultiplexor:inst59|16bit_and:inst
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -15861,7 +19309,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst92
+|Machine|register:inst3|simplemultiplexor:inst92
 out[0] <= 16bit_or:inst35.out[0]
 out[1] <= 16bit_or:inst35.out[1]
 out[2] <= 16bit_or:inst35.out[2]
@@ -15944,7 +19392,7 @@ In1[14] => 16bit_and:inst.A[14]
 In1[15] => 16bit_and:inst.A[15]
 
 
-|register|simplemultiplexor:inst92|16bit_or:inst35
+|Machine|register:inst3|simplemultiplexor:inst92|16bit_or:inst35
 out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -15995,7 +19443,7 @@ A[14] => inst14.IN1
 A[15] => inst16.IN1
 
 
-|register|simplemultiplexor:inst92|16bit_and:inst18
+|Machine|register:inst3|simplemultiplexor:inst92|16bit_and:inst18
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -16046,7 +19494,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst92|16bit_and:inst
+|Machine|register:inst3|simplemultiplexor:inst92|16bit_and:inst
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -16097,7 +19545,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst52
+|Machine|register:inst3|simplemultiplexor:inst52
 out[0] <= 16bit_or:inst35.out[0]
 out[1] <= 16bit_or:inst35.out[1]
 out[2] <= 16bit_or:inst35.out[2]
@@ -16180,7 +19628,7 @@ In1[14] => 16bit_and:inst.A[14]
 In1[15] => 16bit_and:inst.A[15]
 
 
-|register|simplemultiplexor:inst52|16bit_or:inst35
+|Machine|register:inst3|simplemultiplexor:inst52|16bit_or:inst35
 out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -16231,7 +19679,7 @@ A[14] => inst14.IN1
 A[15] => inst16.IN1
 
 
-|register|simplemultiplexor:inst52|16bit_and:inst18
+|Machine|register:inst3|simplemultiplexor:inst52|16bit_and:inst18
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -16282,7 +19730,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst52|16bit_and:inst
+|Machine|register:inst3|simplemultiplexor:inst52|16bit_and:inst
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -16333,7 +19781,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst60
+|Machine|register:inst3|simplemultiplexor:inst60
 out[0] <= 16bit_or:inst35.out[0]
 out[1] <= 16bit_or:inst35.out[1]
 out[2] <= 16bit_or:inst35.out[2]
@@ -16416,7 +19864,7 @@ In1[14] => 16bit_and:inst.A[14]
 In1[15] => 16bit_and:inst.A[15]
 
 
-|register|simplemultiplexor:inst60|16bit_or:inst35
+|Machine|register:inst3|simplemultiplexor:inst60|16bit_or:inst35
 out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -16467,7 +19915,7 @@ A[14] => inst14.IN1
 A[15] => inst16.IN1
 
 
-|register|simplemultiplexor:inst60|16bit_and:inst18
+|Machine|register:inst3|simplemultiplexor:inst60|16bit_and:inst18
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -16518,7 +19966,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst60|16bit_and:inst
+|Machine|register:inst3|simplemultiplexor:inst60|16bit_and:inst
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -16569,7 +20017,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst104
+|Machine|register:inst3|simplemultiplexor:inst104
 out[0] <= 16bit_or:inst35.out[0]
 out[1] <= 16bit_or:inst35.out[1]
 out[2] <= 16bit_or:inst35.out[2]
@@ -16652,7 +20100,7 @@ In1[14] => 16bit_and:inst.A[14]
 In1[15] => 16bit_and:inst.A[15]
 
 
-|register|simplemultiplexor:inst104|16bit_or:inst35
+|Machine|register:inst3|simplemultiplexor:inst104|16bit_or:inst35
 out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -16703,7 +20151,7 @@ A[14] => inst14.IN1
 A[15] => inst16.IN1
 
 
-|register|simplemultiplexor:inst104|16bit_and:inst18
+|Machine|register:inst3|simplemultiplexor:inst104|16bit_and:inst18
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -16754,7 +20202,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst104|16bit_and:inst
+|Machine|register:inst3|simplemultiplexor:inst104|16bit_and:inst
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -16805,7 +20253,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst94
+|Machine|register:inst3|simplemultiplexor:inst94
 out[0] <= 16bit_or:inst35.out[0]
 out[1] <= 16bit_or:inst35.out[1]
 out[2] <= 16bit_or:inst35.out[2]
@@ -16888,7 +20336,7 @@ In1[14] => 16bit_and:inst.A[14]
 In1[15] => 16bit_and:inst.A[15]
 
 
-|register|simplemultiplexor:inst94|16bit_or:inst35
+|Machine|register:inst3|simplemultiplexor:inst94|16bit_or:inst35
 out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -16939,7 +20387,7 @@ A[14] => inst14.IN1
 A[15] => inst16.IN1
 
 
-|register|simplemultiplexor:inst94|16bit_and:inst18
+|Machine|register:inst3|simplemultiplexor:inst94|16bit_and:inst18
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -16990,7 +20438,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst94|16bit_and:inst
+|Machine|register:inst3|simplemultiplexor:inst94|16bit_and:inst
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -17041,7 +20489,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst53
+|Machine|register:inst3|simplemultiplexor:inst53
 out[0] <= 16bit_or:inst35.out[0]
 out[1] <= 16bit_or:inst35.out[1]
 out[2] <= 16bit_or:inst35.out[2]
@@ -17124,7 +20572,7 @@ In1[14] => 16bit_and:inst.A[14]
 In1[15] => 16bit_and:inst.A[15]
 
 
-|register|simplemultiplexor:inst53|16bit_or:inst35
+|Machine|register:inst3|simplemultiplexor:inst53|16bit_or:inst35
 out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -17175,7 +20623,7 @@ A[14] => inst14.IN1
 A[15] => inst16.IN1
 
 
-|register|simplemultiplexor:inst53|16bit_and:inst18
+|Machine|register:inst3|simplemultiplexor:inst53|16bit_and:inst18
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -17226,7 +20674,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst53|16bit_and:inst
+|Machine|register:inst3|simplemultiplexor:inst53|16bit_and:inst
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -17277,7 +20725,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst61
+|Machine|register:inst3|simplemultiplexor:inst61
 out[0] <= 16bit_or:inst35.out[0]
 out[1] <= 16bit_or:inst35.out[1]
 out[2] <= 16bit_or:inst35.out[2]
@@ -17360,7 +20808,7 @@ In1[14] => 16bit_and:inst.A[14]
 In1[15] => 16bit_and:inst.A[15]
 
 
-|register|simplemultiplexor:inst61|16bit_or:inst35
+|Machine|register:inst3|simplemultiplexor:inst61|16bit_or:inst35
 out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -17411,7 +20859,7 @@ A[14] => inst14.IN1
 A[15] => inst16.IN1
 
 
-|register|simplemultiplexor:inst61|16bit_and:inst18
+|Machine|register:inst3|simplemultiplexor:inst61|16bit_and:inst18
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -17462,7 +20910,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst61|16bit_and:inst
+|Machine|register:inst3|simplemultiplexor:inst61|16bit_and:inst
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -17513,7 +20961,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst96
+|Machine|register:inst3|simplemultiplexor:inst96
 out[0] <= 16bit_or:inst35.out[0]
 out[1] <= 16bit_or:inst35.out[1]
 out[2] <= 16bit_or:inst35.out[2]
@@ -17596,7 +21044,7 @@ In1[14] => 16bit_and:inst.A[14]
 In1[15] => 16bit_and:inst.A[15]
 
 
-|register|simplemultiplexor:inst96|16bit_or:inst35
+|Machine|register:inst3|simplemultiplexor:inst96|16bit_or:inst35
 out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -17647,7 +21095,7 @@ A[14] => inst14.IN1
 A[15] => inst16.IN1
 
 
-|register|simplemultiplexor:inst96|16bit_and:inst18
+|Machine|register:inst3|simplemultiplexor:inst96|16bit_and:inst18
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -17698,7 +21146,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst96|16bit_and:inst
+|Machine|register:inst3|simplemultiplexor:inst96|16bit_and:inst
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -17749,7 +21197,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst54
+|Machine|register:inst3|simplemultiplexor:inst54
 out[0] <= 16bit_or:inst35.out[0]
 out[1] <= 16bit_or:inst35.out[1]
 out[2] <= 16bit_or:inst35.out[2]
@@ -17832,7 +21280,7 @@ In1[14] => 16bit_and:inst.A[14]
 In1[15] => 16bit_and:inst.A[15]
 
 
-|register|simplemultiplexor:inst54|16bit_or:inst35
+|Machine|register:inst3|simplemultiplexor:inst54|16bit_or:inst35
 out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -17883,7 +21331,7 @@ A[14] => inst14.IN1
 A[15] => inst16.IN1
 
 
-|register|simplemultiplexor:inst54|16bit_and:inst18
+|Machine|register:inst3|simplemultiplexor:inst54|16bit_and:inst18
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -17934,7 +21382,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst54|16bit_and:inst
+|Machine|register:inst3|simplemultiplexor:inst54|16bit_and:inst
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -17985,7 +21433,7 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst62
+|Machine|register:inst3|simplemultiplexor:inst62
 out[0] <= 16bit_or:inst35.out[0]
 out[1] <= 16bit_or:inst35.out[1]
 out[2] <= 16bit_or:inst35.out[2]
@@ -18068,7 +21516,7 @@ In1[14] => 16bit_and:inst.A[14]
 In1[15] => 16bit_and:inst.A[15]
 
 
-|register|simplemultiplexor:inst62|16bit_or:inst35
+|Machine|register:inst3|simplemultiplexor:inst62|16bit_or:inst35
 out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -18119,7 +21567,7 @@ A[14] => inst14.IN1
 A[15] => inst16.IN1
 
 
-|register|simplemultiplexor:inst62|16bit_and:inst18
+|Machine|register:inst3|simplemultiplexor:inst62|16bit_and:inst18
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -18170,7 +21618,415 @@ B[14] => inst14.IN1
 B[15] => inst15.IN1
 
 
-|register|simplemultiplexor:inst62|16bit_and:inst
+|Machine|register:inst3|simplemultiplexor:inst62|16bit_and:inst
+out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+out[14] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+out[15] <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+A[0] => inst0.IN0
+A[1] => inst1.IN0
+A[2] => inst2.IN0
+A[3] => inst3.IN0
+A[4] => inst4.IN0
+A[5] => inst5.IN0
+A[6] => inst6.IN0
+A[7] => inst7.IN0
+A[8] => inst8.IN0
+A[9] => inst9.IN0
+A[10] => inst10.IN0
+A[11] => inst11.IN0
+A[12] => inst12.IN0
+A[13] => inst13.IN0
+A[14] => inst14.IN0
+A[15] => inst15.IN0
+B[0] => inst0.IN1
+B[1] => inst1.IN1
+B[2] => inst2.IN1
+B[3] => inst3.IN1
+B[4] => inst4.IN1
+B[5] => inst5.IN1
+B[6] => inst6.IN1
+B[7] => inst7.IN1
+B[8] => inst8.IN1
+B[9] => inst9.IN1
+B[10] => inst10.IN1
+B[11] => inst11.IN1
+B[12] => inst12.IN1
+B[13] => inst13.IN1
+B[14] => inst14.IN1
+B[15] => inst15.IN1
+
+
+|Machine|5bit_switch:inst1
+out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+In[0] => inst.IN0
+In[1] => inst1.IN0
+In[2] => inst2.IN0
+In[3] => inst3.IN0
+In[4] => inst4.IN0
+switch => inst.IN1
+switch => inst1.IN1
+switch => inst2.IN1
+switch => inst3.IN1
+switch => inst4.IN1
+
+
+|Machine|5bit_multiplexor:inst7
+out4 <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+switch => 5bit_switch:inst1.switch
+switch => inst2.IN0
+in1[0] => 5bit_switch:inst1.In[0]
+in1[1] => 5bit_switch:inst1.In[1]
+in1[2] => 5bit_switch:inst1.In[2]
+in1[3] => 5bit_switch:inst1.In[3]
+in1[4] => 5bit_switch:inst1.In[4]
+in0[0] => 5bit_switch:inst.In[0]
+in0[1] => 5bit_switch:inst.In[1]
+in0[2] => 5bit_switch:inst.In[2]
+in0[3] => 5bit_switch:inst.In[3]
+in0[4] => 5bit_switch:inst.In[4]
+out3 <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+out2 <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+out1 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+out0 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|5bit_multiplexor:inst7|5bit_switch:inst1
+out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+In[0] => inst.IN0
+In[1] => inst1.IN0
+In[2] => inst2.IN0
+In[3] => inst3.IN0
+In[4] => inst4.IN0
+switch => inst.IN1
+switch => inst1.IN1
+switch => inst2.IN1
+switch => inst3.IN1
+switch => inst4.IN1
+
+
+|Machine|5bit_multiplexor:inst7|5bit_switch:inst
+out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+In[0] => inst.IN0
+In[1] => inst1.IN0
+In[2] => inst2.IN0
+In[3] => inst3.IN0
+In[4] => inst4.IN0
+switch => inst.IN1
+switch => inst1.IN1
+switch => inst2.IN1
+switch => inst3.IN1
+switch => inst4.IN1
+
+
+|Machine|commandor:inst8
+I <= inst.DB_MAX_OUTPUT_PORT_TYPE
+in[0] => inst14.IN1
+in[1] => inst14.IN0
+in[2] => 5bit_multiplexor:inst8.in0[1]
+in[3] => ~NO_FANOUT~
+in[4] => ~NO_FANOUT~
+in[5] => ~NO_FANOUT~
+in[6] => ~NO_FANOUT~
+in[7] => ~NO_FANOUT~
+in[8] => ~NO_FANOUT~
+in[9] => ~NO_FANOUT~
+in[10] => ~NO_FANOUT~
+in[11] => ~NO_FANOUT~
+in[12] => ~NO_FANOUT~
+in[13] => ~NO_FANOUT~
+in[14] => ~NO_FANOUT~
+in[15] => ~NO_FANOUT~
+in[16] => ~NO_FANOUT~
+in[17] => ~NO_FANOUT~
+in[18] => ~NO_FANOUT~
+in[19] => ~NO_FANOUT~
+in[20] => ~NO_FANOUT~
+in[21] => ~NO_FANOUT~
+in[22] => ~NO_FANOUT~
+in[23] => ~NO_FANOUT~
+in[24] => ~NO_FANOUT~
+in[25] => ~NO_FANOUT~
+in[26] => inst.IN5
+in[26] => 5bit_multiplexor:inst8.in1[0]
+in[27] => inst.IN4
+in[28] => inst.IN3
+in[28] => 5bit_multiplexor:inst8.in1[1]
+in[29] => inst.IN1
+in[30] => inst.IN2
+in[31] => inst.IN0
+opecode[0] <= out[0].DB_MAX_OUTPUT_PORT_TYPE
+opecode[1] <= out[1].DB_MAX_OUTPUT_PORT_TYPE
+opecode[2] <= out[2].DB_MAX_OUTPUT_PORT_TYPE
+opecode[3] <= out[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|commandor:inst8|5bit_multiplexor:inst8
+out4 <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+switch => 5bit_switch:inst1.switch
+switch => inst2.IN0
+in1[0] => 5bit_switch:inst1.In[0]
+in1[1] => 5bit_switch:inst1.In[1]
+in1[2] => 5bit_switch:inst1.In[2]
+in1[3] => 5bit_switch:inst1.In[3]
+in1[4] => 5bit_switch:inst1.In[4]
+in0[0] => 5bit_switch:inst.In[0]
+in0[1] => 5bit_switch:inst.In[1]
+in0[2] => 5bit_switch:inst.In[2]
+in0[3] => 5bit_switch:inst.In[3]
+in0[4] => 5bit_switch:inst.In[4]
+out3 <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+out2 <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+out1 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+out0 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Machine|commandor:inst8|5bit_multiplexor:inst8|5bit_switch:inst1
+out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+In[0] => inst.IN0
+In[1] => inst1.IN0
+In[2] => inst2.IN0
+In[3] => inst3.IN0
+In[4] => inst4.IN0
+switch => inst.IN1
+switch => inst1.IN1
+switch => inst2.IN1
+switch => inst3.IN1
+switch => inst4.IN1
+
+
+|Machine|commandor:inst8|5bit_multiplexor:inst8|5bit_switch:inst
+out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+In[0] => inst.IN0
+In[1] => inst1.IN0
+In[2] => inst2.IN0
+In[3] => inst3.IN0
+In[4] => inst4.IN0
+switch => inst.IN1
+switch => inst1.IN1
+switch => inst2.IN1
+switch => inst3.IN1
+switch => inst4.IN1
+
+
+|Machine|simplemultiplexor:inst4
+out[0] <= 16bit_or:inst35.out[0]
+out[1] <= 16bit_or:inst35.out[1]
+out[2] <= 16bit_or:inst35.out[2]
+out[3] <= 16bit_or:inst35.out[3]
+out[4] <= 16bit_or:inst35.out[4]
+out[5] <= 16bit_or:inst35.out[5]
+out[6] <= 16bit_or:inst35.out[6]
+out[7] <= 16bit_or:inst35.out[7]
+out[8] <= 16bit_or:inst35.out[8]
+out[9] <= 16bit_or:inst35.out[9]
+out[10] <= 16bit_or:inst35.out[10]
+out[11] <= 16bit_or:inst35.out[11]
+out[12] <= 16bit_or:inst35.out[12]
+out[13] <= 16bit_or:inst35.out[13]
+out[14] <= 16bit_or:inst35.out[14]
+out[15] <= 16bit_or:inst35.out[15]
+In0[0] => 16bit_and:inst18.A[0]
+In0[1] => 16bit_and:inst18.A[1]
+In0[2] => 16bit_and:inst18.A[2]
+In0[3] => 16bit_and:inst18.A[3]
+In0[4] => 16bit_and:inst18.A[4]
+In0[5] => 16bit_and:inst18.A[5]
+In0[6] => 16bit_and:inst18.A[6]
+In0[7] => 16bit_and:inst18.A[7]
+In0[8] => 16bit_and:inst18.A[8]
+In0[9] => 16bit_and:inst18.A[9]
+In0[10] => 16bit_and:inst18.A[10]
+In0[11] => 16bit_and:inst18.A[11]
+In0[12] => 16bit_and:inst18.A[12]
+In0[13] => 16bit_and:inst18.A[13]
+In0[14] => 16bit_and:inst18.A[14]
+In0[15] => 16bit_and:inst18.A[15]
+switch => inst19.IN0
+switch => inst20.IN0
+switch => inst21.IN0
+switch => inst22.IN0
+switch => inst23.IN0
+switch => inst24.IN0
+switch => inst25.IN0
+switch => inst26.IN0
+switch => inst27.IN0
+switch => inst28.IN0
+switch => inst29.IN0
+switch => inst30.IN0
+switch => inst31.IN0
+switch => inst32.IN0
+switch => inst33.IN0
+switch => inst34.IN0
+switch => 16bit_and:inst.B[0]
+switch => 16bit_and:inst.B[1]
+switch => 16bit_and:inst.B[2]
+switch => 16bit_and:inst.B[3]
+switch => 16bit_and:inst.B[4]
+switch => 16bit_and:inst.B[5]
+switch => 16bit_and:inst.B[6]
+switch => 16bit_and:inst.B[7]
+switch => 16bit_and:inst.B[8]
+switch => 16bit_and:inst.B[9]
+switch => 16bit_and:inst.B[10]
+switch => 16bit_and:inst.B[11]
+switch => 16bit_and:inst.B[12]
+switch => 16bit_and:inst.B[13]
+switch => 16bit_and:inst.B[14]
+switch => 16bit_and:inst.B[15]
+In1[0] => 16bit_and:inst.A[0]
+In1[1] => 16bit_and:inst.A[1]
+In1[2] => 16bit_and:inst.A[2]
+In1[3] => 16bit_and:inst.A[3]
+In1[4] => 16bit_and:inst.A[4]
+In1[5] => 16bit_and:inst.A[5]
+In1[6] => 16bit_and:inst.A[6]
+In1[7] => 16bit_and:inst.A[7]
+In1[8] => 16bit_and:inst.A[8]
+In1[9] => 16bit_and:inst.A[9]
+In1[10] => 16bit_and:inst.A[10]
+In1[11] => 16bit_and:inst.A[11]
+In1[12] => 16bit_and:inst.A[12]
+In1[13] => 16bit_and:inst.A[13]
+In1[14] => 16bit_and:inst.A[14]
+In1[15] => 16bit_and:inst.A[15]
+
+
+|Machine|simplemultiplexor:inst4|16bit_or:inst35
+out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+out[14] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+out[15] <= inst16.DB_MAX_OUTPUT_PORT_TYPE
+B[0] => inst.IN0
+B[1] => inst1.IN0
+B[2] => inst2.IN0
+B[3] => inst3.IN0
+B[4] => inst4.IN0
+B[5] => inst5.IN0
+B[6] => inst6.IN0
+B[7] => inst7.IN0
+B[8] => inst8.IN0
+B[9] => inst9.IN0
+B[10] => inst10.IN0
+B[11] => inst11.IN0
+B[12] => inst12.IN0
+B[13] => inst13.IN0
+B[14] => inst14.IN0
+B[15] => inst16.IN0
+A[0] => inst.IN1
+A[1] => inst1.IN1
+A[2] => inst2.IN1
+A[3] => inst3.IN1
+A[4] => inst4.IN1
+A[5] => inst5.IN1
+A[6] => inst6.IN1
+A[7] => inst7.IN1
+A[8] => inst8.IN1
+A[9] => inst9.IN1
+A[10] => inst10.IN1
+A[11] => inst11.IN1
+A[12] => inst12.IN1
+A[13] => inst13.IN1
+A[14] => inst14.IN1
+A[15] => inst16.IN1
+
+
+|Machine|simplemultiplexor:inst4|16bit_and:inst18
+out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+out[14] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+out[15] <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+A[0] => inst0.IN0
+A[1] => inst1.IN0
+A[2] => inst2.IN0
+A[3] => inst3.IN0
+A[4] => inst4.IN0
+A[5] => inst5.IN0
+A[6] => inst6.IN0
+A[7] => inst7.IN0
+A[8] => inst8.IN0
+A[9] => inst9.IN0
+A[10] => inst10.IN0
+A[11] => inst11.IN0
+A[12] => inst12.IN0
+A[13] => inst13.IN0
+A[14] => inst14.IN0
+A[15] => inst15.IN0
+B[0] => inst0.IN1
+B[1] => inst1.IN1
+B[2] => inst2.IN1
+B[3] => inst3.IN1
+B[4] => inst4.IN1
+B[5] => inst5.IN1
+B[6] => inst6.IN1
+B[7] => inst7.IN1
+B[8] => inst8.IN1
+B[9] => inst9.IN1
+B[10] => inst10.IN1
+B[11] => inst11.IN1
+B[12] => inst12.IN1
+B[13] => inst13.IN1
+B[14] => inst14.IN1
+B[15] => inst15.IN1
+
+
+|Machine|simplemultiplexor:inst4|16bit_and:inst
 out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE

@@ -33,9 +33,8 @@ reg eachvec;
 reg clock;
 reg [31:0] In;
 reg power;
-reg step;
 // wires                                               
-wire [31:0]  Out;
+wire [15:0]  Out;
 
 // assign statements (if any)                          
 Machine i1 (
@@ -43,8 +42,7 @@ Machine i1 (
 	.clock(clock),
 	.In(In),
 	.Out(Out),
-	.power(power),
-	.step(step)
+	.power(power)
 );
 initial                                                
 begin                                                  
