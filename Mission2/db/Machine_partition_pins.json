@@ -4,139 +4,175 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "Out[31]",
+					"name" : "out1[15]",
 					"strict" : false
 				},
 				{
-					"name" : "Out[30]",
+					"name" : "out1[14]",
 					"strict" : false
 				},
 				{
-					"name" : "Out[29]",
+					"name" : "out1[13]",
 					"strict" : false
 				},
 				{
-					"name" : "Out[28]",
+					"name" : "out1[12]",
 					"strict" : false
 				},
 				{
-					"name" : "Out[27]",
+					"name" : "out1[11]",
 					"strict" : false
 				},
 				{
-					"name" : "Out[26]",
+					"name" : "out1[10]",
 					"strict" : false
 				},
 				{
-					"name" : "Out[25]",
+					"name" : "out1[9]",
 					"strict" : false
 				},
 				{
-					"name" : "Out[24]",
+					"name" : "out1[8]",
 					"strict" : false
 				},
 				{
-					"name" : "Out[23]",
+					"name" : "out1[7]",
 					"strict" : false
 				},
 				{
-					"name" : "Out[22]",
+					"name" : "out1[6]",
 					"strict" : false
 				},
 				{
-					"name" : "Out[21]",
+					"name" : "out1[5]",
 					"strict" : false
 				},
 				{
-					"name" : "Out[20]",
+					"name" : "out1[4]",
 					"strict" : false
 				},
 				{
-					"name" : "Out[19]",
+					"name" : "out1[3]",
 					"strict" : false
 				},
 				{
-					"name" : "Out[18]",
+					"name" : "out1[2]",
 					"strict" : false
 				},
 				{
-					"name" : "Out[17]",
+					"name" : "out1[1]",
 					"strict" : false
 				},
 				{
-					"name" : "Out[16]",
+					"name" : "out1[0]",
 					"strict" : false
 				},
 				{
-					"name" : "Out[15]",
+					"name" : "out2[15]",
 					"strict" : false
 				},
 				{
-					"name" : "Out[14]",
+					"name" : "out2[14]",
 					"strict" : false
 				},
 				{
-					"name" : "Out[13]",
+					"name" : "out2[13]",
 					"strict" : false
 				},
 				{
-					"name" : "Out[12]",
+					"name" : "out2[12]",
 					"strict" : false
 				},
 				{
-					"name" : "Out[11]",
+					"name" : "out2[11]",
 					"strict" : false
 				},
 				{
-					"name" : "Out[10]",
+					"name" : "out2[10]",
 					"strict" : false
 				},
 				{
-					"name" : "Out[9]",
+					"name" : "out2[9]",
 					"strict" : false
 				},
 				{
-					"name" : "Out[8]",
+					"name" : "out2[8]",
 					"strict" : false
 				},
 				{
-					"name" : "Out[7]",
+					"name" : "out2[7]",
 					"strict" : false
 				},
 				{
-					"name" : "Out[6]",
+					"name" : "out2[6]",
 					"strict" : false
 				},
 				{
-					"name" : "Out[5]",
+					"name" : "out2[5]",
 					"strict" : false
 				},
 				{
-					"name" : "Out[4]",
+					"name" : "out2[4]",
 					"strict" : false
 				},
 				{
-					"name" : "Out[3]",
+					"name" : "out2[3]",
 					"strict" : false
 				},
 				{
-					"name" : "Out[2]",
+					"name" : "out2[2]",
 					"strict" : false
 				},
 				{
-					"name" : "Out[1]",
+					"name" : "out2[1]",
 					"strict" : false
 				},
 				{
-					"name" : "Out[0]",
+					"name" : "out2[0]",
 					"strict" : false
 				},
 				{
-					"name" : "In[31]",
+					"name" : "read1[3]",
 					"strict" : false
 				},
 				{
-					"name" : "step",
+					"name" : "read1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "read1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "read1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "read2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "read2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "read2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "read2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "read2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "read1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "writedata[15]",
 					"strict" : false
 				},
 				{
@@ -144,127 +180,83 @@
 					"strict" : false
 				},
 				{
-					"name" : "In[30]",
+					"name" : "writedata[14]",
 					"strict" : false
 				},
 				{
-					"name" : "In[29]",
+					"name" : "writedata[13]",
 					"strict" : false
 				},
 				{
-					"name" : "In[28]",
+					"name" : "writedata[12]",
 					"strict" : false
 				},
 				{
-					"name" : "In[27]",
+					"name" : "writedata[11]",
 					"strict" : false
 				},
 				{
-					"name" : "In[26]",
+					"name" : "writedata[10]",
 					"strict" : false
 				},
 				{
-					"name" : "In[25]",
+					"name" : "writedata[9]",
 					"strict" : false
 				},
 				{
-					"name" : "In[24]",
+					"name" : "writedata[8]",
 					"strict" : false
 				},
 				{
-					"name" : "In[23]",
+					"name" : "writedata[7]",
 					"strict" : false
 				},
 				{
-					"name" : "In[22]",
+					"name" : "writedata[6]",
 					"strict" : false
 				},
 				{
-					"name" : "In[21]",
+					"name" : "writedata[5]",
 					"strict" : false
 				},
 				{
-					"name" : "In[20]",
+					"name" : "writedata[4]",
 					"strict" : false
 				},
 				{
-					"name" : "In[19]",
+					"name" : "writedata[3]",
 					"strict" : false
 				},
 				{
-					"name" : "In[18]",
+					"name" : "writedata[2]",
 					"strict" : false
 				},
 				{
-					"name" : "In[17]",
+					"name" : "writedata[1]",
 					"strict" : false
 				},
 				{
-					"name" : "In[16]",
+					"name" : "writedata[0]",
 					"strict" : false
 				},
 				{
-					"name" : "In[15]",
+					"name" : "write[4]",
 					"strict" : false
 				},
 				{
-					"name" : "In[14]",
+					"name" : "write[3]",
 					"strict" : false
 				},
 				{
-					"name" : "In[13]",
+					"name" : "write[0]",
 					"strict" : false
 				},
 				{
-					"name" : "In[12]",
+					"name" : "write[2]",
 					"strict" : false
 				},
 				{
-					"name" : "In[11]",
-					"strict" : false
-				},
-				{
-					"name" : "In[10]",
-					"strict" : false
-				},
-				{
-					"name" : "In[9]",
-					"strict" : false
-				},
-				{
-					"name" : "In[8]",
-					"strict" : false
-				},
-				{
-					"name" : "In[7]",
-					"strict" : false
-				},
-				{
-					"name" : "In[6]",
-					"strict" : false
-				},
-				{
-					"name" : "In[5]",
-					"strict" : false
-				},
-				{
-					"name" : "In[4]",
-					"strict" : false
-				},
-				{
-					"name" : "In[3]",
-					"strict" : false
-				},
-				{
-					"name" : "In[2]",
-					"strict" : false
-				},
-				{
-					"name" : "In[1]",
-					"strict" : false
-				},
-				{
-					"name" : "In[0]",
+					"name" : "write[1]",
 					"strict" : false
 				}
 			]

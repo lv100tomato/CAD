@@ -9,32 +9,55 @@ z2
 cModel Technology
 Z0 d/export/home/017/a0171595/FPGA/Mission2/simulation/modelsim
 vhard_block
-Z1 !s110 1546919986
+Z1 !s110 1546932034
 !i10b 1
-!s100 MknE?Q4<BkQXWX2kCR_MA2
-IgcS`m:UgPabD3ID4JRnBO3
+!s100 S]ISi@oVSmSag`<?KjB5k1
+I`mhNkQ@5?hfk??4jDA5DQ2
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-Z3 w1546919698
+Z3 w1546931494
 Z4 8Machine_7_1200mv_100c_slow.vo
 Z5 FMachine_7_1200mv_100c_slow.vo
-L0 2103
+L0 23532
 Z6 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z7 !s108 1546919986.000000
+Z7 !s108 1546932034.000000
 Z8 !s107 Machine_7_1200mv_100c_slow.vo|
 Z9 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|Machine_7_1200mv_100c_slow.vo|
 !i113 1
 Z10 o-vlog01compat -work work
 Z11 !s92 -vlog01compat -work work +incdir+.
 Z12 tCvgOpt 0
-vMachine
+vMachine_vlg_tst
+!s110 1546932043
+!i10b 1
+!s100 ii_Gmk2dXZGiYjhO;[1SD0
+I6Fja8WKfQNE83WcnfzJli1
+R2
+R0
+w1546931960
+8/export/home/017/a0171595/FPGA/Mission2/simulation/modelsim/Macine_test3.vt
+F/export/home/017/a0171595/FPGA/Mission2/simulation/modelsim/Macine_test3.vt
+L0 28
+R6
+r1
+!s85 0
+31
+!s108 1546932043.000000
+!s107 /export/home/017/a0171595/FPGA/Mission2/simulation/modelsim/Macine_test3.vt|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/export/home/017/a0171595/FPGA/Mission2/simulation/modelsim|/export/home/017/a0171595/FPGA/Mission2/simulation/modelsim/Macine_test3.vt|
+!i113 1
+R10
+!s92 -vlog01compat -work work +incdir+/export/home/017/a0171595/FPGA/Mission2/simulation/modelsim
+R12
+n@machine_vlg_tst
+vregister
 R1
 !i10b 1
-!s100 SDnQf1jTf8A`k;A3[@3?Z1
-IZF6aXUZYCRPP?>f5aIe4b0
+!s100 TkK5emDR5Na^zj[8P>E7W3
+I95Iz`3ha4`[YEfkoDdTje0
 R2
 R0
 R3
@@ -52,27 +75,3 @@ R9
 R10
 R11
 R12
-n@machine
-vMachine_vlg_tst
-!s110 1546919991
-!i10b 1
-!s100 `TNX[PW?I^WBjZ_N55G[[3
-IM2BoH6hXg3SIAnIi4a`GY3
-R2
-R0
-w1546919976
-8/export/home/017/a0171595/FPGA/Mission2/simulation/modelsim/Macine_test1.vt
-F/export/home/017/a0171595/FPGA/Mission2/simulation/modelsim/Macine_test1.vt
-L0 28
-R6
-r1
-!s85 0
-31
-!s108 1546919991.000000
-!s107 /export/home/017/a0171595/FPGA/Mission2/simulation/modelsim/Macine_test1.vt|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/export/home/017/a0171595/FPGA/Mission2/simulation/modelsim|/export/home/017/a0171595/FPGA/Mission2/simulation/modelsim/Macine_test1.vt|
-!i113 1
-R10
-!s92 -vlog01compat -work work +incdir+/export/home/017/a0171595/FPGA/Mission2/simulation/modelsim
-R12
-n@machine_vlg_tst

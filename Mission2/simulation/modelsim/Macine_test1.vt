@@ -24,7 +24,7 @@
 // Simulation tool : ModelSim-Altera (Verilog)
 // 
 
-`timescale 1 ns/ 1 ps
+`timescale 1 ps/ 1 ps
 module Machine_vlg_tst();
 // constants                                           
 // general purpose registers
@@ -50,10 +50,6 @@ initial
 begin                                                  
 // code that executes only once                        
 // insert code here --> begin                          
-In <= 32'd0000_0000_0000_0000_0000_0000_0000_0000;
-clock <= 0;
-power <= 0;
-step <= 0;
                                                        
 // --> end                                             
 $display("Running testbench");                       
@@ -64,18 +60,6 @@ always
 begin                                                  
 // code executes for every event on sensitivity list   
 // insert code here --> begin                          
-#200
-In <= 32'd0101_0101_0101_0101_0101_0101_0101_0101;
-#100
-step <= 1;
-#100
-power <= 1;
-#100
-step <= 0;
-#100
-step <= 1;
-#100
-power <= 0;
                                                        
 @eachvec;                                              
 // --> end                                             
