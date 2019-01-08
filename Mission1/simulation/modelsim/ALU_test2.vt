@@ -17,7 +17,7 @@
 // suit user's needs .Comments are provided in each section to help the user    
 // fill out necessary details.                                                  
 // *****************************************************************************
-// Generated on "12/25/2018 14:21:25"
+// Generated on "01/08/2019 12:17:13"
                                                                                 
 // Verilog Test Bench template for design : ALU
 // 
@@ -30,26 +30,29 @@ module ALU_vlg_tst();
 // general purpose registers
 reg eachvec;
 // test vector input registers
-reg [15:0] In1;
-reg [15:0] In2;
+reg [15:0] dataA;
+reg [15:0] dataB;
+reg [3:0] opecode;
 // wires                                               
-wire [15:0]  Out;
-wire Out16;
+wire [3:0]  cond;
+wire [15:0]  out;
 
 // assign statements (if any)                          
 ALU i1 (
 // port map - connection between master ports and signals/registers   
-	.In1(In1),
-	.In2(In2),
-	.Out(Out),
-	.Out16(Out16)
+	.cond(cond),
+	.dataA(dataA),
+	.dataB(dataB),
+	.opecode(opecode),
+	.out(out)
 );
 initial                                                
 begin                                                  
 // code that executes only once                        
 // insert code here --> begin                          
-In1 <= 16'b0000000000000000;
-In2 <= 16'b0000000000000000;
+dataA <= 16'b0000_0000_0000_0000;
+dataB <= 16'b0000_0000_0000_0000;
+opecode <= 4'b0000;
                                                        
 // --> end                                             
 $display("Running testbench");                       
@@ -60,72 +63,31 @@ always
 begin                                                  
 // code executes for every event on sensitivity list   
 // insert code here --> begin                          
-
+#800
+dataB <= 16'b0101_0111_0011_0100;
+#800
+dataA <= 16'b1111_1111_1111_1111;
                                                        
 @eachvec;                                              
 // --> end                                             
-end                                                    
+end
 
 always begin
+	#50
+	opecode[0] <= ~opecode[0];
+end
+always begin
 	#100
-	In1[0] <= 1;
-	#100
-	In1[0] <= 0;
+	opecode[1] <= ~opecode[1];
 end
 always begin
 	#200
-	In1[1] <= 1;
-	#200
-	In1[1] <= 0;
+	opecode[2] <= ~opecode[2];
 end
 always begin
 	#400
-	In1[2] <= 1;
-	#400
-	In1[2] <= 0;
+	opecode[3] <= ~opecode[3];
 end
-always begin
-	#800
-	In1[3] <= 1;
-	#800
-	In1[3] <= 0;
-end
-always begin
-	#1600
-	In1[4] <= 1;
-	#1600
-	In1[4] <= 0;
-end
-always begin
-	#3200
-	In1[5] <= 1;
-	#3200
-	In1[5] <= 0;
-end
-always begin
-	#6400
-	In1[6] <= 1;
-	#6400
-	In1[6] <= 0;
-end
-always begin
-	#12800
-	In1[7] <= 1;
-	#12800
-	In1[7] <= 0;
-end
-always begin
-	#25600
-	In2[15:8] <= 8'b11111111;
-	#25600
-	In2[15:8] <= 8'b00000000;
-end
-always begin
-	#51200
-	In2 <= 16'b1111111111111111;
-	#51200
-	In2 <= 16'b0000000000000000;
-end
-
+                                                    
 endmodule
 

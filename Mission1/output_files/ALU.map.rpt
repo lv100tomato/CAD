@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ALU
-Tue Dec 25 16:16:36 2018
+Tue Jan  8 12:37:21 2019
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Standard Edition
 
 
@@ -10,7 +10,14 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Standard Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Post-Synthesis Netlist Statistics for Top Partition
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -36,20 +43,20 @@ refer to the applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Tue Dec 25 16:16:36 2018               ;
+; Analysis & Synthesis Status        ; Successful - Tue Jan  8 12:37:21 2019           ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Standard Edition ;
 ; Revision Name                      ; ALU                                             ;
 ; Top-level Entity Name              ; ALU                                             ;
 ; Family                             ; Cyclone IV E                                    ;
-; Total logic elements               ; N/A until Partition Merge                       ;
-;     Total combinational functions  ; N/A until Partition Merge                       ;
-;     Dedicated logic registers      ; N/A until Partition Merge                       ;
-; Total registers                    ; N/A until Partition Merge                       ;
-; Total pins                         ; N/A until Partition Merge                       ;
-; Total virtual pins                 ; N/A until Partition Merge                       ;
-; Total memory bits                  ; N/A until Partition Merge                       ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                       ;
-; Total PLLs                         ; N/A until Partition Merge                       ;
+; Total logic elements               ; 164                                             ;
+;     Total combinational functions  ; 164                                             ;
+;     Dedicated logic registers      ; 0                                               ;
+; Total registers                    ; 0                                               ;
+; Total pins                         ; 56                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
 +------------------------------------+-------------------------------------------------+
 
 
@@ -155,13 +162,181 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                  ;
++----------------------------------+-----------------+------------------------------------------+---------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                                ; File Name with Absolute Path                                  ; Library ;
++----------------------------------+-----------------+------------------------------------------+---------------------------------------------------------------+---------+
+; ALU.bdf                          ; yes             ; User Block Diagram/Schematic File        ; /export/home/017/a0171595/FPGA/Mission1/ALU.bdf               ;         ;
+; 16bit_and.bdf                    ; yes             ; User Block Diagram/Schematic File        ; /export/home/017/a0171595/FPGA/Mission1/16bit_and.bdf         ;         ;
+; 16bit_or.bdf                     ; yes             ; User Block Diagram/Schematic File        ; /export/home/017/a0171595/FPGA/Mission1/16bit_or.bdf          ;         ;
+; 16bit_xor.bdf                    ; yes             ; User Block Diagram/Schematic File        ; /export/home/017/a0171595/FPGA/Mission1/16bit_xor.bdf         ;         ;
+; 16bit_flipsign.bdf               ; yes             ; User Block Diagram/Schematic File        ; /export/home/017/a0171595/FPGA/Mission1/16bit_flipsign.bdf    ;         ;
+; simplemultiplexor.bdf            ; yes             ; User Block Diagram/Schematic File        ; /export/home/017/a0171595/FPGA/Mission1/simplemultiplexor.bdf ;         ;
+; 16bit_fulladder.bdf              ; yes             ; Auto-Found Block Diagram/Schematic File  ; /export/home/017/a0171595/FPGA/Mission1/16bit_fulladder.bdf   ;         ;
+; 2bit_BCLA.bdf                    ; yes             ; Auto-Found Block Diagram/Schematic File  ; /export/home/017/a0171595/FPGA/Mission1/2bit_BCLA.bdf         ;         ;
+; carry_lookahead.bdf              ; yes             ; Auto-Found Block Diagram/Schematic File  ; /export/home/017/a0171595/FPGA/Mission1/carry_lookahead.bdf   ;         ;
++----------------------------------+-----------------+------------------------------------------+---------------------------------------------------------------+---------+
+
+
++-------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                     ;
++---------------------------------------------+---------------------------------------------------+
+; Resource                                    ; Usage                                             ;
++---------------------------------------------+---------------------------------------------------+
+; Estimated Total logic elements              ; 164                                               ;
+;                                             ;                                                   ;
+; Total combinational functions               ; 164                                               ;
+; Logic element usage by number of LUT inputs ;                                                   ;
+;     -- 4 input functions                    ; 116                                               ;
+;     -- 3 input functions                    ; 24                                                ;
+;     -- <=2 input functions                  ; 24                                                ;
+;                                             ;                                                   ;
+; Logic elements by mode                      ;                                                   ;
+;     -- normal mode                          ; 164                                               ;
+;     -- arithmetic mode                      ; 0                                                 ;
+;                                             ;                                                   ;
+; Total registers                             ; 0                                                 ;
+;     -- Dedicated logic registers            ; 0                                                 ;
+;     -- I/O registers                        ; 0                                                 ;
+;                                             ;                                                   ;
+; I/O pins                                    ; 56                                                ;
+;                                             ;                                                   ;
+; Embedded Multiplier 9-bit elements          ; 0                                                 ;
+;                                             ;                                                   ;
+; Maximum fan-out node                        ; simplemultiplexor:inst23|16bit_or:inst35|inst16~1 ;
+; Maximum fan-out                             ; 28                                                ;
+; Total fan-out                               ; 656                                               ;
+; Average fan-out                             ; 2.38                                              ;
++---------------------------------------------+---------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                              ;
++--------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------+-------------------+--------------+
+; Compilation Hierarchy Node     ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                               ; Entity Name       ; Library Name ;
++--------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------+-------------------+--------------+
+; |ALU                           ; 164 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 56   ; 0            ; |ALU                                                              ; ALU               ; work         ;
+;    |16bit_flipsign:inst17|     ; 13 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|16bit_flipsign:inst17                                        ; 16bit_flipsign    ; work         ;
+;       |16bit_fulladder:inst3|  ; 13 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|16bit_flipsign:inst17|16bit_fulladder:inst3                  ; 16bit_fulladder   ; work         ;
+;          |2bit_BCLA:inst11|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|16bit_flipsign:inst17|16bit_fulladder:inst3|2bit_BCLA:inst11 ; 2bit_BCLA         ; work         ;
+;          |2bit_BCLA:inst12|    ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|16bit_flipsign:inst17|16bit_fulladder:inst3|2bit_BCLA:inst12 ; 2bit_BCLA         ; work         ;
+;          |2bit_BCLA:inst13|    ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|16bit_flipsign:inst17|16bit_fulladder:inst3|2bit_BCLA:inst13 ; 2bit_BCLA         ; work         ;
+;          |2bit_BCLA:inst2|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|16bit_flipsign:inst17|16bit_fulladder:inst3|2bit_BCLA:inst2  ; 2bit_BCLA         ; work         ;
+;          |2bit_BCLA:inst4|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|16bit_flipsign:inst17|16bit_fulladder:inst3|2bit_BCLA:inst4  ; 2bit_BCLA         ; work         ;
+;          |2bit_BCLA:inst8|     ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|16bit_flipsign:inst17|16bit_fulladder:inst3|2bit_BCLA:inst8  ; 2bit_BCLA         ; work         ;
+;          |2bit_BCLA:inst|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|16bit_flipsign:inst17|16bit_fulladder:inst3|2bit_BCLA:inst   ; 2bit_BCLA         ; work         ;
+;    |16bit_fulladder:inst16|    ; 33 (1)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|16bit_fulladder:inst16                                       ; 16bit_fulladder   ; work         ;
+;       |2bit_BCLA:inst10|       ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|16bit_fulladder:inst16|2bit_BCLA:inst10                      ; 2bit_BCLA         ; work         ;
+;       |2bit_BCLA:inst11|       ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|16bit_fulladder:inst16|2bit_BCLA:inst11                      ; 2bit_BCLA         ; work         ;
+;       |2bit_BCLA:inst12|       ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|16bit_fulladder:inst16|2bit_BCLA:inst12                      ; 2bit_BCLA         ; work         ;
+;       |2bit_BCLA:inst13|       ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|16bit_fulladder:inst16|2bit_BCLA:inst13                      ; 2bit_BCLA         ; work         ;
+;       |2bit_BCLA:inst1|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|16bit_fulladder:inst16|2bit_BCLA:inst1                       ; 2bit_BCLA         ; work         ;
+;       |2bit_BCLA:inst2|        ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|16bit_fulladder:inst16|2bit_BCLA:inst2                       ; 2bit_BCLA         ; work         ;
+;       |2bit_BCLA:inst3|        ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|16bit_fulladder:inst16|2bit_BCLA:inst3                       ; 2bit_BCLA         ; work         ;
+;       |2bit_BCLA:inst4|        ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|16bit_fulladder:inst16|2bit_BCLA:inst4                       ; 2bit_BCLA         ; work         ;
+;       |2bit_BCLA:inst5|        ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|16bit_fulladder:inst16|2bit_BCLA:inst5                       ; 2bit_BCLA         ; work         ;
+;       |2bit_BCLA:inst6|        ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|16bit_fulladder:inst16|2bit_BCLA:inst6                       ; 2bit_BCLA         ; work         ;
+;       |2bit_BCLA:inst7|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|16bit_fulladder:inst16|2bit_BCLA:inst7                       ; 2bit_BCLA         ; work         ;
+;       |2bit_BCLA:inst8|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|16bit_fulladder:inst16|2bit_BCLA:inst8                       ; 2bit_BCLA         ; work         ;
+;       |2bit_BCLA:inst9|        ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|16bit_fulladder:inst16|2bit_BCLA:inst9                       ; 2bit_BCLA         ; work         ;
+;       |2bit_BCLA:inst|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|16bit_fulladder:inst16|2bit_BCLA:inst                        ; 2bit_BCLA         ; work         ;
+;       |carry_lookahead:inst19| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|16bit_fulladder:inst16|carry_lookahead:inst19                ; carry_lookahead   ; work         ;
+;       |carry_lookahead:inst21| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|16bit_fulladder:inst16|carry_lookahead:inst21                ; carry_lookahead   ; work         ;
+;       |carry_lookahead:inst23| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|16bit_fulladder:inst16|carry_lookahead:inst23                ; carry_lookahead   ; work         ;
+;       |carry_lookahead:inst25| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|16bit_fulladder:inst16|carry_lookahead:inst25                ; carry_lookahead   ; work         ;
+;       |carry_lookahead:inst27| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|16bit_fulladder:inst16|carry_lookahead:inst27                ; carry_lookahead   ; work         ;
+;       |carry_lookahead:inst29| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|16bit_fulladder:inst16|carry_lookahead:inst29                ; carry_lookahead   ; work         ;
+;    |16bit_fulladder:inst|      ; 35 (2)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|16bit_fulladder:inst                                         ; 16bit_fulladder   ; work         ;
+;       |2bit_BCLA:inst10|       ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|16bit_fulladder:inst|2bit_BCLA:inst10                        ; 2bit_BCLA         ; work         ;
+;       |2bit_BCLA:inst11|       ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|16bit_fulladder:inst|2bit_BCLA:inst11                        ; 2bit_BCLA         ; work         ;
+;       |2bit_BCLA:inst12|       ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|16bit_fulladder:inst|2bit_BCLA:inst12                        ; 2bit_BCLA         ; work         ;
+;       |2bit_BCLA:inst13|       ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|16bit_fulladder:inst|2bit_BCLA:inst13                        ; 2bit_BCLA         ; work         ;
+;       |2bit_BCLA:inst1|        ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|16bit_fulladder:inst|2bit_BCLA:inst1                         ; 2bit_BCLA         ; work         ;
+;       |2bit_BCLA:inst2|        ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|16bit_fulladder:inst|2bit_BCLA:inst2                         ; 2bit_BCLA         ; work         ;
+;       |2bit_BCLA:inst3|        ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|16bit_fulladder:inst|2bit_BCLA:inst3                         ; 2bit_BCLA         ; work         ;
+;       |2bit_BCLA:inst4|        ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|16bit_fulladder:inst|2bit_BCLA:inst4                         ; 2bit_BCLA         ; work         ;
+;       |2bit_BCLA:inst5|        ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|16bit_fulladder:inst|2bit_BCLA:inst5                         ; 2bit_BCLA         ; work         ;
+;       |2bit_BCLA:inst6|        ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|16bit_fulladder:inst|2bit_BCLA:inst6                         ; 2bit_BCLA         ; work         ;
+;       |2bit_BCLA:inst8|        ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|16bit_fulladder:inst|2bit_BCLA:inst8                         ; 2bit_BCLA         ; work         ;
+;       |2bit_BCLA:inst9|        ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|16bit_fulladder:inst|2bit_BCLA:inst9                         ; 2bit_BCLA         ; work         ;
+;       |2bit_BCLA:inst|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|16bit_fulladder:inst|2bit_BCLA:inst                          ; 2bit_BCLA         ; work         ;
+;       |carry_lookahead:inst18| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|16bit_fulladder:inst|carry_lookahead:inst18                  ; carry_lookahead   ; work         ;
+;       |carry_lookahead:inst20| ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|16bit_fulladder:inst|carry_lookahead:inst20                  ; carry_lookahead   ; work         ;
+;       |carry_lookahead:inst22| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|16bit_fulladder:inst|carry_lookahead:inst22                  ; carry_lookahead   ; work         ;
+;       |carry_lookahead:inst24| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|16bit_fulladder:inst|carry_lookahead:inst24                  ; carry_lookahead   ; work         ;
+;       |carry_lookahead:inst26| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|16bit_fulladder:inst|carry_lookahead:inst26                  ; carry_lookahead   ; work         ;
+;       |carry_lookahead:inst28| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|16bit_fulladder:inst|carry_lookahead:inst28                  ; carry_lookahead   ; work         ;
+;    |simplemultiplexor:inst19|  ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|simplemultiplexor:inst19                                     ; simplemultiplexor ; work         ;
+;       |16bit_or:inst35|        ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|simplemultiplexor:inst19|16bit_or:inst35                     ; 16bit_or          ; work         ;
+;    |simplemultiplexor:inst22|  ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|simplemultiplexor:inst22                                     ; simplemultiplexor ; work         ;
+;       |16bit_or:inst35|        ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|simplemultiplexor:inst22|16bit_or:inst35                     ; 16bit_or          ; work         ;
+;    |simplemultiplexor:inst23|  ; 53 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|simplemultiplexor:inst23                                     ; simplemultiplexor ; work         ;
+;       |16bit_or:inst35|        ; 53 (53)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|simplemultiplexor:inst23|16bit_or:inst35                     ; 16bit_or          ; work         ;
+;    |simplemultiplexor:inst24|  ; 26 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|simplemultiplexor:inst24                                     ; simplemultiplexor ; work         ;
+;       |16bit_or:inst35|        ; 26 (26)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|simplemultiplexor:inst24|16bit_or:inst35                     ; 16bit_or          ; work         ;
++--------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------+-------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
+; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |ALU|simplemultiplexor:inst23|16bit_or:inst35|inst16 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 56                          ;
+; cycloneiii_lcell_comb ; 165                         ;
+;     normal            ; 165                         ;
+;         0 data inputs ; 1                           ;
+;         2 data inputs ; 24                          ;
+;         3 data inputs ; 24                          ;
+;         4 data inputs ; 116                         ;
+;                       ;                             ;
+; Max LUT depth         ; 12.00                       ;
+; Average LUT depth     ; 8.76                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Standard Edition
-    Info: Processing started: Tue Dec 25 16:16:28 2018
+    Info: Processing started: Tue Jan  8 12:37:11 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ALU -c ALU
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -184,12 +359,38 @@ Info (12021): Found 1 design units, including 1 entities, in source file switchi
 Info (12021): Found 1 design units, including 1 entities, in source file simplemultiplexor.bdf
     Info (12023): Found entity 1: simplemultiplexor
 Info (12127): Elaborating entity "ALU" for the top level hierarchy
-Error (275062): Logic function of type 16bit_and and instance "inst" is already defined as a signal name or another logic function
-Error (12153): Can't elaborate top-level user hierarchy
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 2 errors, 1 warning
-    Error: Peak virtual memory: 879 megabytes
-    Error: Processing ended: Tue Dec 25 16:16:36 2018
-    Error: Elapsed time: 00:00:08
-    Error: Total CPU time (on all processors): 00:00:21
+Warning (275043): Pin "cond[3..0]" is missing source
+Info (12128): Elaborating entity "simplemultiplexor" for hierarchy "simplemultiplexor:inst24"
+Info (12128): Elaborating entity "16bit_or" for hierarchy "simplemultiplexor:inst24|16bit_or:inst35"
+Info (12128): Elaborating entity "16bit_and" for hierarchy "simplemultiplexor:inst24|16bit_and:inst18"
+Warning (12125): Using design file 16bit_fulladder.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: 16bit_fulladder
+Info (12128): Elaborating entity "16bit_fulladder" for hierarchy "16bit_fulladder:inst16"
+Warning (275011): Block or symbol "carry_lookahead" of instance "inst17" overlaps another block or symbol
+Warning (12125): Using design file 2bit_BCLA.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: 2bit_BCLA
+Info (12128): Elaborating entity "2bit_BCLA" for hierarchy "16bit_fulladder:inst16|2bit_BCLA:inst14"
+Warning (12125): Using design file carry_lookahead.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: carry_lookahead
+Info (12128): Elaborating entity "carry_lookahead" for hierarchy "16bit_fulladder:inst16|carry_lookahead:inst16"
+Info (12128): Elaborating entity "16bit_flipsign" for hierarchy "16bit_flipsign:inst17"
+Info (12128): Elaborating entity "16bit_xor" for hierarchy "16bit_flipsign:inst17|16bit_xor:inst"
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "cond[3]" is stuck at GND
+    Warning (13410): Pin "cond[2]" is stuck at GND
+    Warning (13410): Pin "cond[1]" is stuck at GND
+    Warning (13410): Pin "cond[0]" is stuck at GND
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 220 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 36 input pins
+    Info (21059): Implemented 20 output pins
+    Info (21061): Implemented 164 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 11 warnings
+    Info: Peak virtual memory: 971 megabytes
+    Info: Processing ended: Tue Jan  8 12:37:21 2019
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:24
 
 

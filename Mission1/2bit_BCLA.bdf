@@ -413,6 +413,10 @@ refer to the applicable agreement for further details.
 	(pt 544 176)
 	(pt 552 176)
 )
+(connector
+	(pt 336 192)
+	(pt 472 192)
+)
 (junction (pt 392 208))
 (junction (pt 376 216))
 (junction (pt 360 160))

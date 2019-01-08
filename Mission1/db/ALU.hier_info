@@ -1,53 +1,1541 @@
 |ALU
-Out16 <= 16bit_fulladder:inst.Out16
-In1[0] => 16bit_fulladder:inst.A[0]
-In1[1] => 16bit_fulladder:inst.A[1]
-In1[2] => 16bit_fulladder:inst.A[2]
-In1[3] => 16bit_fulladder:inst.A[3]
-In1[4] => 16bit_fulladder:inst.A[4]
-In1[5] => 16bit_fulladder:inst.A[5]
-In1[6] => 16bit_fulladder:inst.A[6]
-In1[7] => 16bit_fulladder:inst.A[7]
-In1[8] => 16bit_fulladder:inst.A[8]
-In1[9] => 16bit_fulladder:inst.A[9]
-In1[10] => 16bit_fulladder:inst.A[10]
-In1[11] => 16bit_fulladder:inst.A[11]
-In1[12] => 16bit_fulladder:inst.A[12]
-In1[13] => 16bit_fulladder:inst.A[13]
-In1[14] => 16bit_fulladder:inst.A[14]
-In1[15] => 16bit_fulladder:inst.A[15]
-In2[0] => 16bit_fulladder:inst.B[0]
-In2[1] => 16bit_fulladder:inst.B[1]
-In2[2] => 16bit_fulladder:inst.B[2]
-In2[3] => 16bit_fulladder:inst.B[3]
-In2[4] => 16bit_fulladder:inst.B[4]
-In2[5] => 16bit_fulladder:inst.B[5]
-In2[6] => 16bit_fulladder:inst.B[6]
-In2[7] => 16bit_fulladder:inst.B[7]
-In2[8] => 16bit_fulladder:inst.B[8]
-In2[9] => 16bit_fulladder:inst.B[9]
-In2[10] => 16bit_fulladder:inst.B[10]
-In2[11] => 16bit_fulladder:inst.B[11]
-In2[12] => 16bit_fulladder:inst.B[12]
-In2[13] => 16bit_fulladder:inst.B[13]
-In2[14] => 16bit_fulladder:inst.B[14]
-In2[15] => 16bit_fulladder:inst.B[15]
-Out[0] <= 16bit_fulladder:inst.Out[0]
-Out[1] <= 16bit_fulladder:inst.Out[1]
-Out[2] <= 16bit_fulladder:inst.Out[2]
-Out[3] <= 16bit_fulladder:inst.Out[3]
-Out[4] <= 16bit_fulladder:inst.Out[4]
-Out[5] <= 16bit_fulladder:inst.Out[5]
-Out[6] <= 16bit_fulladder:inst.Out[6]
-Out[7] <= 16bit_fulladder:inst.Out[7]
-Out[8] <= 16bit_fulladder:inst.Out[8]
-Out[9] <= 16bit_fulladder:inst.Out[9]
-Out[10] <= 16bit_fulladder:inst.Out[10]
-Out[11] <= 16bit_fulladder:inst.Out[11]
-Out[12] <= 16bit_fulladder:inst.Out[12]
-Out[13] <= 16bit_fulladder:inst.Out[13]
-Out[14] <= 16bit_fulladder:inst.Out[14]
-Out[15] <= 16bit_fulladder:inst.Out[15]
+cond[0] <= <GND>
+cond[1] <= <GND>
+cond[2] <= <GND>
+cond[3] <= <GND>
+out[0] <= simplemultiplexor:inst24.out[0]
+out[1] <= simplemultiplexor:inst24.out[1]
+out[2] <= simplemultiplexor:inst24.out[2]
+out[3] <= simplemultiplexor:inst24.out[3]
+out[4] <= simplemultiplexor:inst24.out[4]
+out[5] <= simplemultiplexor:inst24.out[5]
+out[6] <= simplemultiplexor:inst24.out[6]
+out[7] <= simplemultiplexor:inst24.out[7]
+out[8] <= simplemultiplexor:inst24.out[8]
+out[9] <= simplemultiplexor:inst24.out[9]
+out[10] <= simplemultiplexor:inst24.out[10]
+out[11] <= simplemultiplexor:inst24.out[11]
+out[12] <= simplemultiplexor:inst24.out[12]
+out[13] <= simplemultiplexor:inst24.out[13]
+out[14] <= simplemultiplexor:inst24.out[14]
+out[15] <= simplemultiplexor:inst24.out[15]
+opecode[0] => simplemultiplexor:inst18.switch
+opecode[0] => simplemultiplexor:inst19.switch
+opecode[0] => simplemultiplexor:inst20.switch
+opecode[1] => simplemultiplexor:inst21.switch
+opecode[1] => simplemultiplexor:inst22.switch
+opecode[2] => simplemultiplexor:inst23.switch
+opecode[3] => simplemultiplexor:inst24.switch
+dataA[0] => 16bit_fulladder:inst16.A[0]
+dataA[0] => 16bit_fulladder:inst.A[0]
+dataA[0] => 16bit_and:inst0.A[0]
+dataA[0] => 16bit_or:inst3.A[0]
+dataA[0] => 16bit_xor:inst4.A[0]
+dataA[1] => 16bit_fulladder:inst16.A[1]
+dataA[1] => 16bit_fulladder:inst.A[1]
+dataA[1] => 16bit_and:inst0.A[1]
+dataA[1] => 16bit_or:inst3.A[1]
+dataA[1] => 16bit_xor:inst4.A[1]
+dataA[2] => 16bit_fulladder:inst16.A[2]
+dataA[2] => 16bit_fulladder:inst.A[2]
+dataA[2] => 16bit_and:inst0.A[2]
+dataA[2] => 16bit_or:inst3.A[2]
+dataA[2] => 16bit_xor:inst4.A[2]
+dataA[3] => 16bit_fulladder:inst16.A[3]
+dataA[3] => 16bit_fulladder:inst.A[3]
+dataA[3] => 16bit_and:inst0.A[3]
+dataA[3] => 16bit_or:inst3.A[3]
+dataA[3] => 16bit_xor:inst4.A[3]
+dataA[4] => 16bit_fulladder:inst16.A[4]
+dataA[4] => 16bit_fulladder:inst.A[4]
+dataA[4] => 16bit_and:inst0.A[4]
+dataA[4] => 16bit_or:inst3.A[4]
+dataA[4] => 16bit_xor:inst4.A[4]
+dataA[5] => 16bit_fulladder:inst16.A[5]
+dataA[5] => 16bit_fulladder:inst.A[5]
+dataA[5] => 16bit_and:inst0.A[5]
+dataA[5] => 16bit_or:inst3.A[5]
+dataA[5] => 16bit_xor:inst4.A[5]
+dataA[6] => 16bit_fulladder:inst16.A[6]
+dataA[6] => 16bit_fulladder:inst.A[6]
+dataA[6] => 16bit_and:inst0.A[6]
+dataA[6] => 16bit_or:inst3.A[6]
+dataA[6] => 16bit_xor:inst4.A[6]
+dataA[7] => 16bit_fulladder:inst16.A[7]
+dataA[7] => 16bit_fulladder:inst.A[7]
+dataA[7] => 16bit_and:inst0.A[7]
+dataA[7] => 16bit_or:inst3.A[7]
+dataA[7] => 16bit_xor:inst4.A[7]
+dataA[8] => 16bit_fulladder:inst16.A[8]
+dataA[8] => 16bit_fulladder:inst.A[8]
+dataA[8] => 16bit_and:inst0.A[8]
+dataA[8] => 16bit_or:inst3.A[8]
+dataA[8] => 16bit_xor:inst4.A[8]
+dataA[9] => 16bit_fulladder:inst16.A[9]
+dataA[9] => 16bit_fulladder:inst.A[9]
+dataA[9] => 16bit_and:inst0.A[9]
+dataA[9] => 16bit_or:inst3.A[9]
+dataA[9] => 16bit_xor:inst4.A[9]
+dataA[10] => 16bit_fulladder:inst16.A[10]
+dataA[10] => 16bit_fulladder:inst.A[10]
+dataA[10] => 16bit_and:inst0.A[10]
+dataA[10] => 16bit_or:inst3.A[10]
+dataA[10] => 16bit_xor:inst4.A[10]
+dataA[11] => 16bit_fulladder:inst16.A[11]
+dataA[11] => 16bit_fulladder:inst.A[11]
+dataA[11] => 16bit_and:inst0.A[11]
+dataA[11] => 16bit_or:inst3.A[11]
+dataA[11] => 16bit_xor:inst4.A[11]
+dataA[12] => 16bit_fulladder:inst16.A[12]
+dataA[12] => 16bit_fulladder:inst.A[12]
+dataA[12] => 16bit_and:inst0.A[12]
+dataA[12] => 16bit_or:inst3.A[12]
+dataA[12] => 16bit_xor:inst4.A[12]
+dataA[13] => 16bit_fulladder:inst16.A[13]
+dataA[13] => 16bit_fulladder:inst.A[13]
+dataA[13] => 16bit_and:inst0.A[13]
+dataA[13] => 16bit_or:inst3.A[13]
+dataA[13] => 16bit_xor:inst4.A[13]
+dataA[14] => 16bit_fulladder:inst16.A[14]
+dataA[14] => 16bit_fulladder:inst.A[14]
+dataA[14] => 16bit_and:inst0.A[14]
+dataA[14] => 16bit_or:inst3.A[14]
+dataA[14] => 16bit_xor:inst4.A[14]
+dataA[15] => 16bit_fulladder:inst16.A[15]
+dataA[15] => 16bit_fulladder:inst.A[15]
+dataA[15] => 16bit_and:inst0.A[15]
+dataA[15] => 16bit_or:inst3.A[15]
+dataA[15] => 16bit_xor:inst4.A[15]
+dataB[0] => 16bit_fulladder:inst16.B[0]
+dataB[0] => 16bit_flipsign:inst17.In[0]
+dataB[0] => 16bit_and:inst0.B[0]
+dataB[0] => 16bit_or:inst3.B[0]
+dataB[0] => 16bit_xor:inst4.B[0]
+dataB[1] => 16bit_fulladder:inst16.B[1]
+dataB[1] => 16bit_flipsign:inst17.In[1]
+dataB[1] => 16bit_and:inst0.B[1]
+dataB[1] => 16bit_or:inst3.B[1]
+dataB[1] => 16bit_xor:inst4.B[1]
+dataB[2] => 16bit_fulladder:inst16.B[2]
+dataB[2] => 16bit_flipsign:inst17.In[2]
+dataB[2] => 16bit_and:inst0.B[2]
+dataB[2] => 16bit_or:inst3.B[2]
+dataB[2] => 16bit_xor:inst4.B[2]
+dataB[3] => 16bit_fulladder:inst16.B[3]
+dataB[3] => 16bit_flipsign:inst17.In[3]
+dataB[3] => 16bit_and:inst0.B[3]
+dataB[3] => 16bit_or:inst3.B[3]
+dataB[3] => 16bit_xor:inst4.B[3]
+dataB[4] => 16bit_fulladder:inst16.B[4]
+dataB[4] => 16bit_flipsign:inst17.In[4]
+dataB[4] => 16bit_and:inst0.B[4]
+dataB[4] => 16bit_or:inst3.B[4]
+dataB[4] => 16bit_xor:inst4.B[4]
+dataB[5] => 16bit_fulladder:inst16.B[5]
+dataB[5] => 16bit_flipsign:inst17.In[5]
+dataB[5] => 16bit_and:inst0.B[5]
+dataB[5] => 16bit_or:inst3.B[5]
+dataB[5] => 16bit_xor:inst4.B[5]
+dataB[6] => 16bit_fulladder:inst16.B[6]
+dataB[6] => 16bit_flipsign:inst17.In[6]
+dataB[6] => 16bit_and:inst0.B[6]
+dataB[6] => 16bit_or:inst3.B[6]
+dataB[6] => 16bit_xor:inst4.B[6]
+dataB[7] => 16bit_fulladder:inst16.B[7]
+dataB[7] => 16bit_flipsign:inst17.In[7]
+dataB[7] => 16bit_and:inst0.B[7]
+dataB[7] => 16bit_or:inst3.B[7]
+dataB[7] => 16bit_xor:inst4.B[7]
+dataB[8] => 16bit_fulladder:inst16.B[8]
+dataB[8] => 16bit_flipsign:inst17.In[8]
+dataB[8] => 16bit_and:inst0.B[8]
+dataB[8] => 16bit_or:inst3.B[8]
+dataB[8] => 16bit_xor:inst4.B[8]
+dataB[9] => 16bit_fulladder:inst16.B[9]
+dataB[9] => 16bit_flipsign:inst17.In[9]
+dataB[9] => 16bit_and:inst0.B[9]
+dataB[9] => 16bit_or:inst3.B[9]
+dataB[9] => 16bit_xor:inst4.B[9]
+dataB[10] => 16bit_fulladder:inst16.B[10]
+dataB[10] => 16bit_flipsign:inst17.In[10]
+dataB[10] => 16bit_and:inst0.B[10]
+dataB[10] => 16bit_or:inst3.B[10]
+dataB[10] => 16bit_xor:inst4.B[10]
+dataB[11] => 16bit_fulladder:inst16.B[11]
+dataB[11] => 16bit_flipsign:inst17.In[11]
+dataB[11] => 16bit_and:inst0.B[11]
+dataB[11] => 16bit_or:inst3.B[11]
+dataB[11] => 16bit_xor:inst4.B[11]
+dataB[12] => 16bit_fulladder:inst16.B[12]
+dataB[12] => 16bit_flipsign:inst17.In[12]
+dataB[12] => 16bit_and:inst0.B[12]
+dataB[12] => 16bit_or:inst3.B[12]
+dataB[12] => 16bit_xor:inst4.B[12]
+dataB[13] => 16bit_fulladder:inst16.B[13]
+dataB[13] => 16bit_flipsign:inst17.In[13]
+dataB[13] => 16bit_and:inst0.B[13]
+dataB[13] => 16bit_or:inst3.B[13]
+dataB[13] => 16bit_xor:inst4.B[13]
+dataB[14] => 16bit_fulladder:inst16.B[14]
+dataB[14] => 16bit_flipsign:inst17.In[14]
+dataB[14] => 16bit_and:inst0.B[14]
+dataB[14] => 16bit_or:inst3.B[14]
+dataB[14] => 16bit_xor:inst4.B[14]
+dataB[15] => 16bit_fulladder:inst16.B[15]
+dataB[15] => 16bit_flipsign:inst17.In[15]
+dataB[15] => 16bit_and:inst0.B[15]
+dataB[15] => 16bit_or:inst3.B[15]
+dataB[15] => 16bit_xor:inst4.B[15]
+
+
+|ALU|simplemultiplexor:inst24
+out[0] <= 16bit_or:inst35.out[0]
+out[1] <= 16bit_or:inst35.out[1]
+out[2] <= 16bit_or:inst35.out[2]
+out[3] <= 16bit_or:inst35.out[3]
+out[4] <= 16bit_or:inst35.out[4]
+out[5] <= 16bit_or:inst35.out[5]
+out[6] <= 16bit_or:inst35.out[6]
+out[7] <= 16bit_or:inst35.out[7]
+out[8] <= 16bit_or:inst35.out[8]
+out[9] <= 16bit_or:inst35.out[9]
+out[10] <= 16bit_or:inst35.out[10]
+out[11] <= 16bit_or:inst35.out[11]
+out[12] <= 16bit_or:inst35.out[12]
+out[13] <= 16bit_or:inst35.out[13]
+out[14] <= 16bit_or:inst35.out[14]
+out[15] <= 16bit_or:inst35.out[15]
+In0[0] => 16bit_and:inst18.A[0]
+In0[1] => 16bit_and:inst18.A[1]
+In0[2] => 16bit_and:inst18.A[2]
+In0[3] => 16bit_and:inst18.A[3]
+In0[4] => 16bit_and:inst18.A[4]
+In0[5] => 16bit_and:inst18.A[5]
+In0[6] => 16bit_and:inst18.A[6]
+In0[7] => 16bit_and:inst18.A[7]
+In0[8] => 16bit_and:inst18.A[8]
+In0[9] => 16bit_and:inst18.A[9]
+In0[10] => 16bit_and:inst18.A[10]
+In0[11] => 16bit_and:inst18.A[11]
+In0[12] => 16bit_and:inst18.A[12]
+In0[13] => 16bit_and:inst18.A[13]
+In0[14] => 16bit_and:inst18.A[14]
+In0[15] => 16bit_and:inst18.A[15]
+switch => inst19.IN0
+switch => inst20.IN0
+switch => inst21.IN0
+switch => inst22.IN0
+switch => inst23.IN0
+switch => inst24.IN0
+switch => inst25.IN0
+switch => inst26.IN0
+switch => inst27.IN0
+switch => inst28.IN0
+switch => inst29.IN0
+switch => inst30.IN0
+switch => inst31.IN0
+switch => inst32.IN0
+switch => inst33.IN0
+switch => inst34.IN0
+switch => 16bit_and:inst.B[0]
+switch => 16bit_and:inst.B[1]
+switch => 16bit_and:inst.B[2]
+switch => 16bit_and:inst.B[3]
+switch => 16bit_and:inst.B[4]
+switch => 16bit_and:inst.B[5]
+switch => 16bit_and:inst.B[6]
+switch => 16bit_and:inst.B[7]
+switch => 16bit_and:inst.B[8]
+switch => 16bit_and:inst.B[9]
+switch => 16bit_and:inst.B[10]
+switch => 16bit_and:inst.B[11]
+switch => 16bit_and:inst.B[12]
+switch => 16bit_and:inst.B[13]
+switch => 16bit_and:inst.B[14]
+switch => 16bit_and:inst.B[15]
+In1[0] => 16bit_and:inst.A[0]
+In1[1] => 16bit_and:inst.A[1]
+In1[2] => 16bit_and:inst.A[2]
+In1[3] => 16bit_and:inst.A[3]
+In1[4] => 16bit_and:inst.A[4]
+In1[5] => 16bit_and:inst.A[5]
+In1[6] => 16bit_and:inst.A[6]
+In1[7] => 16bit_and:inst.A[7]
+In1[8] => 16bit_and:inst.A[8]
+In1[9] => 16bit_and:inst.A[9]
+In1[10] => 16bit_and:inst.A[10]
+In1[11] => 16bit_and:inst.A[11]
+In1[12] => 16bit_and:inst.A[12]
+In1[13] => 16bit_and:inst.A[13]
+In1[14] => 16bit_and:inst.A[14]
+In1[15] => 16bit_and:inst.A[15]
+
+
+|ALU|simplemultiplexor:inst24|16bit_or:inst35
+out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+out[14] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+out[15] <= inst16.DB_MAX_OUTPUT_PORT_TYPE
+B[0] => inst.IN0
+B[1] => inst1.IN0
+B[2] => inst2.IN0
+B[3] => inst3.IN0
+B[4] => inst4.IN0
+B[5] => inst5.IN0
+B[6] => inst6.IN0
+B[7] => inst7.IN0
+B[8] => inst8.IN0
+B[9] => inst9.IN0
+B[10] => inst10.IN0
+B[11] => inst11.IN0
+B[12] => inst12.IN0
+B[13] => inst13.IN0
+B[14] => inst14.IN0
+B[15] => inst16.IN0
+A[0] => inst.IN1
+A[1] => inst1.IN1
+A[2] => inst2.IN1
+A[3] => inst3.IN1
+A[4] => inst4.IN1
+A[5] => inst5.IN1
+A[6] => inst6.IN1
+A[7] => inst7.IN1
+A[8] => inst8.IN1
+A[9] => inst9.IN1
+A[10] => inst10.IN1
+A[11] => inst11.IN1
+A[12] => inst12.IN1
+A[13] => inst13.IN1
+A[14] => inst14.IN1
+A[15] => inst16.IN1
+
+
+|ALU|simplemultiplexor:inst24|16bit_and:inst18
+out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+out[14] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+out[15] <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+A[0] => inst0.IN0
+A[1] => inst1.IN0
+A[2] => inst2.IN0
+A[3] => inst3.IN0
+A[4] => inst4.IN0
+A[5] => inst5.IN0
+A[6] => inst6.IN0
+A[7] => inst7.IN0
+A[8] => inst8.IN0
+A[9] => inst9.IN0
+A[10] => inst10.IN0
+A[11] => inst11.IN0
+A[12] => inst12.IN0
+A[13] => inst13.IN0
+A[14] => inst14.IN0
+A[15] => inst15.IN0
+B[0] => inst0.IN1
+B[1] => inst1.IN1
+B[2] => inst2.IN1
+B[3] => inst3.IN1
+B[4] => inst4.IN1
+B[5] => inst5.IN1
+B[6] => inst6.IN1
+B[7] => inst7.IN1
+B[8] => inst8.IN1
+B[9] => inst9.IN1
+B[10] => inst10.IN1
+B[11] => inst11.IN1
+B[12] => inst12.IN1
+B[13] => inst13.IN1
+B[14] => inst14.IN1
+B[15] => inst15.IN1
+
+
+|ALU|simplemultiplexor:inst24|16bit_and:inst
+out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+out[14] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+out[15] <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+A[0] => inst0.IN0
+A[1] => inst1.IN0
+A[2] => inst2.IN0
+A[3] => inst3.IN0
+A[4] => inst4.IN0
+A[5] => inst5.IN0
+A[6] => inst6.IN0
+A[7] => inst7.IN0
+A[8] => inst8.IN0
+A[9] => inst9.IN0
+A[10] => inst10.IN0
+A[11] => inst11.IN0
+A[12] => inst12.IN0
+A[13] => inst13.IN0
+A[14] => inst14.IN0
+A[15] => inst15.IN0
+B[0] => inst0.IN1
+B[1] => inst1.IN1
+B[2] => inst2.IN1
+B[3] => inst3.IN1
+B[4] => inst4.IN1
+B[5] => inst5.IN1
+B[6] => inst6.IN1
+B[7] => inst7.IN1
+B[8] => inst8.IN1
+B[9] => inst9.IN1
+B[10] => inst10.IN1
+B[11] => inst11.IN1
+B[12] => inst12.IN1
+B[13] => inst13.IN1
+B[14] => inst14.IN1
+B[15] => inst15.IN1
+
+
+|ALU|simplemultiplexor:inst23
+out[0] <= 16bit_or:inst35.out[0]
+out[1] <= 16bit_or:inst35.out[1]
+out[2] <= 16bit_or:inst35.out[2]
+out[3] <= 16bit_or:inst35.out[3]
+out[4] <= 16bit_or:inst35.out[4]
+out[5] <= 16bit_or:inst35.out[5]
+out[6] <= 16bit_or:inst35.out[6]
+out[7] <= 16bit_or:inst35.out[7]
+out[8] <= 16bit_or:inst35.out[8]
+out[9] <= 16bit_or:inst35.out[9]
+out[10] <= 16bit_or:inst35.out[10]
+out[11] <= 16bit_or:inst35.out[11]
+out[12] <= 16bit_or:inst35.out[12]
+out[13] <= 16bit_or:inst35.out[13]
+out[14] <= 16bit_or:inst35.out[14]
+out[15] <= 16bit_or:inst35.out[15]
+In0[0] => 16bit_and:inst18.A[0]
+In0[1] => 16bit_and:inst18.A[1]
+In0[2] => 16bit_and:inst18.A[2]
+In0[3] => 16bit_and:inst18.A[3]
+In0[4] => 16bit_and:inst18.A[4]
+In0[5] => 16bit_and:inst18.A[5]
+In0[6] => 16bit_and:inst18.A[6]
+In0[7] => 16bit_and:inst18.A[7]
+In0[8] => 16bit_and:inst18.A[8]
+In0[9] => 16bit_and:inst18.A[9]
+In0[10] => 16bit_and:inst18.A[10]
+In0[11] => 16bit_and:inst18.A[11]
+In0[12] => 16bit_and:inst18.A[12]
+In0[13] => 16bit_and:inst18.A[13]
+In0[14] => 16bit_and:inst18.A[14]
+In0[15] => 16bit_and:inst18.A[15]
+switch => inst19.IN0
+switch => inst20.IN0
+switch => inst21.IN0
+switch => inst22.IN0
+switch => inst23.IN0
+switch => inst24.IN0
+switch => inst25.IN0
+switch => inst26.IN0
+switch => inst27.IN0
+switch => inst28.IN0
+switch => inst29.IN0
+switch => inst30.IN0
+switch => inst31.IN0
+switch => inst32.IN0
+switch => inst33.IN0
+switch => inst34.IN0
+switch => 16bit_and:inst.B[0]
+switch => 16bit_and:inst.B[1]
+switch => 16bit_and:inst.B[2]
+switch => 16bit_and:inst.B[3]
+switch => 16bit_and:inst.B[4]
+switch => 16bit_and:inst.B[5]
+switch => 16bit_and:inst.B[6]
+switch => 16bit_and:inst.B[7]
+switch => 16bit_and:inst.B[8]
+switch => 16bit_and:inst.B[9]
+switch => 16bit_and:inst.B[10]
+switch => 16bit_and:inst.B[11]
+switch => 16bit_and:inst.B[12]
+switch => 16bit_and:inst.B[13]
+switch => 16bit_and:inst.B[14]
+switch => 16bit_and:inst.B[15]
+In1[0] => 16bit_and:inst.A[0]
+In1[1] => 16bit_and:inst.A[1]
+In1[2] => 16bit_and:inst.A[2]
+In1[3] => 16bit_and:inst.A[3]
+In1[4] => 16bit_and:inst.A[4]
+In1[5] => 16bit_and:inst.A[5]
+In1[6] => 16bit_and:inst.A[6]
+In1[7] => 16bit_and:inst.A[7]
+In1[8] => 16bit_and:inst.A[8]
+In1[9] => 16bit_and:inst.A[9]
+In1[10] => 16bit_and:inst.A[10]
+In1[11] => 16bit_and:inst.A[11]
+In1[12] => 16bit_and:inst.A[12]
+In1[13] => 16bit_and:inst.A[13]
+In1[14] => 16bit_and:inst.A[14]
+In1[15] => 16bit_and:inst.A[15]
+
+
+|ALU|simplemultiplexor:inst23|16bit_or:inst35
+out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+out[14] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+out[15] <= inst16.DB_MAX_OUTPUT_PORT_TYPE
+B[0] => inst.IN0
+B[1] => inst1.IN0
+B[2] => inst2.IN0
+B[3] => inst3.IN0
+B[4] => inst4.IN0
+B[5] => inst5.IN0
+B[6] => inst6.IN0
+B[7] => inst7.IN0
+B[8] => inst8.IN0
+B[9] => inst9.IN0
+B[10] => inst10.IN0
+B[11] => inst11.IN0
+B[12] => inst12.IN0
+B[13] => inst13.IN0
+B[14] => inst14.IN0
+B[15] => inst16.IN0
+A[0] => inst.IN1
+A[1] => inst1.IN1
+A[2] => inst2.IN1
+A[3] => inst3.IN1
+A[4] => inst4.IN1
+A[5] => inst5.IN1
+A[6] => inst6.IN1
+A[7] => inst7.IN1
+A[8] => inst8.IN1
+A[9] => inst9.IN1
+A[10] => inst10.IN1
+A[11] => inst11.IN1
+A[12] => inst12.IN1
+A[13] => inst13.IN1
+A[14] => inst14.IN1
+A[15] => inst16.IN1
+
+
+|ALU|simplemultiplexor:inst23|16bit_and:inst18
+out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+out[14] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+out[15] <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+A[0] => inst0.IN0
+A[1] => inst1.IN0
+A[2] => inst2.IN0
+A[3] => inst3.IN0
+A[4] => inst4.IN0
+A[5] => inst5.IN0
+A[6] => inst6.IN0
+A[7] => inst7.IN0
+A[8] => inst8.IN0
+A[9] => inst9.IN0
+A[10] => inst10.IN0
+A[11] => inst11.IN0
+A[12] => inst12.IN0
+A[13] => inst13.IN0
+A[14] => inst14.IN0
+A[15] => inst15.IN0
+B[0] => inst0.IN1
+B[1] => inst1.IN1
+B[2] => inst2.IN1
+B[3] => inst3.IN1
+B[4] => inst4.IN1
+B[5] => inst5.IN1
+B[6] => inst6.IN1
+B[7] => inst7.IN1
+B[8] => inst8.IN1
+B[9] => inst9.IN1
+B[10] => inst10.IN1
+B[11] => inst11.IN1
+B[12] => inst12.IN1
+B[13] => inst13.IN1
+B[14] => inst14.IN1
+B[15] => inst15.IN1
+
+
+|ALU|simplemultiplexor:inst23|16bit_and:inst
+out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+out[14] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+out[15] <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+A[0] => inst0.IN0
+A[1] => inst1.IN0
+A[2] => inst2.IN0
+A[3] => inst3.IN0
+A[4] => inst4.IN0
+A[5] => inst5.IN0
+A[6] => inst6.IN0
+A[7] => inst7.IN0
+A[8] => inst8.IN0
+A[9] => inst9.IN0
+A[10] => inst10.IN0
+A[11] => inst11.IN0
+A[12] => inst12.IN0
+A[13] => inst13.IN0
+A[14] => inst14.IN0
+A[15] => inst15.IN0
+B[0] => inst0.IN1
+B[1] => inst1.IN1
+B[2] => inst2.IN1
+B[3] => inst3.IN1
+B[4] => inst4.IN1
+B[5] => inst5.IN1
+B[6] => inst6.IN1
+B[7] => inst7.IN1
+B[8] => inst8.IN1
+B[9] => inst9.IN1
+B[10] => inst10.IN1
+B[11] => inst11.IN1
+B[12] => inst12.IN1
+B[13] => inst13.IN1
+B[14] => inst14.IN1
+B[15] => inst15.IN1
+
+
+|ALU|simplemultiplexor:inst21
+out[0] <= 16bit_or:inst35.out[0]
+out[1] <= 16bit_or:inst35.out[1]
+out[2] <= 16bit_or:inst35.out[2]
+out[3] <= 16bit_or:inst35.out[3]
+out[4] <= 16bit_or:inst35.out[4]
+out[5] <= 16bit_or:inst35.out[5]
+out[6] <= 16bit_or:inst35.out[6]
+out[7] <= 16bit_or:inst35.out[7]
+out[8] <= 16bit_or:inst35.out[8]
+out[9] <= 16bit_or:inst35.out[9]
+out[10] <= 16bit_or:inst35.out[10]
+out[11] <= 16bit_or:inst35.out[11]
+out[12] <= 16bit_or:inst35.out[12]
+out[13] <= 16bit_or:inst35.out[13]
+out[14] <= 16bit_or:inst35.out[14]
+out[15] <= 16bit_or:inst35.out[15]
+In0[0] => 16bit_and:inst18.A[0]
+In0[1] => 16bit_and:inst18.A[1]
+In0[2] => 16bit_and:inst18.A[2]
+In0[3] => 16bit_and:inst18.A[3]
+In0[4] => 16bit_and:inst18.A[4]
+In0[5] => 16bit_and:inst18.A[5]
+In0[6] => 16bit_and:inst18.A[6]
+In0[7] => 16bit_and:inst18.A[7]
+In0[8] => 16bit_and:inst18.A[8]
+In0[9] => 16bit_and:inst18.A[9]
+In0[10] => 16bit_and:inst18.A[10]
+In0[11] => 16bit_and:inst18.A[11]
+In0[12] => 16bit_and:inst18.A[12]
+In0[13] => 16bit_and:inst18.A[13]
+In0[14] => 16bit_and:inst18.A[14]
+In0[15] => 16bit_and:inst18.A[15]
+switch => inst19.IN0
+switch => inst20.IN0
+switch => inst21.IN0
+switch => inst22.IN0
+switch => inst23.IN0
+switch => inst24.IN0
+switch => inst25.IN0
+switch => inst26.IN0
+switch => inst27.IN0
+switch => inst28.IN0
+switch => inst29.IN0
+switch => inst30.IN0
+switch => inst31.IN0
+switch => inst32.IN0
+switch => inst33.IN0
+switch => inst34.IN0
+switch => 16bit_and:inst.B[0]
+switch => 16bit_and:inst.B[1]
+switch => 16bit_and:inst.B[2]
+switch => 16bit_and:inst.B[3]
+switch => 16bit_and:inst.B[4]
+switch => 16bit_and:inst.B[5]
+switch => 16bit_and:inst.B[6]
+switch => 16bit_and:inst.B[7]
+switch => 16bit_and:inst.B[8]
+switch => 16bit_and:inst.B[9]
+switch => 16bit_and:inst.B[10]
+switch => 16bit_and:inst.B[11]
+switch => 16bit_and:inst.B[12]
+switch => 16bit_and:inst.B[13]
+switch => 16bit_and:inst.B[14]
+switch => 16bit_and:inst.B[15]
+In1[0] => 16bit_and:inst.A[0]
+In1[1] => 16bit_and:inst.A[1]
+In1[2] => 16bit_and:inst.A[2]
+In1[3] => 16bit_and:inst.A[3]
+In1[4] => 16bit_and:inst.A[4]
+In1[5] => 16bit_and:inst.A[5]
+In1[6] => 16bit_and:inst.A[6]
+In1[7] => 16bit_and:inst.A[7]
+In1[8] => 16bit_and:inst.A[8]
+In1[9] => 16bit_and:inst.A[9]
+In1[10] => 16bit_and:inst.A[10]
+In1[11] => 16bit_and:inst.A[11]
+In1[12] => 16bit_and:inst.A[12]
+In1[13] => 16bit_and:inst.A[13]
+In1[14] => 16bit_and:inst.A[14]
+In1[15] => 16bit_and:inst.A[15]
+
+
+|ALU|simplemultiplexor:inst21|16bit_or:inst35
+out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+out[14] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+out[15] <= inst16.DB_MAX_OUTPUT_PORT_TYPE
+B[0] => inst.IN0
+B[1] => inst1.IN0
+B[2] => inst2.IN0
+B[3] => inst3.IN0
+B[4] => inst4.IN0
+B[5] => inst5.IN0
+B[6] => inst6.IN0
+B[7] => inst7.IN0
+B[8] => inst8.IN0
+B[9] => inst9.IN0
+B[10] => inst10.IN0
+B[11] => inst11.IN0
+B[12] => inst12.IN0
+B[13] => inst13.IN0
+B[14] => inst14.IN0
+B[15] => inst16.IN0
+A[0] => inst.IN1
+A[1] => inst1.IN1
+A[2] => inst2.IN1
+A[3] => inst3.IN1
+A[4] => inst4.IN1
+A[5] => inst5.IN1
+A[6] => inst6.IN1
+A[7] => inst7.IN1
+A[8] => inst8.IN1
+A[9] => inst9.IN1
+A[10] => inst10.IN1
+A[11] => inst11.IN1
+A[12] => inst12.IN1
+A[13] => inst13.IN1
+A[14] => inst14.IN1
+A[15] => inst16.IN1
+
+
+|ALU|simplemultiplexor:inst21|16bit_and:inst18
+out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+out[14] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+out[15] <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+A[0] => inst0.IN0
+A[1] => inst1.IN0
+A[2] => inst2.IN0
+A[3] => inst3.IN0
+A[4] => inst4.IN0
+A[5] => inst5.IN0
+A[6] => inst6.IN0
+A[7] => inst7.IN0
+A[8] => inst8.IN0
+A[9] => inst9.IN0
+A[10] => inst10.IN0
+A[11] => inst11.IN0
+A[12] => inst12.IN0
+A[13] => inst13.IN0
+A[14] => inst14.IN0
+A[15] => inst15.IN0
+B[0] => inst0.IN1
+B[1] => inst1.IN1
+B[2] => inst2.IN1
+B[3] => inst3.IN1
+B[4] => inst4.IN1
+B[5] => inst5.IN1
+B[6] => inst6.IN1
+B[7] => inst7.IN1
+B[8] => inst8.IN1
+B[9] => inst9.IN1
+B[10] => inst10.IN1
+B[11] => inst11.IN1
+B[12] => inst12.IN1
+B[13] => inst13.IN1
+B[14] => inst14.IN1
+B[15] => inst15.IN1
+
+
+|ALU|simplemultiplexor:inst21|16bit_and:inst
+out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+out[14] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+out[15] <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+A[0] => inst0.IN0
+A[1] => inst1.IN0
+A[2] => inst2.IN0
+A[3] => inst3.IN0
+A[4] => inst4.IN0
+A[5] => inst5.IN0
+A[6] => inst6.IN0
+A[7] => inst7.IN0
+A[8] => inst8.IN0
+A[9] => inst9.IN0
+A[10] => inst10.IN0
+A[11] => inst11.IN0
+A[12] => inst12.IN0
+A[13] => inst13.IN0
+A[14] => inst14.IN0
+A[15] => inst15.IN0
+B[0] => inst0.IN1
+B[1] => inst1.IN1
+B[2] => inst2.IN1
+B[3] => inst3.IN1
+B[4] => inst4.IN1
+B[5] => inst5.IN1
+B[6] => inst6.IN1
+B[7] => inst7.IN1
+B[8] => inst8.IN1
+B[9] => inst9.IN1
+B[10] => inst10.IN1
+B[11] => inst11.IN1
+B[12] => inst12.IN1
+B[13] => inst13.IN1
+B[14] => inst14.IN1
+B[15] => inst15.IN1
+
+
+|ALU|simplemultiplexor:inst18
+out[0] <= 16bit_or:inst35.out[0]
+out[1] <= 16bit_or:inst35.out[1]
+out[2] <= 16bit_or:inst35.out[2]
+out[3] <= 16bit_or:inst35.out[3]
+out[4] <= 16bit_or:inst35.out[4]
+out[5] <= 16bit_or:inst35.out[5]
+out[6] <= 16bit_or:inst35.out[6]
+out[7] <= 16bit_or:inst35.out[7]
+out[8] <= 16bit_or:inst35.out[8]
+out[9] <= 16bit_or:inst35.out[9]
+out[10] <= 16bit_or:inst35.out[10]
+out[11] <= 16bit_or:inst35.out[11]
+out[12] <= 16bit_or:inst35.out[12]
+out[13] <= 16bit_or:inst35.out[13]
+out[14] <= 16bit_or:inst35.out[14]
+out[15] <= 16bit_or:inst35.out[15]
+In0[0] => 16bit_and:inst18.A[0]
+In0[1] => 16bit_and:inst18.A[1]
+In0[2] => 16bit_and:inst18.A[2]
+In0[3] => 16bit_and:inst18.A[3]
+In0[4] => 16bit_and:inst18.A[4]
+In0[5] => 16bit_and:inst18.A[5]
+In0[6] => 16bit_and:inst18.A[6]
+In0[7] => 16bit_and:inst18.A[7]
+In0[8] => 16bit_and:inst18.A[8]
+In0[9] => 16bit_and:inst18.A[9]
+In0[10] => 16bit_and:inst18.A[10]
+In0[11] => 16bit_and:inst18.A[11]
+In0[12] => 16bit_and:inst18.A[12]
+In0[13] => 16bit_and:inst18.A[13]
+In0[14] => 16bit_and:inst18.A[14]
+In0[15] => 16bit_and:inst18.A[15]
+switch => inst19.IN0
+switch => inst20.IN0
+switch => inst21.IN0
+switch => inst22.IN0
+switch => inst23.IN0
+switch => inst24.IN0
+switch => inst25.IN0
+switch => inst26.IN0
+switch => inst27.IN0
+switch => inst28.IN0
+switch => inst29.IN0
+switch => inst30.IN0
+switch => inst31.IN0
+switch => inst32.IN0
+switch => inst33.IN0
+switch => inst34.IN0
+switch => 16bit_and:inst.B[0]
+switch => 16bit_and:inst.B[1]
+switch => 16bit_and:inst.B[2]
+switch => 16bit_and:inst.B[3]
+switch => 16bit_and:inst.B[4]
+switch => 16bit_and:inst.B[5]
+switch => 16bit_and:inst.B[6]
+switch => 16bit_and:inst.B[7]
+switch => 16bit_and:inst.B[8]
+switch => 16bit_and:inst.B[9]
+switch => 16bit_and:inst.B[10]
+switch => 16bit_and:inst.B[11]
+switch => 16bit_and:inst.B[12]
+switch => 16bit_and:inst.B[13]
+switch => 16bit_and:inst.B[14]
+switch => 16bit_and:inst.B[15]
+In1[0] => 16bit_and:inst.A[0]
+In1[1] => 16bit_and:inst.A[1]
+In1[2] => 16bit_and:inst.A[2]
+In1[3] => 16bit_and:inst.A[3]
+In1[4] => 16bit_and:inst.A[4]
+In1[5] => 16bit_and:inst.A[5]
+In1[6] => 16bit_and:inst.A[6]
+In1[7] => 16bit_and:inst.A[7]
+In1[8] => 16bit_and:inst.A[8]
+In1[9] => 16bit_and:inst.A[9]
+In1[10] => 16bit_and:inst.A[10]
+In1[11] => 16bit_and:inst.A[11]
+In1[12] => 16bit_and:inst.A[12]
+In1[13] => 16bit_and:inst.A[13]
+In1[14] => 16bit_and:inst.A[14]
+In1[15] => 16bit_and:inst.A[15]
+
+
+|ALU|simplemultiplexor:inst18|16bit_or:inst35
+out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+out[14] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+out[15] <= inst16.DB_MAX_OUTPUT_PORT_TYPE
+B[0] => inst.IN0
+B[1] => inst1.IN0
+B[2] => inst2.IN0
+B[3] => inst3.IN0
+B[4] => inst4.IN0
+B[5] => inst5.IN0
+B[6] => inst6.IN0
+B[7] => inst7.IN0
+B[8] => inst8.IN0
+B[9] => inst9.IN0
+B[10] => inst10.IN0
+B[11] => inst11.IN0
+B[12] => inst12.IN0
+B[13] => inst13.IN0
+B[14] => inst14.IN0
+B[15] => inst16.IN0
+A[0] => inst.IN1
+A[1] => inst1.IN1
+A[2] => inst2.IN1
+A[3] => inst3.IN1
+A[4] => inst4.IN1
+A[5] => inst5.IN1
+A[6] => inst6.IN1
+A[7] => inst7.IN1
+A[8] => inst8.IN1
+A[9] => inst9.IN1
+A[10] => inst10.IN1
+A[11] => inst11.IN1
+A[12] => inst12.IN1
+A[13] => inst13.IN1
+A[14] => inst14.IN1
+A[15] => inst16.IN1
+
+
+|ALU|simplemultiplexor:inst18|16bit_and:inst18
+out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+out[14] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+out[15] <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+A[0] => inst0.IN0
+A[1] => inst1.IN0
+A[2] => inst2.IN0
+A[3] => inst3.IN0
+A[4] => inst4.IN0
+A[5] => inst5.IN0
+A[6] => inst6.IN0
+A[7] => inst7.IN0
+A[8] => inst8.IN0
+A[9] => inst9.IN0
+A[10] => inst10.IN0
+A[11] => inst11.IN0
+A[12] => inst12.IN0
+A[13] => inst13.IN0
+A[14] => inst14.IN0
+A[15] => inst15.IN0
+B[0] => inst0.IN1
+B[1] => inst1.IN1
+B[2] => inst2.IN1
+B[3] => inst3.IN1
+B[4] => inst4.IN1
+B[5] => inst5.IN1
+B[6] => inst6.IN1
+B[7] => inst7.IN1
+B[8] => inst8.IN1
+B[9] => inst9.IN1
+B[10] => inst10.IN1
+B[11] => inst11.IN1
+B[12] => inst12.IN1
+B[13] => inst13.IN1
+B[14] => inst14.IN1
+B[15] => inst15.IN1
+
+
+|ALU|simplemultiplexor:inst18|16bit_and:inst
+out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+out[14] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+out[15] <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+A[0] => inst0.IN0
+A[1] => inst1.IN0
+A[2] => inst2.IN0
+A[3] => inst3.IN0
+A[4] => inst4.IN0
+A[5] => inst5.IN0
+A[6] => inst6.IN0
+A[7] => inst7.IN0
+A[8] => inst8.IN0
+A[9] => inst9.IN0
+A[10] => inst10.IN0
+A[11] => inst11.IN0
+A[12] => inst12.IN0
+A[13] => inst13.IN0
+A[14] => inst14.IN0
+A[15] => inst15.IN0
+B[0] => inst0.IN1
+B[1] => inst1.IN1
+B[2] => inst2.IN1
+B[3] => inst3.IN1
+B[4] => inst4.IN1
+B[5] => inst5.IN1
+B[6] => inst6.IN1
+B[7] => inst7.IN1
+B[8] => inst8.IN1
+B[9] => inst9.IN1
+B[10] => inst10.IN1
+B[11] => inst11.IN1
+B[12] => inst12.IN1
+B[13] => inst13.IN1
+B[14] => inst14.IN1
+B[15] => inst15.IN1
+
+
+|ALU|16bit_fulladder:inst16
+Out16 <= 2bit_BCLA:inst14.Gout
+A[0] => carry_lookahead:inst16.A
+A[1] => carry_lookahead:inst17.A
+A[2] => carry_lookahead:inst18.A
+A[3] => carry_lookahead:inst19.A
+A[4] => carry_lookahead:inst20.A
+A[5] => carry_lookahead:inst21.A
+A[6] => carry_lookahead:inst22.A
+A[7] => carry_lookahead:inst23.A
+A[8] => carry_lookahead:inst24.A
+A[9] => carry_lookahead:inst25.A
+A[10] => carry_lookahead:inst26.A
+A[11] => carry_lookahead:inst27.A
+A[12] => carry_lookahead:inst28.A
+A[13] => carry_lookahead:inst29.A
+A[14] => carry_lookahead:inst30.A
+A[15] => carry_lookahead:inst31.A
+B[0] => carry_lookahead:inst16.B
+B[1] => carry_lookahead:inst17.B
+B[2] => carry_lookahead:inst18.B
+B[3] => carry_lookahead:inst19.B
+B[4] => carry_lookahead:inst20.B
+B[5] => carry_lookahead:inst21.B
+B[6] => carry_lookahead:inst22.B
+B[7] => carry_lookahead:inst23.B
+B[8] => carry_lookahead:inst24.B
+B[9] => carry_lookahead:inst25.B
+B[10] => carry_lookahead:inst26.B
+B[11] => carry_lookahead:inst27.B
+B[12] => carry_lookahead:inst28.B
+B[13] => carry_lookahead:inst29.B
+B[14] => carry_lookahead:inst30.B
+B[15] => carry_lookahead:inst31.B
+Out[0] <= inst32.DB_MAX_OUTPUT_PORT_TYPE
+Out[1] <= inst33.DB_MAX_OUTPUT_PORT_TYPE
+Out[2] <= inst34.DB_MAX_OUTPUT_PORT_TYPE
+Out[3] <= inst35.DB_MAX_OUTPUT_PORT_TYPE
+Out[4] <= inst36.DB_MAX_OUTPUT_PORT_TYPE
+Out[5] <= inst37.DB_MAX_OUTPUT_PORT_TYPE
+Out[6] <= inst38.DB_MAX_OUTPUT_PORT_TYPE
+Out[7] <= inst39.DB_MAX_OUTPUT_PORT_TYPE
+Out[8] <= inst40.DB_MAX_OUTPUT_PORT_TYPE
+Out[9] <= inst41.DB_MAX_OUTPUT_PORT_TYPE
+Out[10] <= inst42.DB_MAX_OUTPUT_PORT_TYPE
+Out[11] <= inst43.DB_MAX_OUTPUT_PORT_TYPE
+Out[12] <= inst44.DB_MAX_OUTPUT_PORT_TYPE
+Out[13] <= inst45.DB_MAX_OUTPUT_PORT_TYPE
+Out[14] <= inst46.DB_MAX_OUTPUT_PORT_TYPE
+Out[15] <= inst47.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|16bit_fulladder:inst16|2bit_BCLA:inst14
+Cout <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+G0 => inst7.IN0
+G0 => inst.IN0
+P0 => inst6.IN0
+P0 => inst8.IN0
+Cin => inst6.IN1
+Gout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+G1 => inst2.IN0
+P1 => inst.IN1
+P1 => inst8.IN1
+Pout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|16bit_fulladder:inst16|2bit_BCLA:inst12
+Cout <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+G0 => inst7.IN0
+G0 => inst.IN0
+P0 => inst6.IN0
+P0 => inst8.IN0
+Cin => inst6.IN1
+Gout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+G1 => inst2.IN0
+P1 => inst.IN1
+P1 => inst8.IN1
+Pout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|16bit_fulladder:inst16|2bit_BCLA:inst8
+Cout <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+G0 => inst7.IN0
+G0 => inst.IN0
+P0 => inst6.IN0
+P0 => inst8.IN0
+Cin => inst6.IN1
+Gout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+G1 => inst2.IN0
+P1 => inst.IN1
+P1 => inst8.IN1
+Pout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|16bit_fulladder:inst16|2bit_BCLA:inst
+Cout <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+G0 => inst7.IN0
+G0 => inst.IN0
+P0 => inst6.IN0
+P0 => inst8.IN0
+Cin => inst6.IN1
+Gout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+G1 => inst2.IN0
+P1 => inst.IN1
+P1 => inst8.IN1
+Pout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|16bit_fulladder:inst16|carry_lookahead:inst16
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|16bit_fulladder:inst16|carry_lookahead:inst17
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|16bit_fulladder:inst16|2bit_BCLA:inst1
+Cout <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+G0 => inst7.IN0
+G0 => inst.IN0
+P0 => inst6.IN0
+P0 => inst8.IN0
+Cin => inst6.IN1
+Gout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+G1 => inst2.IN0
+P1 => inst.IN1
+P1 => inst8.IN1
+Pout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|16bit_fulladder:inst16|carry_lookahead:inst18
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|16bit_fulladder:inst16|carry_lookahead:inst19
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|16bit_fulladder:inst16|2bit_BCLA:inst9
+Cout <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+G0 => inst7.IN0
+G0 => inst.IN0
+P0 => inst6.IN0
+P0 => inst8.IN0
+Cin => inst6.IN1
+Gout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+G1 => inst2.IN0
+P1 => inst.IN1
+P1 => inst8.IN1
+Pout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|16bit_fulladder:inst16|2bit_BCLA:inst2
+Cout <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+G0 => inst7.IN0
+G0 => inst.IN0
+P0 => inst6.IN0
+P0 => inst8.IN0
+Cin => inst6.IN1
+Gout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+G1 => inst2.IN0
+P1 => inst.IN1
+P1 => inst8.IN1
+Pout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|16bit_fulladder:inst16|carry_lookahead:inst20
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|16bit_fulladder:inst16|carry_lookahead:inst21
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|16bit_fulladder:inst16|2bit_BCLA:inst3
+Cout <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+G0 => inst7.IN0
+G0 => inst.IN0
+P0 => inst6.IN0
+P0 => inst8.IN0
+Cin => inst6.IN1
+Gout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+G1 => inst2.IN0
+P1 => inst.IN1
+P1 => inst8.IN1
+Pout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|16bit_fulladder:inst16|carry_lookahead:inst22
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|16bit_fulladder:inst16|carry_lookahead:inst23
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|16bit_fulladder:inst16|2bit_BCLA:inst13
+Cout <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+G0 => inst7.IN0
+G0 => inst.IN0
+P0 => inst6.IN0
+P0 => inst8.IN0
+Cin => inst6.IN1
+Gout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+G1 => inst2.IN0
+P1 => inst.IN1
+P1 => inst8.IN1
+Pout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|16bit_fulladder:inst16|2bit_BCLA:inst10
+Cout <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+G0 => inst7.IN0
+G0 => inst.IN0
+P0 => inst6.IN0
+P0 => inst8.IN0
+Cin => inst6.IN1
+Gout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+G1 => inst2.IN0
+P1 => inst.IN1
+P1 => inst8.IN1
+Pout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|16bit_fulladder:inst16|2bit_BCLA:inst4
+Cout <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+G0 => inst7.IN0
+G0 => inst.IN0
+P0 => inst6.IN0
+P0 => inst8.IN0
+Cin => inst6.IN1
+Gout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+G1 => inst2.IN0
+P1 => inst.IN1
+P1 => inst8.IN1
+Pout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|16bit_fulladder:inst16|carry_lookahead:inst24
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|16bit_fulladder:inst16|carry_lookahead:inst25
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|16bit_fulladder:inst16|2bit_BCLA:inst5
+Cout <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+G0 => inst7.IN0
+G0 => inst.IN0
+P0 => inst6.IN0
+P0 => inst8.IN0
+Cin => inst6.IN1
+Gout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+G1 => inst2.IN0
+P1 => inst.IN1
+P1 => inst8.IN1
+Pout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|16bit_fulladder:inst16|carry_lookahead:inst26
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|16bit_fulladder:inst16|carry_lookahead:inst27
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|16bit_fulladder:inst16|2bit_BCLA:inst11
+Cout <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+G0 => inst7.IN0
+G0 => inst.IN0
+P0 => inst6.IN0
+P0 => inst8.IN0
+Cin => inst6.IN1
+Gout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+G1 => inst2.IN0
+P1 => inst.IN1
+P1 => inst8.IN1
+Pout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|16bit_fulladder:inst16|2bit_BCLA:inst6
+Cout <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+G0 => inst7.IN0
+G0 => inst.IN0
+P0 => inst6.IN0
+P0 => inst8.IN0
+Cin => inst6.IN1
+Gout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+G1 => inst2.IN0
+P1 => inst.IN1
+P1 => inst8.IN1
+Pout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|16bit_fulladder:inst16|carry_lookahead:inst28
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|16bit_fulladder:inst16|carry_lookahead:inst29
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|16bit_fulladder:inst16|2bit_BCLA:inst7
+Cout <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+G0 => inst7.IN0
+G0 => inst.IN0
+P0 => inst6.IN0
+P0 => inst8.IN0
+Cin => inst6.IN1
+Gout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+G1 => inst2.IN0
+P1 => inst.IN1
+P1 => inst8.IN1
+Pout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|16bit_fulladder:inst16|carry_lookahead:inst30
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|16bit_fulladder:inst16|carry_lookahead:inst31
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ALU|16bit_fulladder:inst
@@ -454,5 +1942,1358 @@ A => inst2.IN0
 B => inst.IN1
 B => inst2.IN1
 P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|16bit_flipsign:inst17
+out[0] <= 16bit_fulladder:inst3.Out[0]
+out[1] <= 16bit_fulladder:inst3.Out[1]
+out[2] <= 16bit_fulladder:inst3.Out[2]
+out[3] <= 16bit_fulladder:inst3.Out[3]
+out[4] <= 16bit_fulladder:inst3.Out[4]
+out[5] <= 16bit_fulladder:inst3.Out[5]
+out[6] <= 16bit_fulladder:inst3.Out[6]
+out[7] <= 16bit_fulladder:inst3.Out[7]
+out[8] <= 16bit_fulladder:inst3.Out[8]
+out[9] <= 16bit_fulladder:inst3.Out[9]
+out[10] <= 16bit_fulladder:inst3.Out[10]
+out[11] <= 16bit_fulladder:inst3.Out[11]
+out[12] <= 16bit_fulladder:inst3.Out[12]
+out[13] <= 16bit_fulladder:inst3.Out[13]
+out[14] <= 16bit_fulladder:inst3.Out[14]
+out[15] <= 16bit_fulladder:inst3.Out[15]
+In[0] => 16bit_xor:inst.A[0]
+In[1] => 16bit_xor:inst.A[1]
+In[2] => 16bit_xor:inst.A[2]
+In[3] => 16bit_xor:inst.A[3]
+In[4] => 16bit_xor:inst.A[4]
+In[5] => 16bit_xor:inst.A[5]
+In[6] => 16bit_xor:inst.A[6]
+In[7] => 16bit_xor:inst.A[7]
+In[8] => 16bit_xor:inst.A[8]
+In[9] => 16bit_xor:inst.A[9]
+In[10] => 16bit_xor:inst.A[10]
+In[11] => 16bit_xor:inst.A[11]
+In[12] => 16bit_xor:inst.A[12]
+In[13] => 16bit_xor:inst.A[13]
+In[14] => 16bit_xor:inst.A[14]
+In[15] => 16bit_xor:inst.A[15]
+
+
+|ALU|16bit_flipsign:inst17|16bit_fulladder:inst3
+Out16 <= 2bit_BCLA:inst14.Gout
+A[0] => carry_lookahead:inst16.A
+A[1] => carry_lookahead:inst17.A
+A[2] => carry_lookahead:inst18.A
+A[3] => carry_lookahead:inst19.A
+A[4] => carry_lookahead:inst20.A
+A[5] => carry_lookahead:inst21.A
+A[6] => carry_lookahead:inst22.A
+A[7] => carry_lookahead:inst23.A
+A[8] => carry_lookahead:inst24.A
+A[9] => carry_lookahead:inst25.A
+A[10] => carry_lookahead:inst26.A
+A[11] => carry_lookahead:inst27.A
+A[12] => carry_lookahead:inst28.A
+A[13] => carry_lookahead:inst29.A
+A[14] => carry_lookahead:inst30.A
+A[15] => carry_lookahead:inst31.A
+B[0] => carry_lookahead:inst16.B
+B[1] => carry_lookahead:inst17.B
+B[2] => carry_lookahead:inst18.B
+B[3] => carry_lookahead:inst19.B
+B[4] => carry_lookahead:inst20.B
+B[5] => carry_lookahead:inst21.B
+B[6] => carry_lookahead:inst22.B
+B[7] => carry_lookahead:inst23.B
+B[8] => carry_lookahead:inst24.B
+B[9] => carry_lookahead:inst25.B
+B[10] => carry_lookahead:inst26.B
+B[11] => carry_lookahead:inst27.B
+B[12] => carry_lookahead:inst28.B
+B[13] => carry_lookahead:inst29.B
+B[14] => carry_lookahead:inst30.B
+B[15] => carry_lookahead:inst31.B
+Out[0] <= inst32.DB_MAX_OUTPUT_PORT_TYPE
+Out[1] <= inst33.DB_MAX_OUTPUT_PORT_TYPE
+Out[2] <= inst34.DB_MAX_OUTPUT_PORT_TYPE
+Out[3] <= inst35.DB_MAX_OUTPUT_PORT_TYPE
+Out[4] <= inst36.DB_MAX_OUTPUT_PORT_TYPE
+Out[5] <= inst37.DB_MAX_OUTPUT_PORT_TYPE
+Out[6] <= inst38.DB_MAX_OUTPUT_PORT_TYPE
+Out[7] <= inst39.DB_MAX_OUTPUT_PORT_TYPE
+Out[8] <= inst40.DB_MAX_OUTPUT_PORT_TYPE
+Out[9] <= inst41.DB_MAX_OUTPUT_PORT_TYPE
+Out[10] <= inst42.DB_MAX_OUTPUT_PORT_TYPE
+Out[11] <= inst43.DB_MAX_OUTPUT_PORT_TYPE
+Out[12] <= inst44.DB_MAX_OUTPUT_PORT_TYPE
+Out[13] <= inst45.DB_MAX_OUTPUT_PORT_TYPE
+Out[14] <= inst46.DB_MAX_OUTPUT_PORT_TYPE
+Out[15] <= inst47.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|16bit_flipsign:inst17|16bit_fulladder:inst3|2bit_BCLA:inst14
+Cout <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+G0 => inst7.IN0
+G0 => inst.IN0
+P0 => inst6.IN0
+P0 => inst8.IN0
+Cin => inst6.IN1
+Gout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+G1 => inst2.IN0
+P1 => inst.IN1
+P1 => inst8.IN1
+Pout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|16bit_flipsign:inst17|16bit_fulladder:inst3|2bit_BCLA:inst12
+Cout <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+G0 => inst7.IN0
+G0 => inst.IN0
+P0 => inst6.IN0
+P0 => inst8.IN0
+Cin => inst6.IN1
+Gout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+G1 => inst2.IN0
+P1 => inst.IN1
+P1 => inst8.IN1
+Pout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|16bit_flipsign:inst17|16bit_fulladder:inst3|2bit_BCLA:inst8
+Cout <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+G0 => inst7.IN0
+G0 => inst.IN0
+P0 => inst6.IN0
+P0 => inst8.IN0
+Cin => inst6.IN1
+Gout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+G1 => inst2.IN0
+P1 => inst.IN1
+P1 => inst8.IN1
+Pout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|16bit_flipsign:inst17|16bit_fulladder:inst3|2bit_BCLA:inst
+Cout <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+G0 => inst7.IN0
+G0 => inst.IN0
+P0 => inst6.IN0
+P0 => inst8.IN0
+Cin => inst6.IN1
+Gout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+G1 => inst2.IN0
+P1 => inst.IN1
+P1 => inst8.IN1
+Pout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|16bit_flipsign:inst17|16bit_fulladder:inst3|carry_lookahead:inst16
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|16bit_flipsign:inst17|16bit_fulladder:inst3|carry_lookahead:inst17
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|16bit_flipsign:inst17|16bit_fulladder:inst3|2bit_BCLA:inst1
+Cout <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+G0 => inst7.IN0
+G0 => inst.IN0
+P0 => inst6.IN0
+P0 => inst8.IN0
+Cin => inst6.IN1
+Gout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+G1 => inst2.IN0
+P1 => inst.IN1
+P1 => inst8.IN1
+Pout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|16bit_flipsign:inst17|16bit_fulladder:inst3|carry_lookahead:inst18
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|16bit_flipsign:inst17|16bit_fulladder:inst3|carry_lookahead:inst19
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|16bit_flipsign:inst17|16bit_fulladder:inst3|2bit_BCLA:inst9
+Cout <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+G0 => inst7.IN0
+G0 => inst.IN0
+P0 => inst6.IN0
+P0 => inst8.IN0
+Cin => inst6.IN1
+Gout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+G1 => inst2.IN0
+P1 => inst.IN1
+P1 => inst8.IN1
+Pout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|16bit_flipsign:inst17|16bit_fulladder:inst3|2bit_BCLA:inst2
+Cout <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+G0 => inst7.IN0
+G0 => inst.IN0
+P0 => inst6.IN0
+P0 => inst8.IN0
+Cin => inst6.IN1
+Gout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+G1 => inst2.IN0
+P1 => inst.IN1
+P1 => inst8.IN1
+Pout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|16bit_flipsign:inst17|16bit_fulladder:inst3|carry_lookahead:inst20
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|16bit_flipsign:inst17|16bit_fulladder:inst3|carry_lookahead:inst21
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|16bit_flipsign:inst17|16bit_fulladder:inst3|2bit_BCLA:inst3
+Cout <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+G0 => inst7.IN0
+G0 => inst.IN0
+P0 => inst6.IN0
+P0 => inst8.IN0
+Cin => inst6.IN1
+Gout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+G1 => inst2.IN0
+P1 => inst.IN1
+P1 => inst8.IN1
+Pout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|16bit_flipsign:inst17|16bit_fulladder:inst3|carry_lookahead:inst22
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|16bit_flipsign:inst17|16bit_fulladder:inst3|carry_lookahead:inst23
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|16bit_flipsign:inst17|16bit_fulladder:inst3|2bit_BCLA:inst13
+Cout <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+G0 => inst7.IN0
+G0 => inst.IN0
+P0 => inst6.IN0
+P0 => inst8.IN0
+Cin => inst6.IN1
+Gout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+G1 => inst2.IN0
+P1 => inst.IN1
+P1 => inst8.IN1
+Pout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|16bit_flipsign:inst17|16bit_fulladder:inst3|2bit_BCLA:inst10
+Cout <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+G0 => inst7.IN0
+G0 => inst.IN0
+P0 => inst6.IN0
+P0 => inst8.IN0
+Cin => inst6.IN1
+Gout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+G1 => inst2.IN0
+P1 => inst.IN1
+P1 => inst8.IN1
+Pout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|16bit_flipsign:inst17|16bit_fulladder:inst3|2bit_BCLA:inst4
+Cout <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+G0 => inst7.IN0
+G0 => inst.IN0
+P0 => inst6.IN0
+P0 => inst8.IN0
+Cin => inst6.IN1
+Gout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+G1 => inst2.IN0
+P1 => inst.IN1
+P1 => inst8.IN1
+Pout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|16bit_flipsign:inst17|16bit_fulladder:inst3|carry_lookahead:inst24
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|16bit_flipsign:inst17|16bit_fulladder:inst3|carry_lookahead:inst25
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|16bit_flipsign:inst17|16bit_fulladder:inst3|2bit_BCLA:inst5
+Cout <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+G0 => inst7.IN0
+G0 => inst.IN0
+P0 => inst6.IN0
+P0 => inst8.IN0
+Cin => inst6.IN1
+Gout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+G1 => inst2.IN0
+P1 => inst.IN1
+P1 => inst8.IN1
+Pout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|16bit_flipsign:inst17|16bit_fulladder:inst3|carry_lookahead:inst26
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|16bit_flipsign:inst17|16bit_fulladder:inst3|carry_lookahead:inst27
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|16bit_flipsign:inst17|16bit_fulladder:inst3|2bit_BCLA:inst11
+Cout <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+G0 => inst7.IN0
+G0 => inst.IN0
+P0 => inst6.IN0
+P0 => inst8.IN0
+Cin => inst6.IN1
+Gout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+G1 => inst2.IN0
+P1 => inst.IN1
+P1 => inst8.IN1
+Pout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|16bit_flipsign:inst17|16bit_fulladder:inst3|2bit_BCLA:inst6
+Cout <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+G0 => inst7.IN0
+G0 => inst.IN0
+P0 => inst6.IN0
+P0 => inst8.IN0
+Cin => inst6.IN1
+Gout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+G1 => inst2.IN0
+P1 => inst.IN1
+P1 => inst8.IN1
+Pout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|16bit_flipsign:inst17|16bit_fulladder:inst3|carry_lookahead:inst28
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|16bit_flipsign:inst17|16bit_fulladder:inst3|carry_lookahead:inst29
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|16bit_flipsign:inst17|16bit_fulladder:inst3|2bit_BCLA:inst7
+Cout <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+G0 => inst7.IN0
+G0 => inst.IN0
+P0 => inst6.IN0
+P0 => inst8.IN0
+Cin => inst6.IN1
+Gout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+G1 => inst2.IN0
+P1 => inst.IN1
+P1 => inst8.IN1
+Pout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|16bit_flipsign:inst17|16bit_fulladder:inst3|carry_lookahead:inst30
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|16bit_flipsign:inst17|16bit_fulladder:inst3|carry_lookahead:inst31
+G <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+P <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|16bit_flipsign:inst17|16bit_xor:inst
+out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= inst16.DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= inst17.DB_MAX_OUTPUT_PORT_TYPE
+out[14] <= inst18.DB_MAX_OUTPUT_PORT_TYPE
+out[15] <= inst19.DB_MAX_OUTPUT_PORT_TYPE
+A[0] => inst.IN0
+A[1] => inst1.IN0
+A[2] => inst2.IN0
+A[3] => inst4.IN0
+A[4] => inst8.IN0
+A[5] => inst9.IN0
+A[6] => inst10.IN0
+A[7] => inst11.IN0
+A[8] => inst12.IN0
+A[9] => inst13.IN0
+A[10] => inst14.IN0
+A[11] => inst15.IN0
+A[12] => inst16.IN0
+A[13] => inst17.IN0
+A[14] => inst18.IN0
+A[15] => inst19.IN0
+B[0] => inst.IN1
+B[1] => inst1.IN1
+B[2] => inst2.IN1
+B[3] => inst4.IN1
+B[4] => inst8.IN1
+B[5] => inst9.IN1
+B[6] => inst10.IN1
+B[7] => inst11.IN1
+B[8] => inst12.IN1
+B[9] => inst13.IN1
+B[10] => inst14.IN1
+B[11] => inst15.IN1
+B[12] => inst16.IN1
+B[13] => inst17.IN1
+B[14] => inst18.IN1
+B[15] => inst19.IN1
+
+
+|ALU|simplemultiplexor:inst19
+out[0] <= 16bit_or:inst35.out[0]
+out[1] <= 16bit_or:inst35.out[1]
+out[2] <= 16bit_or:inst35.out[2]
+out[3] <= 16bit_or:inst35.out[3]
+out[4] <= 16bit_or:inst35.out[4]
+out[5] <= 16bit_or:inst35.out[5]
+out[6] <= 16bit_or:inst35.out[6]
+out[7] <= 16bit_or:inst35.out[7]
+out[8] <= 16bit_or:inst35.out[8]
+out[9] <= 16bit_or:inst35.out[9]
+out[10] <= 16bit_or:inst35.out[10]
+out[11] <= 16bit_or:inst35.out[11]
+out[12] <= 16bit_or:inst35.out[12]
+out[13] <= 16bit_or:inst35.out[13]
+out[14] <= 16bit_or:inst35.out[14]
+out[15] <= 16bit_or:inst35.out[15]
+In0[0] => 16bit_and:inst18.A[0]
+In0[1] => 16bit_and:inst18.A[1]
+In0[2] => 16bit_and:inst18.A[2]
+In0[3] => 16bit_and:inst18.A[3]
+In0[4] => 16bit_and:inst18.A[4]
+In0[5] => 16bit_and:inst18.A[5]
+In0[6] => 16bit_and:inst18.A[6]
+In0[7] => 16bit_and:inst18.A[7]
+In0[8] => 16bit_and:inst18.A[8]
+In0[9] => 16bit_and:inst18.A[9]
+In0[10] => 16bit_and:inst18.A[10]
+In0[11] => 16bit_and:inst18.A[11]
+In0[12] => 16bit_and:inst18.A[12]
+In0[13] => 16bit_and:inst18.A[13]
+In0[14] => 16bit_and:inst18.A[14]
+In0[15] => 16bit_and:inst18.A[15]
+switch => inst19.IN0
+switch => inst20.IN0
+switch => inst21.IN0
+switch => inst22.IN0
+switch => inst23.IN0
+switch => inst24.IN0
+switch => inst25.IN0
+switch => inst26.IN0
+switch => inst27.IN0
+switch => inst28.IN0
+switch => inst29.IN0
+switch => inst30.IN0
+switch => inst31.IN0
+switch => inst32.IN0
+switch => inst33.IN0
+switch => inst34.IN0
+switch => 16bit_and:inst.B[0]
+switch => 16bit_and:inst.B[1]
+switch => 16bit_and:inst.B[2]
+switch => 16bit_and:inst.B[3]
+switch => 16bit_and:inst.B[4]
+switch => 16bit_and:inst.B[5]
+switch => 16bit_and:inst.B[6]
+switch => 16bit_and:inst.B[7]
+switch => 16bit_and:inst.B[8]
+switch => 16bit_and:inst.B[9]
+switch => 16bit_and:inst.B[10]
+switch => 16bit_and:inst.B[11]
+switch => 16bit_and:inst.B[12]
+switch => 16bit_and:inst.B[13]
+switch => 16bit_and:inst.B[14]
+switch => 16bit_and:inst.B[15]
+In1[0] => 16bit_and:inst.A[0]
+In1[1] => 16bit_and:inst.A[1]
+In1[2] => 16bit_and:inst.A[2]
+In1[3] => 16bit_and:inst.A[3]
+In1[4] => 16bit_and:inst.A[4]
+In1[5] => 16bit_and:inst.A[5]
+In1[6] => 16bit_and:inst.A[6]
+In1[7] => 16bit_and:inst.A[7]
+In1[8] => 16bit_and:inst.A[8]
+In1[9] => 16bit_and:inst.A[9]
+In1[10] => 16bit_and:inst.A[10]
+In1[11] => 16bit_and:inst.A[11]
+In1[12] => 16bit_and:inst.A[12]
+In1[13] => 16bit_and:inst.A[13]
+In1[14] => 16bit_and:inst.A[14]
+In1[15] => 16bit_and:inst.A[15]
+
+
+|ALU|simplemultiplexor:inst19|16bit_or:inst35
+out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+out[14] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+out[15] <= inst16.DB_MAX_OUTPUT_PORT_TYPE
+B[0] => inst.IN0
+B[1] => inst1.IN0
+B[2] => inst2.IN0
+B[3] => inst3.IN0
+B[4] => inst4.IN0
+B[5] => inst5.IN0
+B[6] => inst6.IN0
+B[7] => inst7.IN0
+B[8] => inst8.IN0
+B[9] => inst9.IN0
+B[10] => inst10.IN0
+B[11] => inst11.IN0
+B[12] => inst12.IN0
+B[13] => inst13.IN0
+B[14] => inst14.IN0
+B[15] => inst16.IN0
+A[0] => inst.IN1
+A[1] => inst1.IN1
+A[2] => inst2.IN1
+A[3] => inst3.IN1
+A[4] => inst4.IN1
+A[5] => inst5.IN1
+A[6] => inst6.IN1
+A[7] => inst7.IN1
+A[8] => inst8.IN1
+A[9] => inst9.IN1
+A[10] => inst10.IN1
+A[11] => inst11.IN1
+A[12] => inst12.IN1
+A[13] => inst13.IN1
+A[14] => inst14.IN1
+A[15] => inst16.IN1
+
+
+|ALU|simplemultiplexor:inst19|16bit_and:inst18
+out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+out[14] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+out[15] <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+A[0] => inst0.IN0
+A[1] => inst1.IN0
+A[2] => inst2.IN0
+A[3] => inst3.IN0
+A[4] => inst4.IN0
+A[5] => inst5.IN0
+A[6] => inst6.IN0
+A[7] => inst7.IN0
+A[8] => inst8.IN0
+A[9] => inst9.IN0
+A[10] => inst10.IN0
+A[11] => inst11.IN0
+A[12] => inst12.IN0
+A[13] => inst13.IN0
+A[14] => inst14.IN0
+A[15] => inst15.IN0
+B[0] => inst0.IN1
+B[1] => inst1.IN1
+B[2] => inst2.IN1
+B[3] => inst3.IN1
+B[4] => inst4.IN1
+B[5] => inst5.IN1
+B[6] => inst6.IN1
+B[7] => inst7.IN1
+B[8] => inst8.IN1
+B[9] => inst9.IN1
+B[10] => inst10.IN1
+B[11] => inst11.IN1
+B[12] => inst12.IN1
+B[13] => inst13.IN1
+B[14] => inst14.IN1
+B[15] => inst15.IN1
+
+
+|ALU|simplemultiplexor:inst19|16bit_and:inst
+out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+out[14] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+out[15] <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+A[0] => inst0.IN0
+A[1] => inst1.IN0
+A[2] => inst2.IN0
+A[3] => inst3.IN0
+A[4] => inst4.IN0
+A[5] => inst5.IN0
+A[6] => inst6.IN0
+A[7] => inst7.IN0
+A[8] => inst8.IN0
+A[9] => inst9.IN0
+A[10] => inst10.IN0
+A[11] => inst11.IN0
+A[12] => inst12.IN0
+A[13] => inst13.IN0
+A[14] => inst14.IN0
+A[15] => inst15.IN0
+B[0] => inst0.IN1
+B[1] => inst1.IN1
+B[2] => inst2.IN1
+B[3] => inst3.IN1
+B[4] => inst4.IN1
+B[5] => inst5.IN1
+B[6] => inst6.IN1
+B[7] => inst7.IN1
+B[8] => inst8.IN1
+B[9] => inst9.IN1
+B[10] => inst10.IN1
+B[11] => inst11.IN1
+B[12] => inst12.IN1
+B[13] => inst13.IN1
+B[14] => inst14.IN1
+B[15] => inst15.IN1
+
+
+|ALU|16bit_and:inst0
+out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+out[14] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+out[15] <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+A[0] => inst0.IN0
+A[1] => inst1.IN0
+A[2] => inst2.IN0
+A[3] => inst3.IN0
+A[4] => inst4.IN0
+A[5] => inst5.IN0
+A[6] => inst6.IN0
+A[7] => inst7.IN0
+A[8] => inst8.IN0
+A[9] => inst9.IN0
+A[10] => inst10.IN0
+A[11] => inst11.IN0
+A[12] => inst12.IN0
+A[13] => inst13.IN0
+A[14] => inst14.IN0
+A[15] => inst15.IN0
+B[0] => inst0.IN1
+B[1] => inst1.IN1
+B[2] => inst2.IN1
+B[3] => inst3.IN1
+B[4] => inst4.IN1
+B[5] => inst5.IN1
+B[6] => inst6.IN1
+B[7] => inst7.IN1
+B[8] => inst8.IN1
+B[9] => inst9.IN1
+B[10] => inst10.IN1
+B[11] => inst11.IN1
+B[12] => inst12.IN1
+B[13] => inst13.IN1
+B[14] => inst14.IN1
+B[15] => inst15.IN1
+
+
+|ALU|16bit_or:inst3
+out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+out[14] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+out[15] <= inst16.DB_MAX_OUTPUT_PORT_TYPE
+B[0] => inst.IN0
+B[1] => inst1.IN0
+B[2] => inst2.IN0
+B[3] => inst3.IN0
+B[4] => inst4.IN0
+B[5] => inst5.IN0
+B[6] => inst6.IN0
+B[7] => inst7.IN0
+B[8] => inst8.IN0
+B[9] => inst9.IN0
+B[10] => inst10.IN0
+B[11] => inst11.IN0
+B[12] => inst12.IN0
+B[13] => inst13.IN0
+B[14] => inst14.IN0
+B[15] => inst16.IN0
+A[0] => inst.IN1
+A[1] => inst1.IN1
+A[2] => inst2.IN1
+A[3] => inst3.IN1
+A[4] => inst4.IN1
+A[5] => inst5.IN1
+A[6] => inst6.IN1
+A[7] => inst7.IN1
+A[8] => inst8.IN1
+A[9] => inst9.IN1
+A[10] => inst10.IN1
+A[11] => inst11.IN1
+A[12] => inst12.IN1
+A[13] => inst13.IN1
+A[14] => inst14.IN1
+A[15] => inst16.IN1
+
+
+|ALU|simplemultiplexor:inst22
+out[0] <= 16bit_or:inst35.out[0]
+out[1] <= 16bit_or:inst35.out[1]
+out[2] <= 16bit_or:inst35.out[2]
+out[3] <= 16bit_or:inst35.out[3]
+out[4] <= 16bit_or:inst35.out[4]
+out[5] <= 16bit_or:inst35.out[5]
+out[6] <= 16bit_or:inst35.out[6]
+out[7] <= 16bit_or:inst35.out[7]
+out[8] <= 16bit_or:inst35.out[8]
+out[9] <= 16bit_or:inst35.out[9]
+out[10] <= 16bit_or:inst35.out[10]
+out[11] <= 16bit_or:inst35.out[11]
+out[12] <= 16bit_or:inst35.out[12]
+out[13] <= 16bit_or:inst35.out[13]
+out[14] <= 16bit_or:inst35.out[14]
+out[15] <= 16bit_or:inst35.out[15]
+In0[0] => 16bit_and:inst18.A[0]
+In0[1] => 16bit_and:inst18.A[1]
+In0[2] => 16bit_and:inst18.A[2]
+In0[3] => 16bit_and:inst18.A[3]
+In0[4] => 16bit_and:inst18.A[4]
+In0[5] => 16bit_and:inst18.A[5]
+In0[6] => 16bit_and:inst18.A[6]
+In0[7] => 16bit_and:inst18.A[7]
+In0[8] => 16bit_and:inst18.A[8]
+In0[9] => 16bit_and:inst18.A[9]
+In0[10] => 16bit_and:inst18.A[10]
+In0[11] => 16bit_and:inst18.A[11]
+In0[12] => 16bit_and:inst18.A[12]
+In0[13] => 16bit_and:inst18.A[13]
+In0[14] => 16bit_and:inst18.A[14]
+In0[15] => 16bit_and:inst18.A[15]
+switch => inst19.IN0
+switch => inst20.IN0
+switch => inst21.IN0
+switch => inst22.IN0
+switch => inst23.IN0
+switch => inst24.IN0
+switch => inst25.IN0
+switch => inst26.IN0
+switch => inst27.IN0
+switch => inst28.IN0
+switch => inst29.IN0
+switch => inst30.IN0
+switch => inst31.IN0
+switch => inst32.IN0
+switch => inst33.IN0
+switch => inst34.IN0
+switch => 16bit_and:inst.B[0]
+switch => 16bit_and:inst.B[1]
+switch => 16bit_and:inst.B[2]
+switch => 16bit_and:inst.B[3]
+switch => 16bit_and:inst.B[4]
+switch => 16bit_and:inst.B[5]
+switch => 16bit_and:inst.B[6]
+switch => 16bit_and:inst.B[7]
+switch => 16bit_and:inst.B[8]
+switch => 16bit_and:inst.B[9]
+switch => 16bit_and:inst.B[10]
+switch => 16bit_and:inst.B[11]
+switch => 16bit_and:inst.B[12]
+switch => 16bit_and:inst.B[13]
+switch => 16bit_and:inst.B[14]
+switch => 16bit_and:inst.B[15]
+In1[0] => 16bit_and:inst.A[0]
+In1[1] => 16bit_and:inst.A[1]
+In1[2] => 16bit_and:inst.A[2]
+In1[3] => 16bit_and:inst.A[3]
+In1[4] => 16bit_and:inst.A[4]
+In1[5] => 16bit_and:inst.A[5]
+In1[6] => 16bit_and:inst.A[6]
+In1[7] => 16bit_and:inst.A[7]
+In1[8] => 16bit_and:inst.A[8]
+In1[9] => 16bit_and:inst.A[9]
+In1[10] => 16bit_and:inst.A[10]
+In1[11] => 16bit_and:inst.A[11]
+In1[12] => 16bit_and:inst.A[12]
+In1[13] => 16bit_and:inst.A[13]
+In1[14] => 16bit_and:inst.A[14]
+In1[15] => 16bit_and:inst.A[15]
+
+
+|ALU|simplemultiplexor:inst22|16bit_or:inst35
+out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+out[14] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+out[15] <= inst16.DB_MAX_OUTPUT_PORT_TYPE
+B[0] => inst.IN0
+B[1] => inst1.IN0
+B[2] => inst2.IN0
+B[3] => inst3.IN0
+B[4] => inst4.IN0
+B[5] => inst5.IN0
+B[6] => inst6.IN0
+B[7] => inst7.IN0
+B[8] => inst8.IN0
+B[9] => inst9.IN0
+B[10] => inst10.IN0
+B[11] => inst11.IN0
+B[12] => inst12.IN0
+B[13] => inst13.IN0
+B[14] => inst14.IN0
+B[15] => inst16.IN0
+A[0] => inst.IN1
+A[1] => inst1.IN1
+A[2] => inst2.IN1
+A[3] => inst3.IN1
+A[4] => inst4.IN1
+A[5] => inst5.IN1
+A[6] => inst6.IN1
+A[7] => inst7.IN1
+A[8] => inst8.IN1
+A[9] => inst9.IN1
+A[10] => inst10.IN1
+A[11] => inst11.IN1
+A[12] => inst12.IN1
+A[13] => inst13.IN1
+A[14] => inst14.IN1
+A[15] => inst16.IN1
+
+
+|ALU|simplemultiplexor:inst22|16bit_and:inst18
+out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+out[14] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+out[15] <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+A[0] => inst0.IN0
+A[1] => inst1.IN0
+A[2] => inst2.IN0
+A[3] => inst3.IN0
+A[4] => inst4.IN0
+A[5] => inst5.IN0
+A[6] => inst6.IN0
+A[7] => inst7.IN0
+A[8] => inst8.IN0
+A[9] => inst9.IN0
+A[10] => inst10.IN0
+A[11] => inst11.IN0
+A[12] => inst12.IN0
+A[13] => inst13.IN0
+A[14] => inst14.IN0
+A[15] => inst15.IN0
+B[0] => inst0.IN1
+B[1] => inst1.IN1
+B[2] => inst2.IN1
+B[3] => inst3.IN1
+B[4] => inst4.IN1
+B[5] => inst5.IN1
+B[6] => inst6.IN1
+B[7] => inst7.IN1
+B[8] => inst8.IN1
+B[9] => inst9.IN1
+B[10] => inst10.IN1
+B[11] => inst11.IN1
+B[12] => inst12.IN1
+B[13] => inst13.IN1
+B[14] => inst14.IN1
+B[15] => inst15.IN1
+
+
+|ALU|simplemultiplexor:inst22|16bit_and:inst
+out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+out[14] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+out[15] <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+A[0] => inst0.IN0
+A[1] => inst1.IN0
+A[2] => inst2.IN0
+A[3] => inst3.IN0
+A[4] => inst4.IN0
+A[5] => inst5.IN0
+A[6] => inst6.IN0
+A[7] => inst7.IN0
+A[8] => inst8.IN0
+A[9] => inst9.IN0
+A[10] => inst10.IN0
+A[11] => inst11.IN0
+A[12] => inst12.IN0
+A[13] => inst13.IN0
+A[14] => inst14.IN0
+A[15] => inst15.IN0
+B[0] => inst0.IN1
+B[1] => inst1.IN1
+B[2] => inst2.IN1
+B[3] => inst3.IN1
+B[4] => inst4.IN1
+B[5] => inst5.IN1
+B[6] => inst6.IN1
+B[7] => inst7.IN1
+B[8] => inst8.IN1
+B[9] => inst9.IN1
+B[10] => inst10.IN1
+B[11] => inst11.IN1
+B[12] => inst12.IN1
+B[13] => inst13.IN1
+B[14] => inst14.IN1
+B[15] => inst15.IN1
+
+
+|ALU|simplemultiplexor:inst20
+out[0] <= 16bit_or:inst35.out[0]
+out[1] <= 16bit_or:inst35.out[1]
+out[2] <= 16bit_or:inst35.out[2]
+out[3] <= 16bit_or:inst35.out[3]
+out[4] <= 16bit_or:inst35.out[4]
+out[5] <= 16bit_or:inst35.out[5]
+out[6] <= 16bit_or:inst35.out[6]
+out[7] <= 16bit_or:inst35.out[7]
+out[8] <= 16bit_or:inst35.out[8]
+out[9] <= 16bit_or:inst35.out[9]
+out[10] <= 16bit_or:inst35.out[10]
+out[11] <= 16bit_or:inst35.out[11]
+out[12] <= 16bit_or:inst35.out[12]
+out[13] <= 16bit_or:inst35.out[13]
+out[14] <= 16bit_or:inst35.out[14]
+out[15] <= 16bit_or:inst35.out[15]
+In0[0] => 16bit_and:inst18.A[0]
+In0[1] => 16bit_and:inst18.A[1]
+In0[2] => 16bit_and:inst18.A[2]
+In0[3] => 16bit_and:inst18.A[3]
+In0[4] => 16bit_and:inst18.A[4]
+In0[5] => 16bit_and:inst18.A[5]
+In0[6] => 16bit_and:inst18.A[6]
+In0[7] => 16bit_and:inst18.A[7]
+In0[8] => 16bit_and:inst18.A[8]
+In0[9] => 16bit_and:inst18.A[9]
+In0[10] => 16bit_and:inst18.A[10]
+In0[11] => 16bit_and:inst18.A[11]
+In0[12] => 16bit_and:inst18.A[12]
+In0[13] => 16bit_and:inst18.A[13]
+In0[14] => 16bit_and:inst18.A[14]
+In0[15] => 16bit_and:inst18.A[15]
+switch => inst19.IN0
+switch => inst20.IN0
+switch => inst21.IN0
+switch => inst22.IN0
+switch => inst23.IN0
+switch => inst24.IN0
+switch => inst25.IN0
+switch => inst26.IN0
+switch => inst27.IN0
+switch => inst28.IN0
+switch => inst29.IN0
+switch => inst30.IN0
+switch => inst31.IN0
+switch => inst32.IN0
+switch => inst33.IN0
+switch => inst34.IN0
+switch => 16bit_and:inst.B[0]
+switch => 16bit_and:inst.B[1]
+switch => 16bit_and:inst.B[2]
+switch => 16bit_and:inst.B[3]
+switch => 16bit_and:inst.B[4]
+switch => 16bit_and:inst.B[5]
+switch => 16bit_and:inst.B[6]
+switch => 16bit_and:inst.B[7]
+switch => 16bit_and:inst.B[8]
+switch => 16bit_and:inst.B[9]
+switch => 16bit_and:inst.B[10]
+switch => 16bit_and:inst.B[11]
+switch => 16bit_and:inst.B[12]
+switch => 16bit_and:inst.B[13]
+switch => 16bit_and:inst.B[14]
+switch => 16bit_and:inst.B[15]
+In1[0] => 16bit_and:inst.A[0]
+In1[1] => 16bit_and:inst.A[1]
+In1[2] => 16bit_and:inst.A[2]
+In1[3] => 16bit_and:inst.A[3]
+In1[4] => 16bit_and:inst.A[4]
+In1[5] => 16bit_and:inst.A[5]
+In1[6] => 16bit_and:inst.A[6]
+In1[7] => 16bit_and:inst.A[7]
+In1[8] => 16bit_and:inst.A[8]
+In1[9] => 16bit_and:inst.A[9]
+In1[10] => 16bit_and:inst.A[10]
+In1[11] => 16bit_and:inst.A[11]
+In1[12] => 16bit_and:inst.A[12]
+In1[13] => 16bit_and:inst.A[13]
+In1[14] => 16bit_and:inst.A[14]
+In1[15] => 16bit_and:inst.A[15]
+
+
+|ALU|simplemultiplexor:inst20|16bit_or:inst35
+out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+out[14] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+out[15] <= inst16.DB_MAX_OUTPUT_PORT_TYPE
+B[0] => inst.IN0
+B[1] => inst1.IN0
+B[2] => inst2.IN0
+B[3] => inst3.IN0
+B[4] => inst4.IN0
+B[5] => inst5.IN0
+B[6] => inst6.IN0
+B[7] => inst7.IN0
+B[8] => inst8.IN0
+B[9] => inst9.IN0
+B[10] => inst10.IN0
+B[11] => inst11.IN0
+B[12] => inst12.IN0
+B[13] => inst13.IN0
+B[14] => inst14.IN0
+B[15] => inst16.IN0
+A[0] => inst.IN1
+A[1] => inst1.IN1
+A[2] => inst2.IN1
+A[3] => inst3.IN1
+A[4] => inst4.IN1
+A[5] => inst5.IN1
+A[6] => inst6.IN1
+A[7] => inst7.IN1
+A[8] => inst8.IN1
+A[9] => inst9.IN1
+A[10] => inst10.IN1
+A[11] => inst11.IN1
+A[12] => inst12.IN1
+A[13] => inst13.IN1
+A[14] => inst14.IN1
+A[15] => inst16.IN1
+
+
+|ALU|simplemultiplexor:inst20|16bit_and:inst18
+out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+out[14] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+out[15] <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+A[0] => inst0.IN0
+A[1] => inst1.IN0
+A[2] => inst2.IN0
+A[3] => inst3.IN0
+A[4] => inst4.IN0
+A[5] => inst5.IN0
+A[6] => inst6.IN0
+A[7] => inst7.IN0
+A[8] => inst8.IN0
+A[9] => inst9.IN0
+A[10] => inst10.IN0
+A[11] => inst11.IN0
+A[12] => inst12.IN0
+A[13] => inst13.IN0
+A[14] => inst14.IN0
+A[15] => inst15.IN0
+B[0] => inst0.IN1
+B[1] => inst1.IN1
+B[2] => inst2.IN1
+B[3] => inst3.IN1
+B[4] => inst4.IN1
+B[5] => inst5.IN1
+B[6] => inst6.IN1
+B[7] => inst7.IN1
+B[8] => inst8.IN1
+B[9] => inst9.IN1
+B[10] => inst10.IN1
+B[11] => inst11.IN1
+B[12] => inst12.IN1
+B[13] => inst13.IN1
+B[14] => inst14.IN1
+B[15] => inst15.IN1
+
+
+|ALU|simplemultiplexor:inst20|16bit_and:inst
+out[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+out[14] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+out[15] <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+A[0] => inst0.IN0
+A[1] => inst1.IN0
+A[2] => inst2.IN0
+A[3] => inst3.IN0
+A[4] => inst4.IN0
+A[5] => inst5.IN0
+A[6] => inst6.IN0
+A[7] => inst7.IN0
+A[8] => inst8.IN0
+A[9] => inst9.IN0
+A[10] => inst10.IN0
+A[11] => inst11.IN0
+A[12] => inst12.IN0
+A[13] => inst13.IN0
+A[14] => inst14.IN0
+A[15] => inst15.IN0
+B[0] => inst0.IN1
+B[1] => inst1.IN1
+B[2] => inst2.IN1
+B[3] => inst3.IN1
+B[4] => inst4.IN1
+B[5] => inst5.IN1
+B[6] => inst6.IN1
+B[7] => inst7.IN1
+B[8] => inst8.IN1
+B[9] => inst9.IN1
+B[10] => inst10.IN1
+B[11] => inst11.IN1
+B[12] => inst12.IN1
+B[13] => inst13.IN1
+B[14] => inst14.IN1
+B[15] => inst15.IN1
+
+
+|ALU|16bit_xor:inst4
+out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= inst16.DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= inst17.DB_MAX_OUTPUT_PORT_TYPE
+out[14] <= inst18.DB_MAX_OUTPUT_PORT_TYPE
+out[15] <= inst19.DB_MAX_OUTPUT_PORT_TYPE
+A[0] => inst.IN0
+A[1] => inst1.IN0
+A[2] => inst2.IN0
+A[3] => inst4.IN0
+A[4] => inst8.IN0
+A[5] => inst9.IN0
+A[6] => inst10.IN0
+A[7] => inst11.IN0
+A[8] => inst12.IN0
+A[9] => inst13.IN0
+A[10] => inst14.IN0
+A[11] => inst15.IN0
+A[12] => inst16.IN0
+A[13] => inst17.IN0
+A[14] => inst18.IN0
+A[15] => inst19.IN0
+B[0] => inst.IN1
+B[1] => inst1.IN1
+B[2] => inst2.IN1
+B[3] => inst4.IN1
+B[4] => inst8.IN1
+B[5] => inst9.IN1
+B[6] => inst10.IN1
+B[7] => inst11.IN1
+B[8] => inst12.IN1
+B[9] => inst13.IN1
+B[10] => inst14.IN1
+B[11] => inst15.IN1
+B[12] => inst16.IN1
+B[13] => inst17.IN1
+B[14] => inst18.IN1
+B[15] => inst19.IN1
 
 

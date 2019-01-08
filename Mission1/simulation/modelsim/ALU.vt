@@ -17,7 +17,7 @@
 // suit user's needs .Comments are provided in each section to help the user    
 // fill out necessary details.                                                  
 // *****************************************************************************
-// Generated on "12/25/2018 14:21:25"
+// Generated on "01/08/2019 12:17:13"
                                                                                 
 // Verilog Test Bench template for design : ALU
 // 
@@ -30,19 +30,21 @@ module ALU_vlg_tst();
 // general purpose registers
 reg eachvec;
 // test vector input registers
-reg [15:0] In1;
-reg [15:0] In2;
+reg [15:0] dataA;
+reg [15:0] dataB;
+reg [3:0] opecode;
 // wires                                               
-wire [15:0]  Out;
-wire Out16;
+wire [3:0]  cond;
+wire [15:0]  out;
 
 // assign statements (if any)                          
 ALU i1 (
 // port map - connection between master ports and signals/registers   
-	.In1(In1),
-	.In2(In2),
-	.Out(Out),
-	.Out16(Out16)
+	.cond(cond),
+	.dataA(dataA),
+	.dataB(dataB),
+	.opecode(opecode),
+	.out(out)
 );
 initial                                                
 begin                                                  

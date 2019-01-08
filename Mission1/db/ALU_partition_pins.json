@@ -4,199 +4,211 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "Out16",
+					"name" : "out[15]",
 					"strict" : false
 				},
 				{
-					"name" : "Out[15]",
+					"name" : "out[14]",
 					"strict" : false
 				},
 				{
-					"name" : "Out[14]",
+					"name" : "out[13]",
 					"strict" : false
 				},
 				{
-					"name" : "Out[13]",
+					"name" : "out[12]",
 					"strict" : false
 				},
 				{
-					"name" : "Out[12]",
+					"name" : "out[11]",
 					"strict" : false
 				},
 				{
-					"name" : "Out[11]",
+					"name" : "out[10]",
 					"strict" : false
 				},
 				{
-					"name" : "Out[10]",
+					"name" : "out[9]",
 					"strict" : false
 				},
 				{
-					"name" : "Out[9]",
+					"name" : "out[8]",
 					"strict" : false
 				},
 				{
-					"name" : "Out[8]",
+					"name" : "out[7]",
 					"strict" : false
 				},
 				{
-					"name" : "Out[7]",
+					"name" : "out[6]",
 					"strict" : false
 				},
 				{
-					"name" : "Out[6]",
+					"name" : "out[5]",
 					"strict" : false
 				},
 				{
-					"name" : "Out[5]",
+					"name" : "out[4]",
 					"strict" : false
 				},
 				{
-					"name" : "Out[4]",
+					"name" : "out[3]",
 					"strict" : false
 				},
 				{
-					"name" : "Out[3]",
+					"name" : "out[2]",
 					"strict" : false
 				},
 				{
-					"name" : "Out[2]",
+					"name" : "out[1]",
 					"strict" : false
 				},
 				{
-					"name" : "Out[1]",
+					"name" : "out[0]",
 					"strict" : false
 				},
 				{
-					"name" : "Out[0]",
+					"name" : "opecode[3]",
 					"strict" : false
 				},
 				{
-					"name" : "In1[15]",
+					"name" : "dataA[15]",
 					"strict" : false
 				},
 				{
-					"name" : "In2[15]",
+					"name" : "dataB[15]",
 					"strict" : false
 				},
 				{
-					"name" : "In2[14]",
+					"name" : "opecode[0]",
 					"strict" : false
 				},
 				{
-					"name" : "In1[14]",
+					"name" : "opecode[2]",
 					"strict" : false
 				},
 				{
-					"name" : "In2[12]",
+					"name" : "opecode[1]",
 					"strict" : false
 				},
 				{
-					"name" : "In1[12]",
+					"name" : "dataB[13]",
 					"strict" : false
 				},
 				{
-					"name" : "In1[13]",
+					"name" : "dataB[6]",
 					"strict" : false
 				},
 				{
-					"name" : "In2[13]",
+					"name" : "dataB[5]",
 					"strict" : false
 				},
 				{
-					"name" : "In1[10]",
+					"name" : "dataB[4]",
 					"strict" : false
 				},
 				{
-					"name" : "In2[10]",
+					"name" : "dataB[3]",
 					"strict" : false
 				},
 				{
-					"name" : "In1[11]",
+					"name" : "dataB[2]",
 					"strict" : false
 				},
 				{
-					"name" : "In2[11]",
+					"name" : "dataB[1]",
 					"strict" : false
 				},
 				{
-					"name" : "In1[8]",
+					"name" : "dataB[0]",
 					"strict" : false
 				},
 				{
-					"name" : "In2[8]",
+					"name" : "dataB[9]",
 					"strict" : false
 				},
 				{
-					"name" : "In1[9]",
+					"name" : "dataB[8]",
 					"strict" : false
 				},
 				{
-					"name" : "In2[9]",
+					"name" : "dataB[7]",
 					"strict" : false
 				},
 				{
-					"name" : "In2[6]",
+					"name" : "dataB[12]",
 					"strict" : false
 				},
 				{
-					"name" : "In1[6]",
+					"name" : "dataB[11]",
 					"strict" : false
 				},
 				{
-					"name" : "In1[7]",
+					"name" : "dataB[10]",
 					"strict" : false
 				},
 				{
-					"name" : "In2[7]",
+					"name" : "dataB[14]",
 					"strict" : false
 				},
 				{
-					"name" : "In2[4]",
+					"name" : "dataA[12]",
 					"strict" : false
 				},
 				{
-					"name" : "In1[4]",
+					"name" : "dataA[13]",
 					"strict" : false
 				},
 				{
-					"name" : "In1[5]",
+					"name" : "dataA[10]",
 					"strict" : false
 				},
 				{
-					"name" : "In2[5]",
+					"name" : "dataA[11]",
 					"strict" : false
 				},
 				{
-					"name" : "In2[2]",
+					"name" : "dataA[8]",
 					"strict" : false
 				},
 				{
-					"name" : "In1[2]",
+					"name" : "dataA[9]",
 					"strict" : false
 				},
 				{
-					"name" : "In1[3]",
+					"name" : "dataA[6]",
 					"strict" : false
 				},
 				{
-					"name" : "In2[3]",
+					"name" : "dataA[7]",
 					"strict" : false
 				},
 				{
-					"name" : "In2[0]",
+					"name" : "dataA[4]",
 					"strict" : false
 				},
 				{
-					"name" : "In1[0]",
+					"name" : "dataA[5]",
 					"strict" : false
 				},
 				{
-					"name" : "In1[1]",
+					"name" : "dataA[2]",
 					"strict" : false
 				},
 				{
-					"name" : "In2[1]",
+					"name" : "dataA[3]",
+					"strict" : false
+				},
+				{
+					"name" : "dataA[0]",
+					"strict" : false
+				},
+				{
+					"name" : "dataA[1]",
+					"strict" : false
+				},
+				{
+					"name" : "dataA[14]",
 					"strict" : false
 				}
 			]
