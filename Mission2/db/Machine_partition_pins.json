@@ -68,15 +68,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "In[26]",
-					"strict" : false
-				},
-				{
 					"name" : "clock",
 					"strict" : false
 				},
 				{
 					"name" : "power",
+					"strict" : false
+				},
+				{
+					"name" : "In[26]",
 					"strict" : false
 				},
 				{
@@ -112,18 +112,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "In[13]",
-					"strict" : false
-				},
-				{
-					"name" : "In[18]",
-					"strict" : false
-				},
-				{
-					"name" : "In[19]",
-					"strict" : false
-				},
-				{
 					"name" : "In[16]",
 					"strict" : false
 				},
@@ -132,19 +120,19 @@
 					"strict" : false
 				},
 				{
-					"name" : "In[25]",
+					"name" : "In[19]",
 					"strict" : false
 				},
 				{
-					"name" : "In[14]",
+					"name" : "In[20]",
 					"strict" : false
 				},
 				{
-					"name" : "In[9]",
+					"name" : "In[18]",
 					"strict" : false
 				},
 				{
-					"name" : "In[6]",
+					"name" : "In[13]",
 					"strict" : false
 				},
 				{
@@ -152,7 +140,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "In[7]",
+					"name" : "In[6]",
+					"strict" : false
+				},
+				{
+					"name" : "In[4]",
 					"strict" : false
 				},
 				{
@@ -160,7 +152,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "In[4]",
+					"name" : "In[9]",
+					"strict" : false
+				},
+				{
+					"name" : "In[7]",
 					"strict" : false
 				},
 				{
@@ -180,7 +176,19 @@
 					"strict" : false
 				},
 				{
+					"name" : "In[14]",
+					"strict" : false
+				},
+				{
+					"name" : "In[25]",
+					"strict" : false
+				},
+				{
 					"name" : "In[24]",
+					"strict" : false
+				},
+				{
+					"name" : "In[22]",
 					"strict" : false
 				},
 				{
@@ -189,14 +197,6 @@
 				},
 				{
 					"name" : "In[21]",
-					"strict" : false
-				},
-				{
-					"name" : "In[22]",
-					"strict" : false
-				},
-				{
-					"name" : "In[20]",
 					"strict" : false
 				},
 				{

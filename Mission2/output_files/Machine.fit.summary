@@ -1,14 +1,14 @@
-Fitter Status : Successful - Tue Jan  8 16:25:05 2019
-Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Standard Edition
+Fitter Status : Successful - Sat Jan 12 02:21:24 2019
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 Revision Name : Machine
 Top-level Entity Name : Machine
 Family : Cyclone IV E
 Device : EP4CE30F23I7
 Timing Models : Final
-Total logic elements : 1,038 / 28,848 ( 4 % )
-    Total combinational functions : 932 / 28,848 ( 3 % )
-    Dedicated logic registers : 528 / 28,848 ( 2 % )
-Total registers : 528
+Total logic elements : 1,067 / 28,848 ( 4 % )
+    Total combinational functions : 957 / 28,848 ( 3 % )
+    Dedicated logic registers : 544 / 28,848 ( 2 % )
+Total registers : 544
 Total pins : 50 / 329 ( 15 % )
 Total virtual pins : 0
 Total memory bits : 0 / 608,256 ( 0 % )

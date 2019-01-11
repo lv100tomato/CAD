@@ -35,20 +35,24 @@ reg [4:0] read1;
 reg [4:0] read2;
 reg [4:0] write;
 reg [15:0] writedata;
+reg writeswitch;
 // wires                                               
 wire [15:0]  out1;
+wire [15:0]  out00001;
 wire [15:0]  out2;
 
 // assign statements (if any)                          
 register i1 (
 // port map - connection between master ports and signals/registers   
 	.out1(out1),
+	.out00001(out00001),
 	.out2(out2),
 	.power(power),
 	.read1(read1),
 	.read2(read2),
 	.write(write),
-	.writedata(writedata)
+	.writedata(writedata),
+	.writeswitch(writeswitch)
 );
 initial                                                
 begin                                                  
@@ -59,6 +63,7 @@ read1 <= 5'b00000;
 read2 <= 5'b00000;
 write <= 5'b00000;
 writedata <= 16'b0000_0000_0000_0000;
+writeswitch <= 0;
                                                        
 // --> end                                             
 $display("Running testbench");                       
@@ -79,10 +84,18 @@ writedata <= 16'b0101_0110_1001_1010;
 #100
 write <= 5'b00001;
 #100
+writeswitch <= 1;
+#100
+writeswitch <= 0;
+#100
 write <= 5'b00000;
 writedata <= 16'b0011_1100_1001_0101;
 #100
 write <= 5'b10110;
+#100
+writeswitch <=1;
+#100
+writeswitch <=0;
 #100
 write <= 5'b00000;
 #100
@@ -92,9 +105,9 @@ read2 <= 5'b10110;
 // --> end                                             
 end
 
-always begin
+//always begin
 	
-end                                                    
+//end                                                    
 
 endmodule
 
