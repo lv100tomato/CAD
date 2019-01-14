@@ -12,30 +12,30 @@
 # 
 # vlog -vlog01compat -work work +incdir+. {Machine_7_1200mv_100c_slow.vo}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 02:32:09 on Jan 12,2019
+# Start time: 21:35:24 on Jan 14,2019
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+." Machine_7_1200mv_100c_slow.vo 
 # -- Compiling module Machine
 # -- Compiling module hard_block
 # 
 # Top level modules:
 # 	Machine
-# End time: 02:32:09 on Jan 12,2019, Elapsed time: 0:00:00
+# End time: 21:35:24 on Jan 14,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -vlog01compat -work work +incdir+D:/Public/FPGA/CAD/Mission2/simulation/modelsim {D:/Public/FPGA/CAD/Mission2/simulation/modelsim/Macine_test3.vt}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 02:32:10 on Jan 12,2019
+# Start time: 21:35:24 on Jan 14,2019
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Public/FPGA/CAD/Mission2/simulation/modelsim" D:/Public/FPGA/CAD/Mission2/simulation/modelsim/Macine_test3.vt 
 # -- Compiling module Machine_vlg_tst
 # 
 # Top level modules:
 # 	Machine_vlg_tst
-# End time: 02:32:10 on Jan 12,2019, Elapsed time: 0:00:00
+# End time: 21:35:24 on Jan 14,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps +transport_int_delays +transport_path_delays -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs="+acc"  test3
 # vsim -t 1ps "+transport_int_delays" "+transport_path_delays" -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs=""+acc"" test3 
-# Start time: 02:32:10 on Jan 12,2019
+# Start time: 21:35:25 on Jan 14,2019
 # ** Error: (vsim-3170) Could not find 'test3'.
 #         Searched libraries:
 #             C:/intelFPGA_lite/17.1/modelsim_ase/altera/verilog/altera
@@ -48,17 +48,17 @@
 # MACRO ./Machine_run_msim_gate_verilog.do PAUSED at line 12
 vlog -vlog01compat -work work +incdir+D:/Public/FPGA/CAD/Mission2/simulation/modelsim D:/Public/FPGA/CAD/Mission2/simulation/modelsim/Macine_test3.vt
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 02:32:23 on Jan 12,2019
+# Start time: 21:35:31 on Jan 14,2019
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Public/FPGA/CAD/Mission2/simulation/modelsim" D:/Public/FPGA/CAD/Mission2/simulation/modelsim/Macine_test3.vt 
 # -- Compiling module Machine_vlg_tst
 # 
 # Top level modules:
 # 	Machine_vlg_tst
-# End time: 02:32:23 on Jan 12,2019, Elapsed time: 0:00:00
+# End time: 21:35:31 on Jan 14,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vsim -t 1ps +transport_int_delays +transport_path_delays -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs=\"+acc\" gate_work.Machine_vlg_tst
 # vsim -t 1ps "+transport_int_delays" "+transport_path_delays" -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs=""+acc"" gate_work.Machine_vlg_tst 
-# Start time: 02:32:10 on Jan 12,2019
+# Start time: 21:35:25 on Jan 14,2019
 # Loading work.Machine_vlg_tst
 # Loading work.Machine
 # Loading work.hard_block
@@ -80,9 +80,9 @@ add wave -position end  sim:/Machine_vlg_tst/power
 add wave -position end  sim:/Machine_vlg_tst/Out
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: unknown  Hostname: ws24  ProcessID: 19786
-#           Attempting to use alternate WLF file "./wlft0ayysm".
+#           Attempting to use alternate WLF file "./wlftb4ich2".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlft0ayysm
+#           Using alternate file: ./wlftb4ich2
 run
 # Running testbench
 run
@@ -91,64 +91,52 @@ run
 run
 run
 run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-# End time: 02:37:02 on Jan 12,2019, Elapsed time: 0:04:52
+vlog -vlog01compat -work work +incdir+D:/Public/FPGA/CAD/Mission2/simulation/modelsim D:/Public/FPGA/CAD/Mission2/simulation/modelsim/Macine_test3.vt
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:37:05 on Jan 14,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Public/FPGA/CAD/Mission2/simulation/modelsim" D:/Public/FPGA/CAD/Mission2/simulation/modelsim/Macine_test3.vt 
+# -- Compiling module Machine_vlg_tst
+# 
+# Top level modules:
+# 	Machine_vlg_tst
+# End time: 21:37:05 on Jan 14,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -t 1ps +transport_int_delays +transport_path_delays -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs=\"+acc\" gate_work.Machine_vlg_tst
+# End time: 21:37:11 on Jan 14,2019, Elapsed time: 0:01:46
 # Errors: 1, Warnings: 2
+# vsim -t 1ps "+transport_int_delays" "+transport_path_delays" -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs=""+acc"" gate_work.Machine_vlg_tst 
+# Start time: 21:37:12 on Jan 14,2019
+# Loading gate_work.Machine_vlg_tst
+# Loading gate_work.Machine
+# Loading gate_work.hard_block
+# Loading cycloneive_ver.cycloneive_io_obuf
+# Loading cycloneive_ver.cycloneive_io_ibuf
+# Loading cycloneive_ver.cycloneive_clkctrl
+# Loading cycloneive_ver.cycloneive_mux41
+# Loading cycloneive_ver.cycloneive_ena_reg
+# Loading altera_ver.dffeas
+# Loading cycloneive_ver.cycloneive_lcell_comb
+# Loading instances from Machine_7_1200mv_100c_v_slow.sdo
+# Loading altera_ver.PRIM_GDFF_LOW
+# Loading timing data from Machine_7_1200mv_100c_v_slow.sdo
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /Machine_vlg_tst File: D:/Public/FPGA/CAD/Mission2/simulation/modelsim/Macine_test3.vt
+add wave -position end  sim:/Machine_vlg_tst/clock
+add wave -position end  sim:/Machine_vlg_tst/In
+add wave -position end  sim:/Machine_vlg_tst/power
+add wave -position end  sim:/Machine_vlg_tst/Out
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: unknown  Hostname: ws24  ProcessID: 19786
+#           Attempting to use alternate WLF file "./wlftkravgk".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftkravgk
+run
+# Running testbench
+run
+run
+run
+run
+run
+run
+# End time: 21:49:13 on Jan 14,2019, Elapsed time: 0:12:01
+# Errors: 0, Warnings: 2
